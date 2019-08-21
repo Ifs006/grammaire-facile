@@ -1,22 +1,21 @@
-package com.example.gramairefacile;
+package com.example.gramairefacile.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.view.View;
-import android.support.v4.view.GravityCompat;
-import android.support.v7.app.ActionBarDrawerToggle;
-import android.view.MenuItem;
 import android.support.design.widget.NavigationView;
+import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
-
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
 import android.widget.ImageButton;
 
-public class MenuawalActivity extends AppCompatActivity
+import com.example.gramairefacile.R;
+
+public class MenuAwalActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
     ImageButton pindah;
 
@@ -41,7 +40,7 @@ public class MenuawalActivity extends AppCompatActivity
         pindah.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MenuawalActivity.this,LesVerbesActivity.class);
+                Intent intent = new Intent(MenuAwalActivity.this, LesVerbesActivity.class);
                 startActivity(intent);
             }
 
@@ -51,7 +50,7 @@ public class MenuawalActivity extends AppCompatActivity
         pindah.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MenuawalActivity.this,LesPronomActivity.class);
+                Intent intent = new Intent(MenuAwalActivity.this, LesPronomActivity.class);
                 startActivity(intent);
             }
         });
@@ -60,7 +59,7 @@ public class MenuawalActivity extends AppCompatActivity
         pindah.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MenuawalActivity.this,LesArticlesActivity.class);
+                Intent intent = new Intent(MenuAwalActivity.this, LesArticlesActivity.class);
                 startActivity(intent);
             }
         });

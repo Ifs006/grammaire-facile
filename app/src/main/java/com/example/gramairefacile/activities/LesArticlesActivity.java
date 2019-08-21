@@ -1,12 +1,17 @@
-package com.example.gramairefacile;
+package com.example.gramairefacile.activities;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
+
+import com.example.gramairefacile.R;
+import com.example.gramairefacile.lam1;
+import com.example.gramairefacile.lam2;
+import com.example.gramairefacile.lam3;
 
 public class LesArticlesActivity extends AppCompatActivity {
     ImageButton pindah;
@@ -23,7 +28,7 @@ public class LesArticlesActivity extends AppCompatActivity {
     pindah.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            Intent intent = new Intent(LesArticlesActivity.this,lam1.class);
+            Intent intent = new Intent(LesArticlesActivity.this, lam1.class);
             startActivity(intent);
         }
     });
@@ -32,7 +37,7 @@ public class LesArticlesActivity extends AppCompatActivity {
     pindah.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            Intent intent = new Intent(LesArticlesActivity.this,lam2.class);
+            Intent intent = new Intent(LesArticlesActivity.this, lam2.class);
             startActivity(intent);
         }
     });
@@ -41,7 +46,7 @@ public class LesArticlesActivity extends AppCompatActivity {
     pindah.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            Intent intent = new Intent(LesArticlesActivity.this,lam3.class);
+            Intent intent = new Intent(LesArticlesActivity.this, lam3.class);
             startActivity(intent);
         }
     });}

@@ -1,4 +1,4 @@
-package com.example.gramairefacile;
+package com.example.gramairefacile.activities;
 
 import android.content.Intent;
 import android.graphics.Typeface;
@@ -8,6 +8,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
+
+import com.example.gramairefacile.R;
 
 public class LesVerbesActivity extends AppCompatActivity {
     ImageButton pindah;
@@ -24,7 +26,7 @@ public class LesVerbesActivity extends AppCompatActivity {
     pindah.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            Intent intent = new Intent(LesVerbesActivity.this,lvm1.class);
+            Intent intent = new Intent(LesVerbesActivity.this, LesVerbesMateriActivity.class);
             startActivity(intent);
         }
     });
@@ -33,7 +35,7 @@ public class LesVerbesActivity extends AppCompatActivity {
     pindah.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            Intent intent = new Intent(LesVerbesActivity.this,lvm2.class);
+            Intent intent = new Intent(LesVerbesActivity.this, lvm2.class);
             startActivity(intent);
         }
     });
@@ -42,7 +44,7 @@ public class LesVerbesActivity extends AppCompatActivity {
     pindah.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            Intent intent = new Intent(LesVerbesActivity.this,lvm3.class);
+            Intent intent = new Intent(LesVerbesActivity.this, lvm3.class);
             startActivity(intent);
         }
     });
@@ -51,7 +53,7 @@ public class LesVerbesActivity extends AppCompatActivity {
     pindah.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            Intent intent = new Intent(LesVerbesActivity.this,lvm4.class);
+            Intent intent = new Intent(LesVerbesActivity.this, lvm4.class);
             startActivity(intent);
         }
     });
@@ -60,7 +62,7 @@ public class LesVerbesActivity extends AppCompatActivity {
     pindah.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            Intent intent = new Intent(LesVerbesActivity.this,lvm5.class);
+            Intent intent = new Intent(LesVerbesActivity.this, lvm5.class);
             startActivity(intent);
         }
     });
@@ -69,7 +71,7 @@ public class LesVerbesActivity extends AppCompatActivity {
     pindah.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            Intent intent = new Intent(LesVerbesActivity.this,lvm6.class);
+            Intent intent = new Intent(LesVerbesActivity.this, lvm6.class);
             startActivity(intent);
         }
     });

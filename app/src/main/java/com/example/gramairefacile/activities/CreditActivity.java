@@ -1,7 +1,9 @@
-package com.example.gramairefacile;
+package com.example.gramairefacile.activities;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+
+import com.example.gramairefacile.R;
 
 public class CreditActivity extends AppCompatActivity {
 
