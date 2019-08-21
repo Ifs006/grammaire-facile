@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.gramairefacile">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
+        <activity
+            android:name=".Quizlv1Activity"
+            android:label="@string/title_activity_quizlv1"
+            android:theme="@style/NoActionBar"></activity>
+        <activity
+            android:name=".lam3"
+            android:label="@string/title_activity_lam3"
+            android:theme="@style/NoActionBar" />
+        <activity
+            android:name=".lam2"
+            android:label="@string/title_activity_lam2"
+            android:theme="@style/NoActionBar" />
+        <activity
+            android:name=".lam1"
+            android:label="@string/title_activity_lam1"
+            android:theme="@style/NoActionBar" />
+        <activity
+            android:name=".lpm3"
+            android:label="@string/title_activity_lpm3"
+            android:theme="@style/NoActionBar" />
+        <activity
+            android:name=".lpm2"
+            android:label="@string/title_activity_lpm2"
+            android:theme="@style/NoActionBar" />
+        <activity
+            android:name=".lpm1"
+            android:label="@string/title_activity_lpm1"
+            android:theme="@style/NoActionBar" />
+        <activity
+            android:name=".lvm7"
+            android:label="@string/title_activity_lvm7"
+            android:theme="@style/NoActionBar" />
+        <activity
+            android:name=".lvm6"
+            android:label="@string/title_activity_lvm6"
+            android:theme="@style/NoActionBar" />
+        <activity
+            android:name=".lvm5"
+            android:label="@string/title_activity_lvm5"
+            android:theme="@style/NoActionBar" />
+        <activity
+            android:name=".lvm4"
+            android:label="@string/title_activity_lvm4"
+            android:theme="@style/NoActionBar" />
+        <activity
+            android:name=".lvm3"
+            android:label="@string/title_activity_lvm3"
+            android:theme="@style/NoActionBar" />
+        <activity
+            android:name=".lvm2"
+            android:label="@string/title_activity_lvm2"
+            android:theme="@style/NoActionBar" />
+        <activity
+            android:name=".lvm1"
+            android:label="@string/title_activity_lvm1"
+            android:theme="@style/NoActionBar" />
+        <activity
+            android:name=".regular_verb"
+            android:label="@string/title_activity_regular_verb"
+            android:theme="@style/NoActionBar" />
+        <activity android:name=".LesArticlesActivity" />
+        <activity android:name=".LesPronomActivity" />
+        <activity android:name=".CreditActivity" />
+        <activity
+            android:name=".LesVerbesActivity"
+            android:label="@string/title_activity_les_verbes"
+            android:theme="@style/NoActionBar" />
+        <activity
+            android:name=".MenuawalActivity"
+            android:label="@string/title_activity_menuawal"
+            android:theme="@style/NoActionBar" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

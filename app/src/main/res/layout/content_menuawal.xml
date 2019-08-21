@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bgmenu"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MenuawalActivity"
+    tools:showIn="@layout/app_bar_menuawal">
+
+    <ImageButton
+        android:id="@+id/lespronom"
+        android:layout_width="112dp"
+        android:layout_height="133dp"
+        android:layout_marginTop="116dp"
+        android:layout_marginEnd="65dp"
+        android:background="@drawable/lespronom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/lesferbes"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/lesferbes"
+        android:layout_width="112dp"
+        android:layout_height="133dp"
+        android:layout_marginStart="66dp"
+        android:layout_marginTop="116dp"
+        android:layout_marginEnd="56dp"
+        android:background="@drawable/lesferbes"
+        app:layout_constraintEnd_toStartOf="@+id/lespronom"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/lesarticles"
+        android:layout_width="112dp"
+        android:layout_height="133dp"
+        android:layout_marginStart="66dp"
+        android:layout_marginTop="27dp"
+        android:layout_marginEnd="56dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/lesarticles"
+        app:layout_constraintBottom_toTopOf="@+id/lenconjonction"
+        app:layout_constraintEnd_toStartOf="@+id/lesadjective"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lesferbes" />
+
+    <ImageButton
+        android:id="@+id/lesadjective"
+        android:layout_width="112dp"
+        android:layout_height="133dp"
+        android:layout_marginTop="27dp"
+        android:layout_marginEnd="65dp"
+        android:background="@drawable/lesadjective"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/lesarticles"
+        app:layout_constraintTop_toBottomOf="@+id/lespronom" />
+
+    <ImageButton
+        android:id="@+id/lenconjonction"
+        android:layout_width="112dp"
+        android:layout_height="133dp"
+        android:layout_marginStart="66dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="56dp"
+        android:background="@drawable/lesconjonction"
+        app:layout_constraintEnd_toStartOf="@+id/intogatif"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lesarticles" />
+
+    <ImageButton
+        android:id="@+id/intogatif"
+        android:layout_width="112dp"
+        android:layout_height="133dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="65dp"
+        android:background="@drawable/introgatif"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/lenconjonction"
+        app:layout_constraintTop_toBottomOf="@+id/lesadjective" />
+
+
+</android.support.constraint.ConstraintLayout>
