@@ -8,10 +8,8 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import com.example.gramairefacile.LesArticleActivity;
 import com.example.gramairefacile.R;
-import com.example.gramairefacile.lam1;
-import com.example.gramairefacile.lam2;
-import com.example.gramairefacile.lam3;
 
 public class LesArticlesActivity extends AppCompatActivity {
     ImageButton pindah;
@@ -28,7 +26,7 @@ public class LesArticlesActivity extends AppCompatActivity {
     pindah.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            Intent intent = new Intent(LesArticlesActivity.this, lam1.class);
+            Intent intent = new Intent(LesArticlesActivity.this, LesArticleActivity.class);
             startActivity(intent);
         }
     });

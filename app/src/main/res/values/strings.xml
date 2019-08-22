@@ -31,4 +31,7 @@
     <string name="title_activity_lam2">lam2</string>
     <string name="title_activity_lam3">lam3</string>
     <string name="title_activity_quizlv1">quizlv1</string>
+    <string name="title_activity_les_adjectif">LesAdjectifActivity</string>
+    <string name="title_activity_conjonction">ConjonctionActivity</string>
+    <string name="title_activity_interrogation">InterrogationActivity</string>
 </resources>

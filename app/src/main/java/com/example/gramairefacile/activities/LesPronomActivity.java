@@ -10,9 +10,6 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.example.gramairefacile.R;
-import com.example.gramairefacile.lpm1;
-import com.example.gramairefacile.lpm2;
-import com.example.gramairefacile.lpm3;
 
 public class LesPronomActivity extends AppCompatActivity {
     ImageButton pindah;
@@ -30,7 +27,7 @@ public class LesPronomActivity extends AppCompatActivity {
      pindah.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            Intent intent = new Intent(LesPronomActivity.this, lpm1.class);
+            Intent intent = new Intent(LesPronomActivity.this, com.example.gramairefacile.LesPronomActivity.class);
             startActivity(intent);
         }
     });

@@ -10,31 +10,27 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
         <activity
-            android:name=".Quizlv1Activity"
-            android:label="@string/title_activity_quizlv1"
+            android:name=".activities.InterrogationActivity"
+            android:label="@string/title_activity_interrogation"
             android:theme="@style/NoActionBar"></activity>
         <activity
-            android:name=".lam3"
-            android:label="@string/title_activity_lam3"
+            android:name=".activities.ConjonctionActivity"
+            android:label="@string/title_activity_conjonction"
             android:theme="@style/NoActionBar" />
         <activity
-            android:name=".lam2"
-            android:label="@string/title_activity_lam2"
+            android:name=".activities.LesAdjectifActivity"
+            android:label="@string/title_activity_les_adjectif"
             android:theme="@style/NoActionBar" />
         <activity
-            android:name=".lam1"
+            android:name=".Quizlv1Activity"
+            android:label="@string/title_activity_quizlv1"
+            android:theme="@style/NoActionBar" />
+        <activity
+            android:name=".LesArticleActivity"
             android:label="@string/title_activity_lam1"
             android:theme="@style/NoActionBar" />
         <activity
-            android:name=".lpm3"
-            android:label="@string/title_activity_lpm3"
-            android:theme="@style/NoActionBar" />
-        <activity
-            android:name=".lpm2"
-            android:label="@string/title_activity_lpm2"
-            android:theme="@style/NoActionBar" />
-        <activity
-            android:name=".lpm1"
+            android:name=".LesPronomActivity"
             android:label="@string/title_activity_lpm1"
             android:theme="@style/NoActionBar" />
         <activity
