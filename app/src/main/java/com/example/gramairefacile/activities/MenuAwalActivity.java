@@ -16,64 +16,75 @@ import android.widget.ImageButton;
 import com.example.gramairefacile.R;
 
 public class MenuAwalActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
-    ImageButton pindah;
+        implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener {
 
+    private Toolbar toolbar;
+    private DrawerLayout drawerLayout;
+    private NavigationView navigationView;
+    private ActionBarDrawerToggle drawerToggle;
 
+    private ImageButton ibtnLesVerbes;
+    private ImageButton ibtnLesPronom;
+    private ImageButton ibtnLesArticle;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menuawal);
-        Toolbar toolbar = findViewById(R.id.toolbar);
+
+        initViews();
+    }
+
+    private void initViews() {
+        toolbar = findViewById(R.id.toolbar);
+        drawerLayout = findViewById(R.id.drawer_layout);
+        navigationView = findViewById(R.id.nav_view);
+        ibtnLesVerbes = (ImageButton) findViewById(R.id.ibtn_lesverbes);
+        ibtnLesPronom = (ImageButton) findViewById(R.id.ibtn_lespronom);
+        ibtnLesArticle = (ImageButton) findViewById(R.id.ibtn_lesarticles);
+
         setSupportActionBar(toolbar);
-        DrawerLayout drawer = findViewById(R.id.drawer_layout);
-        NavigationView navigationView = findViewById(R.id.nav_view);
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        drawer.addDrawerListener(toggle);
-        toggle.syncState();
+        drawerToggle = new ActionBarDrawerToggle(
+                this, drawerLayout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+
+        drawerLayout.addDrawerListener(drawerToggle);
+        drawerToggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
 
-        pindah = (ImageButton) findViewById(R.id.lesferbes);
-        pindah.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MenuAwalActivity.this, LesVerbesActivity.class);
-                startActivity(intent);
+        ibtnLesArticle.setOnClickListener(this);
+        ibtnLesVerbes.setOnClickListener(this);
+        ibtnLesPronom.setOnClickListener(this);
+    }
+
+    @Override
+    public void onClick(View v) {
+        Intent intent = null;
+
+        switch (v.getId()) {
+            case R.id.ibtn_lesverbes: {
+                intent = new Intent(this, LesVerbesActivity.class);
+                break;
+            }
+            case R.id.ibtn_lespronom: {
+                intent = new Intent(this, LesPronomActivity.class);
+                break;
+            }
+            case R.id.ibtn_lesadjectif: {
+                intent = new Intent(this, LesAdjectifActivity.class);
+                break;
             }
 
-        });
+        }
 
-        pindah = (ImageButton) findViewById(R.id.lespronom);
-        pindah.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MenuAwalActivity.this, LesPronomActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        pindah = (ImageButton) findViewById(R.id.lesarticles);
-        pindah.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MenuAwalActivity.this, LesArticlesActivity.class);
-                startActivity(intent);
-            }
-        });
-
-
-
-
-            }
+        if (intent != null)
+            startActivity(intent);
+    }
 
     @Override
     public void onBackPressed() {
-        DrawerLayout drawer = findViewById(R.id.drawer_layout);
-        if (drawer.isDrawerOpen(GravityCompat.START)) {
-            drawer.closeDrawer(GravityCompat.START);
+        if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
+            drawerLayout.closeDrawer(GravityCompat.START);
         } else {
             super.onBackPressed();
         }
@@ -115,9 +126,7 @@ public class MenuAwalActivity extends AppCompatActivity
 
         }
 
-
-        DrawerLayout drawer = findViewById(R.id.drawer_layout);
-        drawer.closeDrawer(GravityCompat.START);
+        drawerLayout.closeDrawer(GravityCompat.START);
         return true;
     }
 

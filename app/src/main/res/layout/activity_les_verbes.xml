@@ -33,7 +33,8 @@
             android:textAlignment="center"
             android:textSize="40sp"
             android:text="Les Verbes"
-            android:textColor="@color/cardview_light_background"/>
+            android:fontFamily=""
+            android:textColor="@color/cardview_light_background" />
 
 
         </android.support.v7.widget.Toolbar>

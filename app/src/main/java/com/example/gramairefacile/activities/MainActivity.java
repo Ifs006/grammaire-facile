@@ -9,21 +9,22 @@ import android.widget.ImageButton;
 import com.example.gramairefacile.R;
 
 public class MainActivity extends AppCompatActivity {
-    ImageButton pindah;
+
+    private ImageButton ibtnEntre;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        pindah = (ImageButton) findViewById(R.id.entre);
-        pindah.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Intent intent = new Intent(MainActivity.this, MenuAwalActivity.class);
-                    startActivity(intent);
-                }
-            });
+        ibtnEntre = (ImageButton) findViewById(R.id.ibtn_entre);
+        ibtnEntre.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, MenuAwalActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
 }

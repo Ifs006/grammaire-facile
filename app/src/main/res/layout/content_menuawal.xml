@@ -10,30 +10,30 @@
     tools:showIn="@layout/app_bar_menuawal">
 
     <ImageButton
-        android:id="@+id/lespronom"
+        android:id="@+id/ibtn_lespronom"
         android:layout_width="112dp"
         android:layout_height="133dp"
         android:layout_marginTop="116dp"
         android:layout_marginEnd="65dp"
         android:background="@drawable/lespronom"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/lesferbes"
+        app:layout_constraintStart_toEndOf="@+id/ibtn_lesverbes"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
-        android:id="@+id/lesferbes"
+        android:id="@+id/ibtn_lesverbes"
         android:layout_width="112dp"
         android:layout_height="133dp"
         android:layout_marginStart="66dp"
         android:layout_marginTop="116dp"
         android:layout_marginEnd="56dp"
         android:background="@drawable/lesferbes"
-        app:layout_constraintEnd_toStartOf="@+id/lespronom"
+        app:layout_constraintEnd_toStartOf="@+id/ibtn_lespronom"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
-        android:id="@+id/lesarticles"
+        android:id="@+id/ibtn_lesarticles"
         android:layout_width="112dp"
         android:layout_height="133dp"
         android:layout_marginStart="66dp"
@@ -41,44 +41,44 @@
         android:layout_marginEnd="56dp"
         android:layout_marginBottom="32dp"
         android:background="@drawable/lesarticles"
-        app:layout_constraintBottom_toTopOf="@+id/lenconjonction"
-        app:layout_constraintEnd_toStartOf="@+id/lesadjective"
+        app:layout_constraintBottom_toTopOf="@+id/ibtn_lesconjonction"
+        app:layout_constraintEnd_toStartOf="@+id/ibtn_lesadjectif"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lesferbes" />
+        app:layout_constraintTop_toBottomOf="@+id/ibtn_lesverbes" />
 
     <ImageButton
-        android:id="@+id/lesadjective"
+        android:id="@+id/ibtn_lesadjectif"
         android:layout_width="112dp"
         android:layout_height="133dp"
         android:layout_marginTop="27dp"
         android:layout_marginEnd="65dp"
         android:background="@drawable/lesadjective"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/lesarticles"
-        app:layout_constraintTop_toBottomOf="@+id/lespronom" />
+        app:layout_constraintStart_toEndOf="@+id/ibtn_lesarticles"
+        app:layout_constraintTop_toBottomOf="@+id/ibtn_lespronom" />
 
     <ImageButton
-        android:id="@+id/lenconjonction"
+        android:id="@+id/ibtn_lesconjonction"
         android:layout_width="112dp"
         android:layout_height="133dp"
         android:layout_marginStart="66dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="56dp"
         android:background="@drawable/lesconjonction"
-        app:layout_constraintEnd_toStartOf="@+id/intogatif"
+        app:layout_constraintEnd_toStartOf="@+id/ibtn_intogatif"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lesarticles" />
+        app:layout_constraintTop_toBottomOf="@+id/ibtn_lesarticles" />
 
     <ImageButton
-        android:id="@+id/intogatif"
+        android:id="@+id/ibtn_intogatif"
         android:layout_width="112dp"
         android:layout_height="133dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="65dp"
         android:background="@drawable/introgatif"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/lenconjonction"
-        app:layout_constraintTop_toBottomOf="@+id/lesadjective" />
+        app:layout_constraintStart_toEndOf="@+id/ibtn_lesconjonction"
+        app:layout_constraintTop_toBottomOf="@+id/ibtn_lesadjectif" />
 
 
 </android.support.constraint.ConstraintLayout>
