@@ -70,8 +70,8 @@ public class MenuAwalActivity extends AppCompatActivity
                 intent = new Intent(this, LesPronomActivity.class);
                 break;
             }
-            case R.id.ibtn_lesadjectif: {
-                intent = new Intent(this, LesAdjectifActivity.class);
+            case R.id.ibtn_lesarticles: {
+                intent = new Intent(this, LesArticlesActivity.class);
                 break;
             }
 

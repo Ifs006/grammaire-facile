@@ -7,46 +7,58 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ImageButton;
-import android.widget.TextView;
 
 import com.example.gramairefacile.R;
 
-public class LesPronomActivity extends AppCompatActivity {
-    ImageButton pindah;
-    TextView teks;
+public class LesPronomActivity extends AppCompatActivity implements View.OnClickListener {
+    private ImageButton ibtnLpps;
+    private ImageButton ibtnLpt;
+    private ImageButton ibtnLpis;
+    private Toolbar toolbar;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_les_pronom);
-        Toolbar toolbar = findViewById(R.id.toolbar);
+
+        initView();
+
+    }
+
+    private void initView() {
+        toolbar = findViewById(R.id.toolbar);
+
+        ibtnLpps = (ImageButton) findViewById(R.id.ibtn_Lpps);
+        ibtnLpt = (ImageButton) findViewById(R.id.ibtn_Lpt);
+        ibtnLpis = (ImageButton) findViewById(R.id.ibtn_Lpis);
         setSupportActionBar(toolbar);
 
-     pindah = (ImageButton) findViewById(R.id.p1);
-     pindah.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            Intent intent = new Intent(LesPronomActivity.this, com.example.gramairefacile.LesPronomActivity.class);
-            startActivity(intent);
-        }
-    });
+        ibtnLpps.setOnClickListener(this);
+        ibtnLpt.setOnClickListener(this);
+        ibtnLpis.setOnClickListener(this);
 
-    pindah = (ImageButton) findViewById(R.id.p2);
-    pindah.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            Intent intent = new Intent(LesPronomActivity.this, lpm2.class);
-            startActivity(intent);
-        }
-    });
+    }
 
-    pindah = (ImageButton) findViewById(R.id.p3);
-    pindah.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            Intent intent = new Intent(LesPronomActivity.this, lpm3.class);
-            startActivity(intent);
+    @Override
+    public void onClick(View v) {
+        Intent intent = null;
+        switch (v.getId()) {
+            case R.id.ibtn_Lpps: {
+                intent = new Intent(this, LesPronomMateriActivity.class);
+                break;
+            }
+            case R.id.ibtn_Lpt: {
+                intent = new Intent(this, LesPronomMateriActivity.class);
+                break;
+            }
+            case R.id.ibtn_Lpis: {
+                intent = new Intent(this, LesPronomMateriActivity.class);
+                break;
+            }
         }
-    });}
+
+        if (intent != null)
+            startActivity(intent);
+    }
 }

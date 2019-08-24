@@ -34,4 +34,7 @@
     <string name="title_activity_les_adjectif">LesAdjectifActivity</string>
     <string name="title_activity_conjonction">ConjonctionActivity</string>
     <string name="title_activity_interrogation">InterrogationActivity</string>
+    <string name="title_activity_les_article_materi">LesArticleMateriActivity</string>
+    <string name="title_activity_les_pronom_materi">LesPronomMateriActivity</string>
+    <string name="title_activity_les_adjectif_materi">LesAdjectifMateriActivity</string>
 </resources>

@@ -13,13 +13,13 @@ public class LesVerbesActivity extends AppCompatActivity implements View.OnClick
 
     private Toolbar toolbar;
 
-    private ImageButton ibtnlvr;
-    private ImageButton ibtnlvir;
-    private ImageButton ibtnlcdp;
-    private ImageButton ibtnln;
-    private ImageButton ibtnlfis;
-    private ImageButton ibtnli;
-    private ImageButton ibtnpdi;
+    private ImageButton ibtnLvr;
+    private ImageButton ibtnLvir;
+    private ImageButton ibtnLcdp;
+    private ImageButton ibtnLn;
+    private ImageButton ibtnLfis;
+    private ImageButton ibtnLi;
+    private ImageButton ibtnPdi;
 
 
     @Override
@@ -33,23 +33,23 @@ public class LesVerbesActivity extends AppCompatActivity implements View.OnClick
     private void initViews() {
         toolbar = findViewById(R.id.toolbar);
 
-        ibtnlvr = (ImageButton) findViewById(R.id.ibtn_lvr);
-        ibtnlvir = (ImageButton) findViewById(R.id.ibtn_lvr);
-        ibtnlcdp = (ImageButton) findViewById(R.id.ibtn_lcdp);
-        ibtnln = (ImageButton) findViewById(R.id.ibtn_ln);
-        ibtnlfis = (ImageButton) findViewById(R.id.ibtn_lfis);
-        ibtnli = (ImageButton) findViewById(R.id.ibtn_li);
-        ibtnpdi = (ImageButton) findViewById(R.id.ibtn_pdi);
+        ibtnLvr = (ImageButton) findViewById(R.id.ibtn_Lvr);
+        ibtnLvir = (ImageButton) findViewById(R.id.ibtn_Lvr);
+        ibtnLcdp = (ImageButton) findViewById(R.id.ibtn_Lcdp);
+        ibtnLn = (ImageButton) findViewById(R.id.ibtn_Ln);
+        ibtnLfis = (ImageButton) findViewById(R.id.ibtn_Lfis);
+        ibtnLi = (ImageButton) findViewById(R.id.ibtn_Li);
+        ibtnPdi = (ImageButton) findViewById(R.id.ibtn_Pdi);
         setSupportActionBar(toolbar);
 
 
-        ibtnlvr.setOnClickListener(this);
-        ibtnlvir.setOnClickListener(this);
-        ibtnlcdp.setOnClickListener(this);
-        ibtnln.setOnClickListener(this);
-        ibtnlfis.setOnClickListener(this);
-        ibtnli.setOnClickListener(this);
-        ibtnpdi.setOnClickListener(this);
+        ibtnLvr.setOnClickListener(this);
+        ibtnLvir.setOnClickListener(this);
+        ibtnLcdp.setOnClickListener(this);
+        ibtnLn.setOnClickListener(this);
+        ibtnLfis.setOnClickListener(this);
+        ibtnLi.setOnClickListener(this);
+        ibtnPdi.setOnClickListener(this);
 
     }
 
@@ -57,31 +57,31 @@ public class LesVerbesActivity extends AppCompatActivity implements View.OnClick
     public void onClick(View v) {
         Intent intent = null;
         switch (v.getId()) {
-            case R.id.ibtn_lvr: {
+            case R.id.ibtn_Lvr: {
                 intent = new Intent(this, LesVerbesMateriActivity.class);
                 break;
             }
-            case R.id.ibtn_lvir: {
+            case R.id.ibtn_Lvir: {
                 intent = new Intent(this, LesVerbesMateriActivity.class);
                 break;
             }
-            case R.id.ibtn_lcdp: {
+            case R.id.ibtn_Lcdp: {
                 intent = new Intent(this, LesVerbesMateriActivity.class);
                 break;
             }
-            case R.id.ibtn_ln: {
+            case R.id.ibtn_Ln: {
                 intent = new Intent(this, LesVerbesMateriActivity.class);
                 break;
             }
-            case R.id.ibtn_lfis: {
+            case R.id.ibtn_Lfis: {
                 intent = new Intent(this, LesVerbesMateriActivity.class);
                 break;
             }
-            case R.id.ibtn_li: {
+            case R.id.ibtn_Li: {
                 intent = new Intent(this, LesVerbesMateriActivity.class);
                 break;
             }
-            case R.id.ibtn_pdi: {
+            case R.id.ibtn_Pdi: {
                 intent = new Intent(this, LesVerbesMateriActivity.class);
                 break;
             }

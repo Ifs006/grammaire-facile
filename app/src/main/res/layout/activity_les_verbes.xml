@@ -31,10 +31,10 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:textAlignment="center"
-            android:textSize="40sp"
-            android:text="Les Verbes"
-            android:fontFamily=""
-            android:textColor="@color/cardview_light_background" />
+            android:fontFamily="@font/warung_kopi"
+            android:text="LES VERBES"
+            android:textColor="@color/cardview_light_background"
+            android:textSize="45sp" />
 
 
         </android.support.v7.widget.Toolbar>

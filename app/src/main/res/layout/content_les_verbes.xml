@@ -21,7 +21,7 @@
             android:orientation="vertical">
 
             <ImageButton
-                android:id="@+id/ibtn_lvr"
+                android:id="@+id/ibtn_Lvr"
                 android:layout_width="320dp"
                 android:layout_height="60dp"
                 android:layout_marginStart="30dp"
@@ -45,7 +45,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/la1" />
 
             <ImageButton
-                android:id="@+id/ibtn_lvir"
+                android:id="@+id/ibtn_Lvir"
                 android:layout_width="330dp"
                 android:layout_height="70dp"
                 android:layout_marginStart="30dp"
@@ -69,7 +69,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/la1" />
 
             <ImageButton
-                android:id="@+id/ibtn_lcdp"
+                android:id="@+id/ibtn_Lcdp"
                 android:layout_width="320dp"
                 android:layout_height="68dp"
                 android:layout_marginStart="30dp"
@@ -90,7 +90,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/la1" />
 
             <ImageButton
-                android:id="@+id/ibtn_ln"
+                android:id="@+id/ibtn_Ln"
                 android:layout_width="230dp"
                 android:layout_height="70dp"
                 android:layout_marginStart="30dp"
@@ -114,7 +114,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/la1" />
 
             <ImageButton
-                android:id="@+id/ibtn_lfis"
+                android:id="@+id/ibtn_Lfis"
                 android:layout_width="350dp"
                 android:layout_height="69dp"
                 android:layout_marginStart="30dp"
@@ -138,7 +138,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/la1" />
 
             <ImageButton
-                android:id="@+id/ibtn_li"
+                android:id="@+id/ibtn_Li"
                 android:layout_width="210dp"
                 android:layout_height="70dp"
                 android:layout_marginStart="30dp"
@@ -162,7 +162,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/la1" />
 
             <ImageButton
-                android:id="@+id/ibtn_pdi"
+                android:id="@+id/ibtn_Pdi"
                 android:layout_width="340dp"
                 android:layout_height="70dp"
                 android:layout_marginStart="30dp"

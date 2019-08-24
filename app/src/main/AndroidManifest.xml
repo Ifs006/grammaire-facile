@@ -9,6 +9,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
+        <activity
+            android:name=".activities.LesAdjectifMateriActivity"
+            android:label="@string/title_activity_les_adjectif_materi"
+            android:theme="@style/NoActionBar"></activity>
+        <activity
+            android:name=".activities.LesPronomMateriActivity"
+            android:label="@string/title_activity_les_pronom_materi"
+            android:theme="@style/NoActionBar" />
+        <activity
+            android:name=".activities.LesArticleMateriActivity"
+            android:label="@string/title_activity_les_article_materi"
+            android:theme="@style/NoActionBar" />
         <activity android:name=".activities.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,7 +31,7 @@
         <activity
             android:name=".activities.InterrogationActivity"
             android:label="@string/title_activity_interrogation"
-            android:theme="@style/NoActionBar"></activity>
+            android:theme="@style/NoActionBar" />
         <activity
             android:name=".activities.ConjonctionActivity"
             android:label="@string/title_activity_conjonction"
@@ -29,16 +41,8 @@
             android:label="@string/title_activity_les_adjectif"
             android:theme="@style/NoActionBar" />
         <activity
-            android:name=".Quizlv1Activity"
+            android:name=".activities.QuizLvActivity"
             android:label="@string/title_activity_quizlv1"
-            android:theme="@style/NoActionBar" />
-        <activity
-            android:name=".LesArticleActivity"
-            android:label="@string/title_activity_lam1"
-            android:theme="@style/NoActionBar" />
-        <activity
-            android:name=".LesPronomActivity"
-            android:label="@string/title_activity_lpm1"
             android:theme="@style/NoActionBar" />
         <activity
             android:name=".activities.LesVerbesMateriActivity"
@@ -59,7 +63,6 @@
             android:name=".activities.MenuAwalActivity"
             android:label="@string/title_activity_menuawal"
             android:theme="@style/NoActionBar" />
-
     </application>
 
 </manifest>
