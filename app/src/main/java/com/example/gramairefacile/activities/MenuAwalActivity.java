@@ -26,6 +26,9 @@ public class MenuAwalActivity extends AppCompatActivity
     private ImageButton ibtnLesVerbes;
     private ImageButton ibtnLesPronom;
     private ImageButton ibtnLesArticle;
+    private ImageButton ibtnLesAdjectif;
+    private ImageButton ibtnLesConjonction;
+    private ImageButton ibtnInterogatif;
 
 
     @Override
@@ -43,7 +46,9 @@ public class MenuAwalActivity extends AppCompatActivity
         ibtnLesVerbes = (ImageButton) findViewById(R.id.ibtn_lesverbes);
         ibtnLesPronom = (ImageButton) findViewById(R.id.ibtn_lespronom);
         ibtnLesArticle = (ImageButton) findViewById(R.id.ibtn_lesarticles);
-
+        ibtnLesAdjectif = (ImageButton) findViewById(R.id.ibtn_lesadjectif);
+        ibtnLesConjonction = (ImageButton) findViewById(R.id.ibtn_lesconjonction);
+        ibtnInterogatif = (ImageButton) findViewById(R.id.ibtn_interogatif);
         setSupportActionBar(toolbar);
         drawerToggle = new ActionBarDrawerToggle(
                 this, drawerLayout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -55,6 +60,9 @@ public class MenuAwalActivity extends AppCompatActivity
         ibtnLesArticle.setOnClickListener(this);
         ibtnLesVerbes.setOnClickListener(this);
         ibtnLesPronom.setOnClickListener(this);
+        ibtnLesAdjectif.setOnClickListener(this);
+        ibtnLesConjonction.setOnClickListener(this);
+        ibtnInterogatif.setOnClickListener(this);
     }
 
     @Override
@@ -72,6 +80,18 @@ public class MenuAwalActivity extends AppCompatActivity
             }
             case R.id.ibtn_lesarticles: {
                 intent = new Intent(this, LesArticlesActivity.class);
+                break;
+            }
+            case R.id.ibtn_lesadjectif: {
+                intent = new Intent(this, LesAdjectifActivity.class);
+                break;
+            }
+            case R.id.ibtn_lesconjonction: {
+                intent = new Intent(this, ConjonctionMateriActivity.class);
+                break;
+            }
+            case R.id.ibtn_interogatif: {
+                intent = new Intent(this, InterrogationMateriActivity.class);
                 break;
             }
 

@@ -29,11 +29,11 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activities.InterrogationActivity"
+            android:name=".activities.InterrogationMateriActivity"
             android:label="@string/title_activity_interrogation"
             android:theme="@style/NoActionBar" />
         <activity
-            android:name=".activities.ConjonctionActivity"
+            android:name=".activities.ConjonctionMateriActivity"
             android:label="@string/title_activity_conjonction"
             android:theme="@style/NoActionBar" />
         <activity

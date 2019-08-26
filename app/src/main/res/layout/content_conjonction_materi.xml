@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".activities.ConjonctionMateriActivity"
+    tools:showIn="@layout/activity_conjonction_materi">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_regulierre">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="350dp"
+                android:layout_height="120dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/conjonction1" />
+
+            <ImageView
+                android:layout_width="300dp"
+                android:layout_height="200dp"
+                android:layout_marginStart="44dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/conjonction2" />
+
+            <ImageView
+                android:layout_width="330dp"
+                android:layout_height="130dp"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/conjonction3" />
+
+            <ImageView
+                android:layout_width="330dp"
+                android:layout_height="130dp"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/conjonction4" />
+
+            <ImageView
+                android:layout_width="330dp"
+                android:layout_height="290dp"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/conjonction5" />
+
+        </LinearLayout>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>

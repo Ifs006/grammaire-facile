@@ -1,31 +1,100 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg_regulierre"
+
     tools:context=".activities.QuizLvActivity">
 
-    <android.support.design.widget.AppBarLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:theme="@style/AppBarOverlay">
+    <ImageButton
+        android:id="@+id/ibtn_continue"
+        android:layout_width="200dp"
+        android:layout_height="44dp"
+        android:layout_marginBottom="53dp"
+        android:background="@drawable/ibtnquizcontinue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absolutex="633dp" />
 
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            app:popupTheme="@style/PopupOverlay" />
 
-    </android.support.design.widget.AppBarLayout>
+    <ImageView
+        android:id="@+id/img_question_count"
+        android:layout_width="374dp"
+        android:layout_height="10dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/quiz1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab"
+
+    <RadioGroup
+        android:id="@+id/radio_group"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="@dimen/fab_margin"
-        app:srcCompat="@android:drawable/ic_dialog_email" />
+        android:layout_marginTop="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_question1">
 
-</android.support.design.widget.CoordinatorLayout>
+        <RadioButton
+            android:id="@+id/radio_button1"
+            android:layout_width="170dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            android:background="@drawable/option1reguirre" />
+
+        <RadioButton
+            android:id="@+id/radio_button2"
+            android:layout_width="170dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            android:background="@drawable/option2reguirre" />
+
+        <RadioButton
+            android:id="@+id/radio_button3"
+            android:layout_width="170dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            android:background="@drawable/option3reguirre" />
+
+        <RadioButton
+            android:id="@+id/radio_button4"
+            android:layout_width="170dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            android:background="@drawable/option4reguirre" />
+
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tv_question1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/warung_kopi"
+        android:text="Here will be the question"
+        android:textColor="#000000"
+        android:textSize="35sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_command_quiz" />
+
+    <TextView
+        android:id="@+id/tv_command_quiz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:fontFamily="@font/caviar_dreams_bold"
+        android:text="Pilihlah konjugasi yang tepat dari kata\nkerja berakhiran -er di dalam kurung !"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/img_question_count" />
+
+</android.support.constraint.ConstraintLayout>
