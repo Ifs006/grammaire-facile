@@ -42,13 +42,13 @@ public class LesVerbesActivity extends AppCompatActivity {
         titleToolbar.setText("LES VERBES");
 
         List<LesVerbes> lesVerbes = new ArrayList<>();
-        lesVerbes.add(new LesVerbes(R.drawable.icon_lesverbes, "LE VERBE RÉGULIER"));
-        lesVerbes.add(new LesVerbes(R.drawable.icon_lesverbes, "LE VERBE IRRÉGULIER"));
-        lesVerbes.add(new LesVerbes(R.drawable.icon_lesverbes, "LE CONDITIONNEL DE POLITESSE"));
-        lesVerbes.add(new LesVerbes(R.drawable.icon_lesverbes, "LA NÉGATION"));
-        lesVerbes.add(new LesVerbes(R.drawable.icon_lesverbes, "LA FORME IMPERSONNELLE SIMPLE"));
-        lesVerbes.add(new LesVerbes(R.drawable.icon_lesverbes, "L’IMPÉRATIF"));
-        lesVerbes.add(new LesVerbes(R.drawable.icon_lesverbes, "LA PRÉSENT DE L’INDICATIF"));
+        lesVerbes.add(new LesVerbes(R.drawable.ic_icon_lesverbes, "LE VERBE RÉGULIER"));
+        lesVerbes.add(new LesVerbes(R.drawable.ic_icon_lesverbes, "LE VERBE IRRÉGULIER"));
+        lesVerbes.add(new LesVerbes(R.drawable.ic_icon_lesverbes, "LE CONDITIONNEL DE POLITESSE"));
+        lesVerbes.add(new LesVerbes(R.drawable.ic_icon_lesverbes, "LA NÉGATION"));
+        lesVerbes.add(new LesVerbes(R.drawable.ic_icon_lesverbes, "LA FORME IMPERSONNELLE SIMPLE"));
+        lesVerbes.add(new LesVerbes(R.drawable.ic_icon_lesverbes, "L’IMPÉRATIF"));
+        lesVerbes.add(new LesVerbes(R.drawable.ic_icon_lesverbes, "LA PRÉSENT DE L’INDICATIF"));
 
         lesVerbesAdapter = new LesVerbesAdapter(this, lesVerbes);
 

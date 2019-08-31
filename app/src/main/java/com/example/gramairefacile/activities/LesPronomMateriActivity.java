@@ -6,7 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 
 import com.example.gramairefacile.R;
-import com.example.gramairefacile.adapters.ViewPagerAdapter;
+import com.example.gramairefacile.adapters.CustomPagerAdapter;
 
 public class LesPronomMateriActivity extends AppCompatActivity {
     private Toolbar toolbar;
@@ -19,8 +19,8 @@ public class LesPronomMateriActivity extends AppCompatActivity {
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        viewPager = (ViewPager) findViewById(R.id.view_pager);
-        viewPager.setAdapter(new ViewPagerAdapter(this));
+        ViewPager viewPager = (ViewPager) findViewById(R.id.viewpager);
+        viewPager.setAdapter(new CustomPagerAdapter(this));
 
     }
 
