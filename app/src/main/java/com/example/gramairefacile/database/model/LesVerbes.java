@@ -1,6 +1,7 @@
-package com.example.gramairefacile.database;
+package com.example.gramairefacile.database.model;
 
 public class LesVerbes {
+
     private int icon;
     private String title;
 

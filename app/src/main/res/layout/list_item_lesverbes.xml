@@ -26,5 +26,4 @@
         android:text="Le Verbe Reguliere"
         android:textColor="@color/white"
         android:textSize="24sp" />
-
 </RelativeLayout>

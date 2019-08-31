@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 
-
 <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -10,30 +9,26 @@
     android:background="@drawable/bg_materi"
     tools:context=".activities.LesPronomActivity">
 
-
     <android.support.design.widget.AppBarLayout
         android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
-        android:layout_height="80dp"
-        >
-
+        android:layout_height="80dp">
 
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/tbmat"
-            >
+            android:background="@drawable/tbmat">
 
-        <ImageButton
-            android:id="@+id/quiz"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginRight="5dp"
-            android:background="@drawable/quiz"
-            app:layout_anchor="@+id/appBarLayout"
-            app:layout_anchorGravity="end|center" />
+            <ImageButton
+                android:id="@+id/quiz"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/quiz"
+                app:layout_anchor="@+id/appBarLayout"
+                app:layout_anchorGravity="end|center" />
 
         </android.support.v7.widget.Toolbar>
     </android.support.design.widget.AppBarLayout>

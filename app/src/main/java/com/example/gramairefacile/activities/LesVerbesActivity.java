@@ -7,12 +7,11 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.example.gramairefacile.R;
 import com.example.gramairefacile.adapters.LesVerbesAdapter;
-import com.example.gramairefacile.database.LesVerbes;
+import com.example.gramairefacile.database.model.LesVerbes;
 import com.example.gramairefacile.utils.ItemClickListener;
 import com.example.gramairefacile.utils.SimpleDividerItemDecoration;
 
@@ -37,8 +36,8 @@ public class LesVerbesActivity extends AppCompatActivity{
 
     private void initViews() {
         toolbar = findViewById(R.id.toolbar);
+        recyclerView = findViewById(R.id.recyclerview);
         titleToolbar = findViewById(R.id.title_toolbar);
-        recyclerView = findViewById(R.id.reyclerview);
 
         titleToolbar.setText("Les Verbes");
 
@@ -52,6 +51,7 @@ public class LesVerbesActivity extends AppCompatActivity{
         lesVerbes.add(new LesVerbes(R.mipmap.ic_launcher, "Present De L'Indication"));
 
         lesVerbesAdapter = new LesVerbesAdapter(this, lesVerbes);
+
         recyclerView.setAdapter(lesVerbesAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setHasFixedSize(true);

@@ -9,7 +9,6 @@ import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.gramairefacile.R;
 import com.example.gramairefacile.database.QuizDbHelper;
@@ -52,6 +51,10 @@ public class QuizLvActivity extends AppCompatActivity {
         ibtnContinue.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+<<<<<<< HEAD
+=======
+                // ctrl + / (untuk komen code)
+>>>>>>> a482fe608a74d621742e7a15f0a8753d5f56af8f
 //                if (!answered) {
 //                    if (rb1.isChecked()) ||
 //                    (rb2.isChecked()) || (rb3.isChecked()) || (rb4.isChecked()) {

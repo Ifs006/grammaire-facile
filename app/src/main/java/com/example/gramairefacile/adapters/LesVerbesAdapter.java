@@ -1,7 +1,6 @@
 package com.example.gramairefacile.adapters;
 
 import android.content.Context;
-import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -11,7 +10,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.gramairefacile.R;
-import com.example.gramairefacile.database.LesVerbes;
+import com.example.gramairefacile.database.model.LesVerbes;
 
 import java.util.List;
 
@@ -73,4 +72,3 @@ public class LesVerbesAdapter extends RecyclerView.Adapter<LesVerbesAdapter.LesV
         }
     }
 }
-
