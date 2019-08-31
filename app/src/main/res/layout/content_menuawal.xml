@@ -15,7 +15,7 @@
         android:layout_height="133dp"
         android:layout_marginTop="116dp"
         android:layout_marginEnd="65dp"
-        android:background="@drawable/lespronom"
+        android:background="@drawable/bg_menu_lespronom"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/ibtn_lesverbes"
         app:layout_constraintTop_toTopOf="parent" />
@@ -27,7 +27,7 @@
         android:layout_marginStart="66dp"
         android:layout_marginTop="116dp"
         android:layout_marginEnd="56dp"
-        android:background="@drawable/lesferbes"
+        android:background="@drawable/bg_menu_lesverbes"
         app:layout_constraintEnd_toStartOf="@+id/ibtn_lespronom"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -40,7 +40,7 @@
         android:layout_marginTop="27dp"
         android:layout_marginEnd="56dp"
         android:layout_marginBottom="32dp"
-        android:background="@drawable/lesarticles"
+        android:background="@drawable/bg_menu_lesarticles"
         app:layout_constraintBottom_toTopOf="@+id/ibtn_lesconjonction"
         app:layout_constraintEnd_toStartOf="@+id/ibtn_lesadjectif"
         app:layout_constraintStart_toStartOf="parent"
@@ -52,7 +52,7 @@
         android:layout_height="133dp"
         android:layout_marginTop="27dp"
         android:layout_marginEnd="65dp"
-        android:background="@drawable/lesadjective"
+        android:background="@drawable/bg_menu_lesadjective"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/ibtn_lesarticles"
         app:layout_constraintTop_toBottomOf="@+id/ibtn_lespronom" />
@@ -64,7 +64,7 @@
         android:layout_marginStart="66dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="56dp"
-        android:background="@drawable/lesconjonction"
+        android:background="@drawable/bg_menu_lesconjonction"
         app:layout_constraintEnd_toStartOf="@+id/ibtn_interogatif"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ibtn_lesarticles" />
@@ -75,7 +75,7 @@
         android:layout_height="133dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="65dp"
-        android:background="@drawable/introgatif"
+        android:background="@drawable/bg_menu_introgatif"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/ibtn_lesconjonction"
         app:layout_constraintTop_toBottomOf="@+id/ibtn_lesadjectif" />

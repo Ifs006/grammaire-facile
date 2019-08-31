@@ -10,16 +10,18 @@ import com.example.gramairefacile.fragments.MateriFragmentPronom;
 public class ViewPagerAdapter extends FragmentStatePagerAdapter {
 
     public ViewPagerAdapter(LesPronomMateriActivity fm) {
-        super(fm);
+        super(fm.getSupportFragmentManager());
     }
 
     @Override
     public Fragment getItem(int position) {
         if (position == 2) {
-            return new OtherInfoFragment();
+//            return new OtherInfoFragment();
         } else {
-            return MateriFragmentPronom.getInstance(position);
+//            return MateriFragmentPronom.getInstance(position);
         }
+
+        return null;
     }
 
     @Override

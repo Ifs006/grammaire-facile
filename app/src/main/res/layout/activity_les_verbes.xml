@@ -15,7 +15,7 @@
         android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
         android:layout_height="80dp"
-        android:theme="@style/AppBarOverlay">
+        >
 
 
         <android.support.v7.widget.Toolbar
@@ -23,7 +23,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/tbmat"
-            app:popupTheme="@style/PopupOverlay">
+            >
 
         <TextView
             android:id="@+id/LesVerbes"
@@ -31,7 +31,7 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:textAlignment="center"
-            android:fontFamily="@font/warung_kopi"
+
             android:text="LES VERBES"
             android:textColor="@color/cardview_light_background"
             android:textSize="45sp" />

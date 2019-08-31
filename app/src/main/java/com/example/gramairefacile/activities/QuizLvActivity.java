@@ -44,24 +44,24 @@ public class QuizLvActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         QuizDbHelper dbHelper = new QuizDbHelper(this);
-        questionList = dbHelper.getAllQuestions();
-        questionCountTotal = questionList.size();
+//        questionList = dbHelper.getAllQuestions();
+//        questionCountTotal = questionList.size();
 
         showNextQuestion();
 
         ibtnContinue.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (!answered) {
-                    if (rb1.isChecked()) ||
-                    (rb2.isChecked()) || (rb3.isChecked()) || (rb4.isChecked()) {
-                        checkAnswer();
-                    }else{
-                        Toast.makeText(QuizLvActivity.this, "please select an answer", Toast.LENGTH_SHORT).show();
-                    }
-                } else {
-                    showNextQuestion();
-                }
+//                if (!answered) {
+//                    if (rb1.isChecked()) ||
+//                    (rb2.isChecked()) || (rb3.isChecked()) || (rb4.isChecked()) {
+//                        checkAnswer();
+//                    }else{
+//                        Toast.makeText(QuizLvActivity.this, "please select an answer", Toast.LENGTH_SHORT).show();
+//                    }
+//                } else {
+//                    showNextQuestion();
+//                }
             }
         });
 

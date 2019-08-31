@@ -10,14 +10,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#FCFCFC"
-        android:theme="@style/AppBarOverlay">
+        >
 
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:background="@drawable/nb_regulierre"
-            app:popupTheme="@style/PopupOverlay">
+            >
 
             <RelativeLayout
                 android:layout_width="match_parent"
