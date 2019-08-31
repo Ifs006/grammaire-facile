@@ -1,8 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorPrimary">@color/viking</color>
+    <color name="colorPrimaryDark">@color/viking</color>
     <color name="colorAccent">#D81B60</color>
+    <color name="colorWindowBackground">#EEEEEF</color>
+    <color name="colorPrimaryText">@color/tundora</color>
+    <color name="colorPrimaryTextLight">@color/white</color>
+    <color name="colorPrimaryTextHint">@color/alto1</color>
+    <color name="colorSecondaryText">@color/dustyGray</color>
 
-    <color name="colorBackground">#EEEEEF</color>
+    <color name="white">#ffffff</color>
+    <color name="colorTransparent">#00ffffff</color>
+    <color name="alto1">#d1d1d1</color>
+    <color name="dustyGray">#9b9b9b</color>
+    <color name="tundora">#4a4a4a</color>
+    <color name="viking">#5DC5E2</color>
+    <color name="chathamsBlue">#145569</color>
+    <color name="elm">#1B6D85</color>
+    <color name="colorShadow">#0F4C5E</color>
 </resources>

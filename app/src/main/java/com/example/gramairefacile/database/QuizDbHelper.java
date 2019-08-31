@@ -4,8 +4,6 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import java.util.List;
-
 public class QuizDbHelper extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "Gramairre_Facile.db";
     private static final int DATABASE_VERSION = 1;
@@ -19,14 +17,14 @@ public class QuizDbHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         this.db = db;
-        final String SQL_CREATE_QUESTIONS_TABLE = "CREATE TABLE" +
-                QuestionsTable.TABLE_NAME + " ( " +
+        final String SQL_CREATE_QUESTIONS_TABLE = "CREATE TABLE";
+//                QuestionsTable.TABLE_NAME + " ( " +
 
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        db.execSQL("DROP TABLE IF EXISTS " + QuestionsTable.TABLE_NAME);
+//        db.execSQL("DROP TABLE IF EXISTS " + QuestionsTable.TABLE_NAME);
     }
 
     private void fillQuestionsTable() {
@@ -34,17 +32,17 @@ public class QuizDbHelper extends SQLiteOpenHelper {
 
     }
 
-    private void addQuestion(Question question) {
-
-
-    }
-
-    public List<Question> getAllQuestions() {
-
-
-        c.close();
-        return questionList;
-    }
+//    private void addQuestion(Question question) {
+//
+//
+//    }
+//
+//    public List<Question> getAllQuestions() {
+//
+//
+//        c.close();
+//        return questionList;
+//    }
 
 
 }

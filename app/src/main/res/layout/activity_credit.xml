@@ -4,6 +4,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activities.CreditActivity"
-    android:background="@drawable/bgmat">
+    android:background="@drawable/bg_materi">
 
 </android.support.constraint.ConstraintLayout>

@@ -3,24 +3,28 @@ package com.example.gramairefacile.activities;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.widget.ImageButton;
+import android.widget.TextView;
 
 import com.example.gramairefacile.R;
+import com.example.gramairefacile.adapters.LesVerbesAdapter;
+import com.example.gramairefacile.database.model.LesVerbes;
+import com.example.gramairefacile.utils.ItemClickListener;
+import com.example.gramairefacile.utils.SimpleDividerItemDecoration;
 
-public class LesVerbesActivity extends AppCompatActivity implements View.OnClickListener {
+import java.util.ArrayList;
+import java.util.List;
+
+public class LesVerbesActivity extends AppCompatActivity {
 
     private Toolbar toolbar;
+    private TextView titleToolbar;
+    private RecyclerView recyclerView;
 
-    private ImageButton ibtnLvr;
-    private ImageButton ibtnLvir;
-    private ImageButton ibtnLcdp;
-    private ImageButton ibtnLn;
-    private ImageButton ibtnLfis;
-    private ImageButton ibtnLi;
-    private ImageButton ibtnPdi;
-
+    private LesVerbesAdapter lesVerbesAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,64 +36,37 @@ public class LesVerbesActivity extends AppCompatActivity implements View.OnClick
 
     private void initViews() {
         toolbar = findViewById(R.id.toolbar);
+        recyclerView = findViewById(R.id.recyclerview);
+        titleToolbar = findViewById(R.id.title_toolbar);
 
-        ibtnLvr = (ImageButton) findViewById(R.id.ibtn_Lvr);
-        ibtnLvir = (ImageButton) findViewById(R.id.ibtn_Lvr);
-        ibtnLcdp = (ImageButton) findViewById(R.id.ibtn_Lcdp);
-        ibtnLn = (ImageButton) findViewById(R.id.ibtn_Ln);
-        ibtnLfis = (ImageButton) findViewById(R.id.ibtn_Lfis);
-        ibtnLi = (ImageButton) findViewById(R.id.ibtn_Li);
-        ibtnPdi = (ImageButton) findViewById(R.id.ibtn_Pdi);
-        setSupportActionBar(toolbar);
+        titleToolbar.setText("Les Verbes");
 
+        List<LesVerbes> lesVerbes = new ArrayList<>();
+        lesVerbes.add(new LesVerbes(R.mipmap.ic_launcher, "Le Verbe Reguliere"));
+        lesVerbes.add(new LesVerbes(R.mipmap.ic_launcher, "Le Verbe Irreguliere"));
+        lesVerbes.add(new LesVerbes(R.mipmap.ic_launcher, "Le Conditionnel De Politesse"));
+        lesVerbes.add(new LesVerbes(R.mipmap.ic_launcher, "La Negation"));
+        lesVerbes.add(new LesVerbes(R.mipmap.ic_launcher, "La Forme Impersonnel Simple"));
+        lesVerbes.add(new LesVerbes(R.mipmap.ic_launcher, "L'Imperatif"));
+        lesVerbes.add(new LesVerbes(R.mipmap.ic_launcher, "Present De L'Indication"));
 
-        ibtnLvr.setOnClickListener(this);
-        ibtnLvir.setOnClickListener(this);
-        ibtnLcdp.setOnClickListener(this);
-        ibtnLn.setOnClickListener(this);
-        ibtnLfis.setOnClickListener(this);
-        ibtnLi.setOnClickListener(this);
-        ibtnPdi.setOnClickListener(this);
+        lesVerbesAdapter = new LesVerbesAdapter(this, lesVerbes);
 
+        recyclerView.setAdapter(lesVerbesAdapter);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setHasFixedSize(true);
+        recyclerView.addItemDecoration(new SimpleDividerItemDecoration(this, R.drawable.divider_dashed));
+        recyclerView.addOnItemTouchListener(new ItemClickListener(this, new ItemClickListener.OnItemClickListener() {
+            @Override
+            public void onItemClick(View view, int position) {
+                showDetail(position);
+            }
+        }));
     }
 
-    @Override
-    public void onClick(View v) {
-        Intent intent = null;
-        switch (v.getId()) {
-            case R.id.ibtn_Lvr: {
-                intent = new Intent(this, LesVerbesMateriActivity.class);
-                break;
-            }
-            case R.id.ibtn_Lvir: {
-                intent = new Intent(this, LesVerbesMateriActivity.class);
-                break;
-            }
-            case R.id.ibtn_Lcdp: {
-                intent = new Intent(this, LesVerbesMateriActivity.class);
-                break;
-            }
-            case R.id.ibtn_Ln: {
-                intent = new Intent(this, LesVerbesMateriActivity.class);
-                break;
-            }
-            case R.id.ibtn_Lfis: {
-                intent = new Intent(this, LesVerbesMateriActivity.class);
-                break;
-            }
-            case R.id.ibtn_Li: {
-                intent = new Intent(this, LesVerbesMateriActivity.class);
-                break;
-            }
-            case R.id.ibtn_Pdi: {
-                intent = new Intent(this, LesVerbesMateriActivity.class);
-                break;
-            }
-        }
-
-        if (intent != null)
-            startActivity(intent);
+    private void showDetail(int position) {
+        Intent intent = new Intent(this, LesVerbesMateriActivity.class);
+        startActivity(intent);
     }
-
 
 }
