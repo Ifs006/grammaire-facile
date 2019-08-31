@@ -11,10 +11,10 @@
         android:id="@+id/title_toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/caviar_dreams_bold"
+        android:fontFamily="@font/warung_kopi"
         android:gravity="center"
         android:textColor="@color/cardview_light_background"
-        android:textSize="32sp"
+        android:textSize="40sp"
         tools:text="LES VERBES" />
 
 </android.support.v7.widget.Toolbar>

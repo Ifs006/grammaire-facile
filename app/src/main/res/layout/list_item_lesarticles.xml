@@ -5,18 +5,18 @@
     android:padding="16dp">
 
     <ImageView
-        android:id="@+id/img_logo_verbes"
+        android:id="@+id/img_logo_articles"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:src="@mipmap/ic_launcher" />
 
     <TextView
-        android:id="@+id/tv_title_verbes"
+        android:id="@+id/tv_title_articles"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
         android:layout_marginLeft="20dp"
-        android:layout_toRightOf="@id/img_logo_verbes"
+        android:layout_toRightOf="@id/img_logo_articles"
         android:ellipsize="end"
         android:fontFamily="@font/warung_kopi"
         android:lines="1"
