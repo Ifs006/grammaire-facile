@@ -4,17 +4,17 @@
     tools:showIn="navigation_view">
 
     <group android:checkableBehavior="single">
-
         <item
             android:id="@+id/credit"
-            android:title="credit" />
+            android:title="Credit" />
+
         <item
             android:id="@+id/a_propos_de_lauteur"
-            android:title="a propos de l'auteur" />
+            android:title="A Propos De L'auteur" />
+
         <item
             android:id="@+id/les_aides"
-            android:title="les aides" />
+            android:title="Les Aides" />
+
     </group>
-
-
 </menu>

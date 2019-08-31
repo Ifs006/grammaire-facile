@@ -14,16 +14,14 @@
     <android.support.design.widget.AppBarLayout
         android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:theme="@style/AppBarOverlay">
+        android:layout_height="80dp">
 
 
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/tbmat"
-            app:popupTheme="@style/PopupOverlay">
+            android:background="@drawable/tbmat">
 
         <ImageButton
             android:id="@+id/quiz"
