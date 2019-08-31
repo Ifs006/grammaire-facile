@@ -22,8 +22,12 @@
 
         <activity
             android:screenOrientation="portrait"
-            android:name=".activities.MenuAwalActivity"
-            android:label="@string/title_activity_menuawal" />
+            android:name=".activities.MenuAwalActivity" />
+
+        <activity
+            android:theme="@style/AppTheme.Dark"
+            android:screenOrientation="portrait"
+            android:name=".activities.LesVerbesActivity" />
 
         <!-- Refactor code -->
         <activity
@@ -56,9 +60,6 @@
         <activity android:name=".activities.LesArticlesActivity" />
         <activity android:name=".activities.LesPronomActivity" />
         <activity android:name=".activities.CreditActivity" />
-        <activity
-            android:name=".activities.LesVerbesActivity"
-            android:label="@string/title_activity_les_verbes" />
     </application>
 
 </manifest>

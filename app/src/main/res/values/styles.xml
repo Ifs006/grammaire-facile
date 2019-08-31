@@ -18,15 +18,10 @@
         <item name="color">@color/white</item>
     </style>
 
-    <style name="AppTheme.Toolbar" parent="@style/Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme.Dark" parent="AppTheme">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
-
-        <item name="android:colorBackground">@color/colorWindowBackground</item>
-        <item name="android:textColorPrimary">@color/colorPrimaryText</item>
-        <item name="android:textColorSecondary">@color/colorSecondaryText</item>
+        <item name="colorPrimary">@color/chathamsBlue</item>
+        <item name="colorPrimaryDark">@color/chathamsBlue</item>
     </style>
 
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
