@@ -23,13 +23,13 @@
         </activity>
 
         <activity
-            android:name=".activities.MenuAwalActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:name=".activities.MenuAwalActivity" />
 
         <activity
-            android:name=".activities.LesVerbesActivity"
+            android:theme="@style/AppTheme.Dark"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.Dark" />
+            android:name=".activities.LesVerbesActivity" />
 
         <activity
             android:name=".activities.LesPronomActivity"
@@ -44,7 +44,7 @@
         <!-- Refactor code -->
         <activity
             android:name=".activities.LesAdjectifMateriActivity"
-            android:label="@string/title_activity_les_adjectif_materi" />
+            android:label="@string/title_activity_les_adjectif_materi"/>
         <activity
             android:name=".activities.LesPronomMateriActivity"
             android:label="@string/title_activity_les_pronom_materi" />
@@ -56,7 +56,7 @@
             android:label="@string/title_activity_interrogation" />
         <activity
             android:name=".activities.ConjonctionMateriActivity"
-            android:label="@string/title_activity_conjonction" />
+            android:label="@string/title_activity_conjonction"/>
         <activity
             android:name=".activities.LesAdjectifActivity"
             android:label="@string/title_activity_les_adjectif" />
@@ -64,9 +64,8 @@
             android:name=".activities.QuizLvActivity"
             android:label="@string/title_activity_quizlv1" />
         <activity
-            android:label="@string/title_activity_lvm1"
             android:name=".activities.LesVerbesMateriActivity"
-            android:theme="@style/AppTheme.Dark" />
+            android:label="@string/title_activity_lvm1"/>
         <activity
             android:name=".activities.RegularVerbActivity"
             android:label="@string/title_activity_regular_verb" />

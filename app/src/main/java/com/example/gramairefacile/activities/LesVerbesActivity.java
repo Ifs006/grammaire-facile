@@ -18,7 +18,7 @@ import com.example.gramairefacile.utils.SimpleDividerItemDecoration;
 import java.util.ArrayList;
 import java.util.List;
 
-public class LesVerbesActivity extends AppCompatActivity {
+public class LesVerbesActivity extends AppCompatActivity{
 
     private Toolbar toolbar;
     private TextView titleToolbar;
@@ -62,11 +62,11 @@ public class LesVerbesActivity extends AppCompatActivity {
                 showDetail(position);
             }
         }));
+
     }
 
-    private void showDetail(int position) {
+    private void showDetail(int position){
         Intent intent = new Intent(this, LesVerbesMateriActivity.class);
         startActivity(intent);
     }
-
 }

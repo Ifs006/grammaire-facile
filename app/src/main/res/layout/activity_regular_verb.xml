@@ -19,6 +19,4 @@
 
     <include layout="@layout/content_regular_verb" />
 
-
-
 </android.support.design.widget.CoordinatorLayout>

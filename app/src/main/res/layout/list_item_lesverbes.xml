@@ -2,6 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="@color/elm"
     android:padding="16dp">
 
     <ImageView
@@ -14,15 +15,15 @@
         android:id="@+id/tv_title_verbes"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
         android:layout_marginLeft="20dp"
+        android:textAllCaps="true"
+        android:layout_centerVertical="true"
         android:layout_toRightOf="@id/img_logo_verbes"
         android:ellipsize="end"
         android:fontFamily="@font/warung_kopi"
         android:lines="1"
         android:maxLines="1"
         android:text="Le Verbe Reguliere"
-        android:textAllCaps="true"
         android:textColor="@color/white"
         android:textSize="30sp" />
 </RelativeLayout>
