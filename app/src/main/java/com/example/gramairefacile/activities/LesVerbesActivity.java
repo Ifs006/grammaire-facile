@@ -39,16 +39,16 @@ public class LesVerbesActivity extends AppCompatActivity{
         recyclerView = findViewById(R.id.recyclerview);
         titleToolbar = findViewById(R.id.title_toolbar);
 
-        titleToolbar.setText("Les Verbes");
+        titleToolbar.setText("LES VERBES");
 
         List<LesVerbes> lesVerbes = new ArrayList<>();
-        lesVerbes.add(new LesVerbes(R.mipmap.ic_launcher, "Le Verbe Reguliere"));
-        lesVerbes.add(new LesVerbes(R.mipmap.ic_launcher, "Le Verbe Irreguliere"));
-        lesVerbes.add(new LesVerbes(R.mipmap.ic_launcher, "Le Conditionnel De Politesse"));
-        lesVerbes.add(new LesVerbes(R.mipmap.ic_launcher, "La Negation"));
-        lesVerbes.add(new LesVerbes(R.mipmap.ic_launcher, "La Forme Impersonnel Simple"));
-        lesVerbes.add(new LesVerbes(R.mipmap.ic_launcher, "L'Imperatif"));
-        lesVerbes.add(new LesVerbes(R.mipmap.ic_launcher, "Present De L'Indication"));
+        lesVerbes.add(new LesVerbes(R.drawable.icon_lesverbes, "LE VERBE RÉGULIER"));
+        lesVerbes.add(new LesVerbes(R.drawable.icon_lesverbes, "LE VERBE IRRÉGULIER"));
+        lesVerbes.add(new LesVerbes(R.drawable.icon_lesverbes, "LE CONDITIONNEL DE POLITESSE"));
+        lesVerbes.add(new LesVerbes(R.drawable.icon_lesverbes, "LA NÉGATION"));
+        lesVerbes.add(new LesVerbes(R.drawable.icon_lesverbes, "LA FORME IMPERSONNELLE SIMPLE"));
+        lesVerbes.add(new LesVerbes(R.drawable.icon_lesverbes, "L’IMPÉRATIF"));
+        lesVerbes.add(new LesVerbes(R.drawable.icon_lesverbes, "LA PRÉSENT DE L’INDICATIF"));
 
         lesVerbesAdapter = new LesVerbesAdapter(this, lesVerbes);
 

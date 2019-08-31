@@ -3,17 +3,28 @@ package com.example.gramairefacile.activities;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.widget.ImageButton;
+import android.widget.TextView;
 
 import com.example.gramairefacile.R;
+import com.example.gramairefacile.adapters.LesAdjectifAdapter;
+import com.example.gramairefacile.database.model.LesAdjectif;
+import com.example.gramairefacile.utils.ItemClickListener;
+import com.example.gramairefacile.utils.SimpleDividerItemDecoration;
 
-public class LesAdjectifActivity extends AppCompatActivity implements View.OnClickListener {
-    private ImageButton ibtnLap;
-    private ImageButton ibtnLade;
-    private ImageButton ibtnLaq;
+import java.util.ArrayList;
+import java.util.List;
+
+public class LesAdjectifActivity extends AppCompatActivity {
+
     private Toolbar toolbar;
+    private TextView titleToolbar;
+    private RecyclerView recyclerView;
+
+    private LesAdjectifAdapter lesAdjectifAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,38 +37,38 @@ public class LesAdjectifActivity extends AppCompatActivity implements View.OnCli
 
     private void initView() {
         toolbar = findViewById(R.id.toolbar);
-
-        ibtnLap = (ImageButton) findViewById(R.id.ibtn_Lap);
-        ibtnLade = (ImageButton) findViewById(R.id.ibtn_Lade);
-        ibtnLaq = (ImageButton) findViewById(R.id.ibtn_Laq);
         setSupportActionBar(toolbar);
+        toolbar = findViewById(R.id.toolbar);
+        recyclerView = findViewById(R.id.recyclerview);
+        titleToolbar = findViewById(R.id.title_toolbar);
 
-        ibtnLap.setOnClickListener(this);
-        ibtnLade.setOnClickListener(this);
-        ibtnLaq.setOnClickListener(this);
+        titleToolbar.setText("LES ADJECTIFS");
+
+        List<LesAdjectif> lesAdjectif = new ArrayList<>();
+        lesAdjectif.add(new LesAdjectif(R.drawable.icon_lesadjectif, "L’ADJECTIFS POSSESSIF"));
+        lesAdjectif.add(new LesAdjectif(R.drawable.icon_lesadjectif, "L’ADJECTIFS DÉMONSTRATIF"));
+        lesAdjectif.add(new LesAdjectif(R.drawable.icon_lesadjectif, "L’ADJECTIFS QUALIFICATIFS"));
+
+        lesAdjectifAdapter = new LesAdjectifAdapter(this, lesAdjectif);
+
+        recyclerView.setAdapter(lesAdjectifAdapter);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setHasFixedSize(true);
+        recyclerView.addItemDecoration(new SimpleDividerItemDecoration(this, R.drawable.divider_dashed));
+        recyclerView.addOnItemTouchListener(new ItemClickListener(this, new ItemClickListener.OnItemClickListener() {
+            @Override
+            public void onItemClick(View view, int position) {
+                showDetail(position);
+            }
+        }));
     }
 
-
-    @Override
-    public void onClick(View v) {
-        Intent intent = null;
-        switch (v.getId()) {
-            case R.id.ibtn_Lap: {
-                intent = new Intent(this, LesAdjectifMateriActivity.class);
-                break;
-            }
-            case R.id.ibtn_Lade: {
-                intent = new Intent(this, LesAdjectifMateriActivity.class);
-                break;
-            }
-            case R.id.ibtn_Laq: {
-                intent = new Intent(this, LesAdjectifMateriActivity.class);
-                break;
-            }
-        }
-        if (intent != null)
-            startActivity(intent);
-
+    public void showDetail(int position) {
+        Intent intent = new Intent(this, LesAdjectifMateriActivity.class);
+        startActivity(intent);
     }
+
 
 }
+
+

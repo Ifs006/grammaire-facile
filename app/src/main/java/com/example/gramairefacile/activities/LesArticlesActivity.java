@@ -3,17 +3,27 @@ package com.example.gramairefacile.activities;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.widget.ImageButton;
+import android.widget.TextView;
 
 import com.example.gramairefacile.R;
+import com.example.gramairefacile.adapters.LesArticlesAdapter;
+import com.example.gramairefacile.database.model.LesArticles;
+import com.example.gramairefacile.utils.ItemClickListener;
+import com.example.gramairefacile.utils.SimpleDividerItemDecoration;
 
-public class LesArticlesActivity extends AppCompatActivity implements View.OnClickListener {
-    private ImageButton ibtnLad;
-    private ImageButton ibtnLai;
-    private ImageButton ibtnLap;
+import java.util.ArrayList;
+import java.util.List;
+
+public class LesArticlesActivity extends AppCompatActivity {
     private Toolbar toolbar;
+    private TextView titleToolbar;
+    private RecyclerView recyclerView;
+
+    private LesArticlesAdapter lesArticlesAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,37 +36,36 @@ public class LesArticlesActivity extends AppCompatActivity implements View.OnCli
 
     private void initView() {
         toolbar = findViewById(R.id.toolbar);
-
-        ibtnLad = (ImageButton) findViewById(R.id.ibtn_Lad);
-        ibtnLai = (ImageButton) findViewById(R.id.ibtn_Lai);
-        ibtnLap = (ImageButton) findViewById(R.id.ibtn_Lap);
         setSupportActionBar(toolbar);
 
-        ibtnLad.setOnClickListener(this);
-        ibtnLai.setOnClickListener(this);
-        ibtnLap.setOnClickListener(this);
+        toolbar = findViewById(R.id.toolbar);
+        recyclerView = findViewById(R.id.recyclerview);
+        titleToolbar = findViewById(R.id.title_toolbar);
 
+        titleToolbar.setText("LES ARTICLES");
+
+        List<LesArticles> lesArticles = new ArrayList<>();
+        lesArticles.add(new LesArticles(R.drawable.icon_lesarticles, "LES ARTICLES DÉFINIS"));
+        lesArticles.add(new LesArticles(R.drawable.icon_lesarticles, "LES ARTICLES INDÉFINIS"));
+        lesArticles.add(new LesArticles(R.drawable.icon_lesarticles, "LES ARTICLES PARTITIFS"));
+
+        lesArticlesAdapter = new LesArticlesAdapter(this, lesArticles);
+
+        recyclerView.setAdapter(lesArticlesAdapter);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setHasFixedSize(true);
+        recyclerView.addItemDecoration(new SimpleDividerItemDecoration(this, R.drawable.divider_dashed));
+        recyclerView.addOnItemTouchListener(new ItemClickListener(this, new ItemClickListener.OnItemClickListener() {
+            @Override
+            public void onItemClick(View view, int position) {
+                showDetail(position);
+            }
+        }));
     }
 
-    @Override
-    public void onClick(View v) {
-        Intent intent = null;
-        switch (v.getId()) {
-            case R.id.ibtn_Lad: {
-                intent = new Intent(this, LesArticleMateriActivity.class);
-                break;
-            }
-            case R.id.ibtn_Lai: {
-                intent = new Intent(this, LesArticleMateriActivity.class);
-                break;
-            }
-            case R.id.ibtn_Lap: {
-                intent = new Intent(this, LesArticleMateriActivity.class);
-                break;
-            }
-        }
-
-        if (intent != null)
-            startActivity(intent);
+    public void showDetail(int position) {
+        Intent intent = new Intent(this, LesPronomMateriActivity.class);
+        startActivity(intent);
     }
+
 }
