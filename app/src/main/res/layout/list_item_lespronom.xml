@@ -20,7 +20,7 @@
         android:ellipsize="end"
         android:fontFamily="@font/warung_kopi"
         android:lines="1"
-        android:maxLines="1"
+        android:maxLines="2"
         android:text="Le Verbe Reguliere"
         android:textAllCaps="true"
         android:textColor="@color/white"

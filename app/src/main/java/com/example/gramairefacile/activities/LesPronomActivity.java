@@ -44,7 +44,7 @@ public class LesPronomActivity extends AppCompatActivity {
         titleToolbar.setText("LES PRONOMS");
 
         List<LesPronom> lesPronoms = new ArrayList<>();
-        lesPronoms.add(new LesPronom(R.drawable.ic_icon_lespronom, "LES PRONOMS PERSONNELS SUJETS"));
+        lesPronoms.add(new LesPronom(R.drawable.ic_icon_lespronom, "LES PRONOMS \n" + "PERSONNELS SUJETS"));
         lesPronoms.add(new LesPronom(R.drawable.ic_icon_lespronom, "LES PRONOMS TONIQUES"));
         lesPronoms.add(new LesPronom(R.drawable.ic_icon_lespronom, "LES INTÉROGATIFS SIMPLES"));
 
