@@ -13,6 +13,7 @@ import com.example.gramairefacile.R;
 import com.example.gramairefacile.adapters.LesVerbesAdapter;
 import com.example.gramairefacile.database.DatabaseHelper;
 import com.example.gramairefacile.database.model.LesVerbes;
+import com.example.gramairefacile.utils.Constants;
 import com.example.gramairefacile.utils.ItemClickListener;
 import com.example.gramairefacile.utils.SimpleDividerItemDecoration;
 
@@ -27,6 +28,7 @@ public class LesVerbesActivity extends AppCompatActivity{
 
     private LesVerbesAdapter lesVerbesAdapter;
     private DatabaseHelper db;
+    private List<LesVerbes> dataList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,7 +48,7 @@ public class LesVerbesActivity extends AppCompatActivity{
 
         titleToolbar.setText("LES VERBES");
 
-        List<LesVerbes> dataList = db.getMateriByType(LesVerbes.class);
+        dataList = db.getMateriByType(LesVerbes.class);
         lesVerbesAdapter = new LesVerbesAdapter(this, dataList);
 
         recyclerView.setAdapter(lesVerbesAdapter);
@@ -63,7 +65,12 @@ public class LesVerbesActivity extends AppCompatActivity{
     }
 
     private void showDetail(int position){
-        Intent intent = new Intent(this, LesVerbesMateriActivity.class);
+        LesVerbes data = dataList.get(position);
+
+        Intent intent = new Intent(this, DetailMateriActivity.class);
+        intent.putExtra(Constants.EXTRA_ID, data.getId());
+        intent.putExtra(Constants.EXTRA_TITLE, data.getTitle());
+        intent.putExtra(Constants.EXTRA_CONTENTS, data.getContents());
         startActivity(intent);
     }
 }

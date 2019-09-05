@@ -2,6 +2,11 @@ package com.example.gramairefacile.utils;
 
 public class Constants {
 
+    // EXTRA
+    public static String EXTRA_ID = "id";
+    public static String EXTRA_TITLE = "title";
+    public static String EXTRA_CONTENTS = "contents";
+
     public static class Materi {
         // TYPE MATERI
         public static int TYPE_VERB = 1;

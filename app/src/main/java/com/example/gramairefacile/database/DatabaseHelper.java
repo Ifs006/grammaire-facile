@@ -170,6 +170,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                     articles.setIcon(R.drawable.icon_lesarticles);
                     articles.setId(cursor.getInt(cursor.getColumnIndex(Materi.COLUMN_ID)));
                     articles.setTitle(cursor.getString(cursor.getColumnIndex(Materi.COLUMN_TITLE)));
+                    articles.setContents(cursor.getString(cursor.getColumnIndex(Materi.COLUMN_CONTENTS)));
                     materies.add((T) articles);
                 } while (cursor.moveToNext());
             } else if (dataClass == LesVerbes.class) {
@@ -178,6 +179,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                     verbes.setIcon(R.drawable.icon_lesverbes);
                     verbes.setId(cursor.getInt(cursor.getColumnIndex(Materi.COLUMN_ID)));
                     verbes.setTitle(cursor.getString(cursor.getColumnIndex(Materi.COLUMN_TITLE)));
+                    verbes.setContents(cursor.getString(cursor.getColumnIndex(Materi.COLUMN_CONTENTS)));
                     materies.add((T) verbes);
                 } while (cursor.moveToNext());
             } else if (dataClass == LesPronom.class) {
@@ -186,6 +188,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                     pronom.setIcon(R.drawable.icon_lespronom);
                     pronom.setId(cursor.getInt(cursor.getColumnIndex(Materi.COLUMN_ID)));
                     pronom.setTitle(cursor.getString(cursor.getColumnIndex(Materi.COLUMN_TITLE)));
+                    pronom.setContents(cursor.getString(cursor.getColumnIndex(Materi.COLUMN_CONTENTS)));
                     materies.add((T) pronom);
                 } while (cursor.moveToNext());
             }

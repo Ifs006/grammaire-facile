@@ -10,6 +10,7 @@ import android.widget.TextView;
 import com.example.gramairefacile.R;
 
 public class LesVerbesMateriActivity extends AppCompatActivity {
+
     ImageButton pindah;
     TextView teks;
 
@@ -22,9 +23,8 @@ public class LesVerbesMateriActivity extends AppCompatActivity {
 
 
         teks = (TextView) findViewById(R.id.VerbeRegulierre);
-        Typeface customfont=Typeface.createFromAsset(getAssets(),"font/Warung Kopi.otf");
+        Typeface customfont = Typeface.createFromAsset(getAssets(), "font/Warung Kopi.otf");
         teks.setTypeface(customfont);
+    }
 
-
-};
 }
