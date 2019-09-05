@@ -11,7 +11,7 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 
 import com.example.gramairefacile.R;
-import com.example.gramairefacile.database.QuizDbHelper;
+import com.example.gramairefacile.database.DatabaseHelper;
 
 public class QuizLvActivity extends AppCompatActivity {
     private Toolbar toolbar;
@@ -42,7 +42,7 @@ public class QuizLvActivity extends AppCompatActivity {
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        QuizDbHelper dbHelper = new QuizDbHelper(this);
+        DatabaseHelper dbHelper = new DatabaseHelper(this);
 //        questionList = dbHelper.getAllQuestions();
 //        questionCountTotal = questionList.size();
 

@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 import com.example.gramairefacile.R;
 import com.example.gramairefacile.adapters.LesPronomAdapter;
+import com.example.gramairefacile.database.DatabaseHelper;
 import com.example.gramairefacile.database.model.LesPronom;
 import com.example.gramairefacile.utils.ItemClickListener;
 import com.example.gramairefacile.utils.SimpleDividerItemDecoration;
@@ -25,15 +26,17 @@ public class LesPronomActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
 
     private LesPronomAdapter lesPronomsAdapter;
-
+    private DatabaseHelper db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_les_pronom);
 
-        initView();
+        // Initialize database helper
+        db = new DatabaseHelper(this);
 
+        initView();
     }
 
     private void initView() {
@@ -43,12 +46,8 @@ public class LesPronomActivity extends AppCompatActivity {
 
         titleToolbar.setText("LES PRONOMS");
 
-        List<LesPronom> lesPronoms = new ArrayList<>();
-        lesPronoms.add(new LesPronom(R.drawable.icon_lespronom, "LES PRONOMS PERSONNELS SUJETS"));
-        lesPronoms.add(new LesPronom(R.drawable.icon_lespronom, "LES PRONOMS TONIQUES"));
-        lesPronoms.add(new LesPronom(R.drawable.icon_lespronom, "LES INTÉROGATIFS SIMPLES"));
-
-        lesPronomsAdapter = new LesPronomAdapter(this, lesPronoms);
+        List<LesPronom> dataList = db.getMateriByType(LesPronom.class);
+        lesPronomsAdapter = new LesPronomAdapter(this, dataList);
 
         recyclerView.setAdapter(lesPronomsAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));

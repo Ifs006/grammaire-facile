@@ -45,9 +45,9 @@ public class LesArticlesActivity extends AppCompatActivity {
         titleToolbar.setText("LES ARTICLES");
 
         List<LesArticles> lesArticles = new ArrayList<>();
-        lesArticles.add(new LesArticles(R.drawable.icon_lesarticles, "LES ARTICLES DÉFINIS"));
-        lesArticles.add(new LesArticles(R.drawable.icon_lesarticles, "LES ARTICLES INDÉFINIS"));
-        lesArticles.add(new LesArticles(R.drawable.icon_lesarticles, "LES ARTICLES PARTITIFS"));
+//        lesArticles.add(new LesArticles(R.drawable.icon_lesarticles, "LES ARTICLES DÉFINIS"));
+//        lesArticles.add(new LesArticles(R.drawable.icon_lesarticles, "LES ARTICLES INDÉFINIS"));
+//        lesArticles.add(new LesArticles(R.drawable.icon_lesarticles, "LES ARTICLES PARTITIFS"));
 
         lesArticlesAdapter = new LesArticlesAdapter(this, lesArticles);
 

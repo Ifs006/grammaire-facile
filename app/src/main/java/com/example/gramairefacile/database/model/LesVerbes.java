@@ -2,12 +2,17 @@ package com.example.gramairefacile.database.model;
 
 public class LesVerbes {
 
+    private int id;
     private int icon;
     private String title;
+    private String contents;
 
-    public LesVerbes(int icon, String title) {
-        this.icon = icon;
-        this.title = title;
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public int getIcon() {
@@ -24,5 +29,13 @@ public class LesVerbes {
 
     public void setTitle(String title) {
         this.title = title;
+    }
+
+    public String getContents() {
+        return contents;
+    }
+
+    public void setContents(String contents) {
+        this.contents = contents;
     }
 }

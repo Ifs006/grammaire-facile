@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import com.example.gramairefacile.R;
 import com.example.gramairefacile.adapters.LesVerbesAdapter;
+import com.example.gramairefacile.database.DatabaseHelper;
 import com.example.gramairefacile.database.model.LesVerbes;
 import com.example.gramairefacile.utils.ItemClickListener;
 import com.example.gramairefacile.utils.SimpleDividerItemDecoration;
@@ -25,32 +26,28 @@ public class LesVerbesActivity extends AppCompatActivity{
     private RecyclerView recyclerView;
 
     private LesVerbesAdapter lesVerbesAdapter;
+    private DatabaseHelper db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_les_verbes);
 
+        // Initialize database helper
+        db = new DatabaseHelper(this);
+
         initViews();
     }
 
     private void initViews() {
         toolbar = findViewById(R.id.toolbar);
-        recyclerView = findViewById(R.id.recyclerview);
+        recyclerView = findViewById(R.id.reyclerview);
         titleToolbar = findViewById(R.id.title_toolbar);
 
         titleToolbar.setText("LES VERBES");
 
-        List<LesVerbes> lesVerbes = new ArrayList<>();
-        lesVerbes.add(new LesVerbes(R.drawable.icon_lesverbes, "LE VERBE RÉGULIER"));
-        lesVerbes.add(new LesVerbes(R.drawable.icon_lesverbes, "LE VERBE IRRÉGULIER"));
-        lesVerbes.add(new LesVerbes(R.drawable.icon_lesverbes, "LE CONDITIONNEL DE POLITESSE"));
-        lesVerbes.add(new LesVerbes(R.drawable.icon_lesverbes, "LA NÉGATION"));
-        lesVerbes.add(new LesVerbes(R.drawable.icon_lesverbes, "LA FORME IMPERSONNELLE SIMPLE"));
-        lesVerbes.add(new LesVerbes(R.drawable.icon_lesverbes, "L’IMPÉRATIF"));
-        lesVerbes.add(new LesVerbes(R.drawable.icon_lesverbes, "LA PRÉSENT DE L’INDICATIF"));
-
-        lesVerbesAdapter = new LesVerbesAdapter(this, lesVerbes);
+        List<LesVerbes> dataList = db.getMateriByType(LesVerbes.class);
+        lesVerbesAdapter = new LesVerbesAdapter(this, dataList);
 
         recyclerView.setAdapter(lesVerbesAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
