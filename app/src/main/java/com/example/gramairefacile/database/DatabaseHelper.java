@@ -36,11 +36,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     // Pretty print
     private static Gson gson = new GsonBuilder().setPrettyPrinting().create();
 
-    // JSON to List
-    public static <T> List<T> toList(String json, Class<T> typeClass) {
-        Type listType = new TypeToken<ArrayList<T>>() {
-        }.getType();
-        return gson.fromJson(json, listType);
+    // Convert JSON to Array
+    public static int[] toArray(String json) {
+        return gson.fromJson(json, int[].class);
     }
 
     public DatabaseHelper(Context context) {
@@ -63,47 +61,18 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     private void initData() {
         // GENERATE MATERI VERB
-        addNewMateri(Constants.Materi.TYPE_VERB, "LE VERBE RÉGULIER", new ArrayList<Integer>() {{
-            add(R.drawable.verb1_content1);
-        }});
-        addNewMateri(Constants.Materi.TYPE_VERB, "LE VERBE IRRÉGULIER", new ArrayList<Integer>() {{
-            add(R.drawable.verb2_content1);
-            add(R.drawable.verb2_content2);
-        }});
-        addNewMateri(Constants.Materi.TYPE_VERB, "LE CONDITIONNEL DE POLITESSE", new ArrayList<Integer>() {{
-            add(R.drawable.verb3_content1);
-        }});
-        addNewMateri(Constants.Materi.TYPE_VERB, "LA NÉGATION", new ArrayList<Integer>() {{
-            add(R.drawable.verb4_content1);
-            add(R.drawable.verb4_content2);
-        }});
-        addNewMateri(Constants.Materi.TYPE_VERB, "LA FORME IMPERSONNELLE SIMPLE", new ArrayList<Integer>() {{
-            add(R.drawable.verb5_content1);
-            add(R.drawable.verb5_content2);
-        }});
-        addNewMateri(Constants.Materi.TYPE_VERB, "L’IMPÉRATIF", new ArrayList<Integer>() {{
-            add(R.drawable.verb6_content1);
-            add(R.drawable.verb6_content2);
-        }});
-        addNewMateri(Constants.Materi.TYPE_VERB, "LA PRÉSENT DE L’INDICATIF", new ArrayList<Integer>() {{
-            add(R.drawable.verb7_content1);
-            add(R.drawable.verb7_content2);
-            add(R.drawable.verb7_content3);
-            add(R.drawable.verb7_content4);
-        }});
+        addNewMateri(Constants.Materi.TYPE_VERB, "LE VERBE RÉGULIER", new int[]{R.drawable.verb1_content1});
+        addNewMateri(Constants.Materi.TYPE_VERB, "LE VERBE IRRÉGULIER", new int[]{R.drawable.verb2_content1, R.drawable.verb2_content2});
+        addNewMateri(Constants.Materi.TYPE_VERB, "LE CONDITIONNEL DE POLITESSE", new int[]{R.drawable.verb3_content1});
+        addNewMateri(Constants.Materi.TYPE_VERB, "LA NÉGATION", new int[]{R.drawable.verb4_content1, R.drawable.verb4_content2});
+        addNewMateri(Constants.Materi.TYPE_VERB, "LA FORME IMPERSONNELLE SIMPLE", new int[]{R.drawable.verb5_content1, R.drawable.verb5_content2});
+        addNewMateri(Constants.Materi.TYPE_VERB, "L’IMPÉRATIF", new int[]{R.drawable.verb6_content1, R.drawable.verb6_content2});
+        addNewMateri(Constants.Materi.TYPE_VERB, "LA PRÉSENT DE L’INDICATIF", new int[]{R.drawable.verb7_content1, R.drawable.verb7_content2, R.drawable.verb7_content3, R.drawable.verb7_content4});
 
         // GENERATE MATERI PRONOM
-        addNewMateri(Constants.Materi.TYPE_PRONOM, "LES PRONOMS PERSONNELS SUJETS", new ArrayList<Integer>() {{
-            add(R.drawable.pronom1_content1);
-        }});
-        addNewMateri(Constants.Materi.TYPE_PRONOM, "LES PRONOMS TONIQUES", new ArrayList<Integer>() {{
-            add(R.drawable.pronom2_content1);
-            add(R.drawable.pronom2_content2);
-        }});
-        addNewMateri(Constants.Materi.TYPE_PRONOM, "LES INTÉROGATIFS SIMPLES", new ArrayList<Integer>() {{
-            add(R.drawable.pronom3_content1);
-            add(R.drawable.pronom3_content2);
-        }});
+        addNewMateri(Constants.Materi.TYPE_PRONOM, "LES PRONOMS PERSONNELS SUJETS", new int[]{R.drawable.pronom1_content1});
+        addNewMateri(Constants.Materi.TYPE_PRONOM, "LES PRONOMS TONIQUES", new int[]{R.drawable.pronom2_content1, R.drawable.pronom2_content2});
+        addNewMateri(Constants.Materi.TYPE_PRONOM, "LES INTÉROGATIFS SIMPLES", new int[]{R.drawable.pronom3_content1});
     }
 
     // Upgrading database
@@ -117,13 +86,15 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-    public long addNewMateri(int type, String title, List<Integer> contents) {
+    public long addNewMateri(int type, String title, int[] contents) {
         ContentValues values = new ContentValues();
         // `id` will be inserted automatically.
         // no need to add them
         values.put(Materi.COLUMN_TYPE, type);
         values.put(Materi.COLUMN_TITLE, title);
         values.put(Materi.COLUMN_CONTENTS, gson.toJson(contents));
+
+        Log.i("@@@", gson.toJson(contents));
 
         // insert row
         long id = db.insert(Materi.TABLE_NAME, null, values);
