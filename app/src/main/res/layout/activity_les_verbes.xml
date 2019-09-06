@@ -8,8 +8,8 @@
     tools:context=".activities.LesVerbesActivity">
 
     <View
-        android:layout_width="match_parent"
         android:layout_height="4dp"
+        android:layout_width="match_parent"
         android:background="@color/colorShadow" />
 
     <android.support.v7.widget.RecyclerView
@@ -20,15 +20,5 @@
     <include
         android:id="@+id/toolbar"
         layout="@layout/toolbar" />
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="4dp"
-        android:background="@color/colorShadow" />
-
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/recyclerview"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
 </LinearLayout>
 

@@ -41,6 +41,11 @@
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.Dark" />
 
+        <activity
+            android:name=".activities.DetailMateriActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.Dark" />
+
         <!-- Refactor code -->
         <activity
             android:name=".activities.LesAdjectifMateriActivity"

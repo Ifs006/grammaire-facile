@@ -45,9 +45,9 @@ public class LesAdjectifActivity extends AppCompatActivity {
         titleToolbar.setText("LES ADJECTIFS");
 
         List<LesAdjectif> lesAdjectif = new ArrayList<>();
-        lesAdjectif.add(new LesAdjectif(R.drawable.ic_icon_lesadjectif, "L’ADJECTIFS POSSESSIF"));
-        lesAdjectif.add(new LesAdjectif(R.drawable.ic_icon_lesadjectif, "L’ADJECTIFS DÉMONSTRATIF"));
-        lesAdjectif.add(new LesAdjectif(R.drawable.ic_icon_lesadjectif, "L’ADJECTIFS QUALIFICATIFS"));
+//        lesAdjectif.add(new LesAdjectif(R.drawable.icon_lesadjectif, "L’ADJECTIFS POSSESSIF"));
+//        lesAdjectif.add(new LesAdjectif(R.drawable.icon_lesadjectif, "L’ADJECTIFS DÉMONSTRATIF"));
+//        lesAdjectif.add(new LesAdjectif(R.drawable.icon_lesadjectif, "L’ADJECTIFS QUALIFICATIFS"));
 
         lesAdjectifAdapter = new LesAdjectifAdapter(this, lesAdjectif);
 

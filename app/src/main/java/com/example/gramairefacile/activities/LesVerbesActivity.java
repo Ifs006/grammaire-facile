@@ -11,11 +11,12 @@ import android.widget.TextView;
 
 import com.example.gramairefacile.R;
 import com.example.gramairefacile.adapters.LesVerbesAdapter;
+import com.example.gramairefacile.database.DatabaseHelper;
 import com.example.gramairefacile.database.model.LesVerbes;
+import com.example.gramairefacile.utils.Constants;
 import com.example.gramairefacile.utils.ItemClickListener;
 import com.example.gramairefacile.utils.SimpleDividerItemDecoration;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class LesVerbesActivity extends AppCompatActivity {
@@ -25,6 +26,8 @@ public class LesVerbesActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
 
     private LesVerbesAdapter lesVerbesAdapter;
+    private DatabaseHelper db;
+    private List<LesVerbes> dataList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,21 +39,13 @@ public class LesVerbesActivity extends AppCompatActivity {
 
     private void initViews() {
         toolbar = findViewById(R.id.toolbar);
-        recyclerView = findViewById(R.id.recyclerview);
+        recyclerView = findViewById(R.id.reyclerview);
         titleToolbar = findViewById(R.id.title_toolbar);
 
         titleToolbar.setText("LES VERBES");
 
-        List<LesVerbes> lesVerbes = new ArrayList<>();
-        lesVerbes.add(new LesVerbes(R.drawable.ic_icon_lesverbes, "LE VERBE RÉGULIER"));
-        lesVerbes.add(new LesVerbes(R.drawable.ic_icon_lesverbes, "LE VERBE IRRÉGULIER"));
-        lesVerbes.add(new LesVerbes(R.drawable.ic_icon_lesverbes, "LE CONDITIONNEL DE POLITESSE"));
-        lesVerbes.add(new LesVerbes(R.drawable.ic_icon_lesverbes, "LA NÉGATION"));
-        lesVerbes.add(new LesVerbes(R.drawable.ic_icon_lesverbes, "LA FORME IMPERSONNELLE SIMPLE"));
-        lesVerbes.add(new LesVerbes(R.drawable.ic_icon_lesverbes, "L’IMPÉRATIF"));
-        lesVerbes.add(new LesVerbes(R.drawable.ic_icon_lesverbes, "LA PRÉSENT DE L’INDICATIF"));
-
-        lesVerbesAdapter = new LesVerbesAdapter(this, lesVerbes);
+        dataList = db.getMateriByType(LesVerbes.class);
+        lesVerbesAdapter = new LesVerbesAdapter(this, dataList);
 
         recyclerView.setAdapter(lesVerbesAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -62,11 +57,16 @@ public class LesVerbesActivity extends AppCompatActivity {
                 showDetail(position);
             }
         }));
+
     }
 
     private void showDetail(int position) {
-        Intent intent = new Intent(this, LesVerbesMateriActivity.class);
+        LesVerbes data = dataList.get(position);
+
+        Intent intent = new Intent(this, DetailMateriActivity.class);
+        intent.putExtra(Constants.EXTRA_ID, data.getId());
+        intent.putExtra(Constants.EXTRA_TITLE, data.getTitle());
+        intent.putExtra(Constants.EXTRA_CONTENTS, data.getContents());
         startActivity(intent);
     }
-
 }

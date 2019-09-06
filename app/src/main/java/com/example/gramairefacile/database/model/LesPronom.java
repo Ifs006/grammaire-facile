@@ -1,13 +1,17 @@
 package com.example.gramairefacile.database.model;
 
 public class LesPronom {
-
+    private int id;
     private int icon;
     private String title;
+    private String contents;
 
-    public LesPronom(int icon, String title) {
-        this.icon = icon;
-        this.title = title;
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public int getIcon() {
@@ -24,5 +28,13 @@ public class LesPronom {
 
     public void setTitle(String title) {
         this.title = title;
+    }
+
+    public String getContents() {
+        return contents;
+    }
+
+    public void setContents(String contents) {
+        this.contents = contents;
     }
 }
