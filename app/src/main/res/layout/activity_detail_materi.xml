@@ -80,6 +80,7 @@
             android:background="@drawable/bg_card_top_rounded">
 
             <LinearLayout
+                android:padding="16dp"
                 android:id="@+id/content_container"
                 android:orientation="vertical"
                 android:layout_width="match_parent"

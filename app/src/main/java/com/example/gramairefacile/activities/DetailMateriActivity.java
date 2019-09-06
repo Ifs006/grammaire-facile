@@ -63,8 +63,8 @@ public class DetailMateriActivity extends AppCompatActivity {
         int imageWidth = bd.getIntrinsicWidth();
 
         ImageView imageView = new ImageView(this);
-        imageView.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, imageHeight));
-        imageView.setScaleType(ImageView.ScaleType.FIT_XY);
+        imageView.setLayoutParams(new LinearLayout.LayoutParams(imageWidth, imageHeight));
+//        imageView.setScaleType(ImageView.ScaleType.FIT_XY);
         imageView.setImageResource(resource);
 
         contentContainer.addView(imageView);
