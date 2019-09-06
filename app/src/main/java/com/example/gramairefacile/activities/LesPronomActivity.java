@@ -14,6 +14,8 @@ import com.example.gramairefacile.R;
 import com.example.gramairefacile.adapters.LesPronomAdapter;
 import com.example.gramairefacile.database.DatabaseHelper;
 import com.example.gramairefacile.database.model.LesPronom;
+import com.example.gramairefacile.database.model.LesVerbes;
+import com.example.gramairefacile.utils.Constants;
 import com.example.gramairefacile.utils.ItemClickListener;
 import com.example.gramairefacile.utils.SimpleDividerItemDecoration;
 
@@ -26,6 +28,7 @@ public class LesPronomActivity extends AppCompatActivity {
 
     private LesPronomAdapter lesPronomsAdapter;
     private DatabaseHelper db;
+    private List<LesVerbes> dataList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,8 +64,13 @@ public class LesPronomActivity extends AppCompatActivity {
         }));
     }
 
-    public void showDetail(int position) {
-        Intent intent = new Intent(this, LesPronomMateriActivity.class);
+    private void showDetail(int position) {
+        LesVerbes data = dataList.get(position);
+
+        Intent intent = new Intent(this, DetailMateriActivity.class);
+        intent.putExtra(Constants.EXTRA_ID, data.getId());
+        intent.putExtra(Constants.EXTRA_TITLE, data.getTitle());
+        intent.putExtra(Constants.EXTRA_CONTENTS, data.getContents());
         startActivity(intent);
     }
 }

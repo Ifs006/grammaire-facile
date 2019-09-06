@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/bg_materi"
     android:orientation="vertical"
-    tools:context=".activities.LesPronomActivity">
+    tools:context=".activities.LesArticlesActivity">
 
     <include
         android:id="@+id/toolbar"

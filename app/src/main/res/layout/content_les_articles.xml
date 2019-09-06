@@ -5,9 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".activities.LesVerbesActivity"
+    tools:context=".activities.LesArticlesActivity"
     tools:showIn="@layout/activity_les_articles">
-
 
     <ScrollView
         android:layout_width="match_parent"

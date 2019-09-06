@@ -11,11 +11,12 @@ import android.widget.TextView;
 
 import com.example.gramairefacile.R;
 import com.example.gramairefacile.adapters.LesAdjectifAdapter;
+import com.example.gramairefacile.database.DatabaseHelper;
 import com.example.gramairefacile.database.model.LesAdjectif;
+import com.example.gramairefacile.utils.Constants;
 import com.example.gramairefacile.utils.ItemClickListener;
 import com.example.gramairefacile.utils.SimpleDividerItemDecoration;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class LesAdjectifActivity extends AppCompatActivity {
@@ -25,11 +26,15 @@ public class LesAdjectifActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
 
     private LesAdjectifAdapter lesAdjectifAdapter;
+    private DatabaseHelper db;
+    private List<LesAdjectif> dataList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_les_adjectif);
+
+        db = new DatabaseHelper(this);
 
         initView();
 
@@ -44,12 +49,8 @@ public class LesAdjectifActivity extends AppCompatActivity {
 
         titleToolbar.setText("LES ADJECTIFS");
 
-        List<LesAdjectif> lesAdjectif = new ArrayList<>();
-//        lesAdjectif.add(new LesAdjectif(R.drawable.icon_lesadjectif, "L’ADJECTIFS POSSESSIF"));
-//        lesAdjectif.add(new LesAdjectif(R.drawable.icon_lesadjectif, "L’ADJECTIFS DÉMONSTRATIF"));
-//        lesAdjectif.add(new LesAdjectif(R.drawable.icon_lesadjectif, "L’ADJECTIFS QUALIFICATIFS"));
-
-        lesAdjectifAdapter = new LesAdjectifAdapter(this, lesAdjectif);
+        dataList = db.getMateriByType(LesAdjectif.class);
+        lesAdjectifAdapter = new LesAdjectifAdapter(this, dataList);
 
         recyclerView.setAdapter(lesAdjectifAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -63,12 +64,15 @@ public class LesAdjectifActivity extends AppCompatActivity {
         }));
     }
 
-    public void showDetail(int position) {
-        Intent intent = new Intent(this, LesAdjectifMateriActivity.class);
+    private void showDetail(int position) {
+        LesAdjectif data = dataList.get(position);
+
+        Intent intent = new Intent(this, DetailMateriActivity.class);
+        intent.putExtra(Constants.EXTRA_ID, data.getId());
+        intent.putExtra(Constants.EXTRA_TITLE, data.getTitle());
+        intent.putExtra(Constants.EXTRA_CONTENTS, data.getContents());
         startActivity(intent);
     }
-
-
 }
 
 

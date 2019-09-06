@@ -1,10 +1,9 @@
 package com.example.gramairefacile.activities;
 
-import android.graphics.drawable.Drawable;
+import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -13,13 +12,11 @@ import com.example.gramairefacile.R;
 import com.example.gramairefacile.database.DatabaseHelper;
 import com.example.gramairefacile.utils.Constants;
 
-import java.util.List;
-
 public class DetailMateriActivity extends AppCompatActivity {
 
     private int id;
     private String title;
-    private List<Integer> contents;
+    private int[] contents;
 
     private Toolbar toolbar;
     private TextView titleToolbar;
@@ -41,7 +38,7 @@ public class DetailMateriActivity extends AppCompatActivity {
             title = bundle.getString(Constants.EXTRA_TITLE, "");
 
             String jsonList = bundle.getString(Constants.EXTRA_CONTENTS, "");
-            contents = DatabaseHelper.toList(jsonList, Integer.class);
+            contents = DatabaseHelper.toArray(jsonList);
         }
     }
 
@@ -52,23 +49,22 @@ public class DetailMateriActivity extends AppCompatActivity {
 
         titleToolbar.setText(title);
 
-//        for (Integer content : contents) {
-//            addContent(content);
-//        }
+        for (Integer content : contents) {
+            addContent(content);
+        }
     }
 
     private void addContent(int resource) {
-        View view = View.inflate(this, R.layout.view_materi, null);
-        ImageView imageView = view.findViewById(R.id.img_content);
+        BitmapDrawable bd = (BitmapDrawable) this.getResources().getDrawable(resource);
+        int imageHeight = bd.getIntrinsicHeight();
+        int imageWidth = bd.getIntrinsicWidth();
 
-        Drawable dr = getResources().getDrawable(resource);
-        int height = dr.getIntrinsicHeight();
-        int width = dr.getIntrinsicWidth();
-
-        imageView.getLayoutParams().height = height;
+        ImageView imageView = new ImageView(this);
+        imageView.setLayoutParams(new LinearLayout.LayoutParams(imageWidth, imageHeight));
+//        imageView.setScaleType(ImageView.ScaleType.FIT_XY);
         imageView.setImageResource(resource);
 
-        contentContainer.addView(view);
+        contentContainer.addView(imageView);
 
     }
 }

@@ -57,10 +57,10 @@
             android:name=".activities.LesArticleMateriActivity"
             android:label="@string/title_activity_les_article_materi" />
         <activity
-            android:name=".activities.InterrogationMateriActivity"
+            android:name=".activities.InterrogationActivity"
             android:label="@string/title_activity_interrogation" />
         <activity
-            android:name=".activities.ConjonctionMateriActivity"
+            android:name=".activities.ConjonctionActivity"
             android:label="@string/title_activity_conjonction" />
         <activity
             android:name=".activities.LesAdjectifActivity"
@@ -68,10 +68,6 @@
         <activity
             android:name=".activities.QuizLvActivity"
             android:label="@string/title_activity_quizlv1" />
-        <activity
-            android:label="@string/title_activity_lvm1"
-            android:name=".activities.LesVerbesMateriActivity"
-            android:theme="@style/AppTheme.Dark" />
         <activity
             android:name=".activities.RegularVerbActivity"
             android:label="@string/title_activity_regular_verb" />

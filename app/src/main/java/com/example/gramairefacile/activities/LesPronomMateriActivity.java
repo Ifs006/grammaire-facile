@@ -1,26 +1,20 @@
 package com.example.gramairefacile.activities;
 
 import android.os.Bundle;
-import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 
 import com.example.gramairefacile.R;
-import com.example.gramairefacile.adapters.CustomPagerAdapter;
 
 public class LesPronomMateriActivity extends AppCompatActivity {
-    private Toolbar toolbar;
-    private ViewPager viewPager;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_les_pronom_materi);
-        toolbar = findViewById(R.id.toolbar);
+        setContentView(R.layout.activity_les_pronom);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-        ViewPager viewPager = (ViewPager) findViewById(R.id.viewpager);
-        viewPager.setAdapter(new CustomPagerAdapter(this));
 
     }
 

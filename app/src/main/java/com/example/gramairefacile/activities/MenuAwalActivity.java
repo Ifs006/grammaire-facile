@@ -88,11 +88,11 @@ public class MenuAwalActivity extends AppCompatActivity
                 break;
             }
             case R.id.ibtn_lesconjonction: {
-                intent = new Intent(this, ConjonctionMateriActivity.class);
+                intent = new Intent(this, ConjonctionActivity.class);
                 break;
             }
             case R.id.ibtn_interogatif: {
-                intent = new Intent(this, InterrogationMateriActivity.class);
+                intent = new Intent(this, InterrogationActivity.class);
                 break;
             }
 

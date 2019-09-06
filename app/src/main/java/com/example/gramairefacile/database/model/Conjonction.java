@@ -1,6 +1,6 @@
 package com.example.gramairefacile.database.model;
 
-public class LesArticles {
+public class Conjonction {
 
     private int id;
     private int icon;
