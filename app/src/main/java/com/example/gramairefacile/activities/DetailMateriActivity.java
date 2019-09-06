@@ -58,9 +58,9 @@ public class DetailMateriActivity extends AppCompatActivity {
 
         titleToolbar.setText(title);
 
-        for (Integer content : contents) {
-            addContent(content);
-        }
+//        for (Integer content : contents) {
+//            addContent(content);
+//        }
     }
 
     private void addContent(int resource){
