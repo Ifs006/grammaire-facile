@@ -29,7 +29,6 @@ public class MenuAwalActivity extends AppCompatActivity
     private ImageButton ibtnLesConjonction;
     private ImageButton ibtnInterogatif;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -129,6 +128,4 @@ public class MenuAwalActivity extends AppCompatActivity
         drawerLayout.closeDrawer(GravityCompat.START);
         return true;
     }
-
-
 }

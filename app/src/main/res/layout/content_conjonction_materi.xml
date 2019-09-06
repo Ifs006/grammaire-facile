@@ -22,37 +22,32 @@
                 android:layout_width="350dp"
                 android:layout_height="120dp"
                 android:layout_marginStart="28dp"
-                android:layout_marginTop="10dp"
-                android:src="@drawable/conjonction1" />
+                android:layout_marginTop="10dp" />
 
             <ImageView
                 android:layout_width="300dp"
                 android:layout_height="200dp"
                 android:layout_marginStart="44dp"
-                android:layout_marginTop="10dp"
-                android:src="@drawable/conjonction2" />
+                android:layout_marginTop="10dp" />
 
             <ImageView
                 android:layout_width="330dp"
                 android:layout_height="130dp"
                 android:layout_marginStart="35dp"
-                android:layout_marginTop="10dp"
-                android:src="@drawable/conjonction3" />
+                android:layout_marginTop="10dp" />
 
             <ImageView
                 android:layout_width="330dp"
                 android:layout_height="130dp"
                 android:layout_marginStart="35dp"
-                android:layout_marginTop="10dp"
-                android:src="@drawable/conjonction4" />
+                android:layout_marginTop="10dp" />
 
             <ImageView
                 android:layout_width="330dp"
                 android:layout_height="290dp"
                 android:layout_marginStart="35dp"
                 android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:src="@drawable/conjonction5" />
+                android:layout_marginBottom="10dp" />
 
         </LinearLayout>
     </ScrollView>

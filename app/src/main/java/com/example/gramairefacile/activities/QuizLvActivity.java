@@ -3,7 +3,6 @@ package com.example.gramairefacile.activities;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.RadioButton;
@@ -46,12 +45,11 @@ public class QuizLvActivity extends AppCompatActivity {
 //        questionList = dbHelper.getAllQuestions();
 //        questionCountTotal = questionList.size();
 
-        showNextQuestion();
+//        showNextQuestion();
 
-        ibtnContinue.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // ctrl + / (untuk komen code)
+//        ibtnContinue.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
 //                if (!answered) {
 //                    if (rb1.isChecked()) ||
 //                    (rb2.isChecked()) || (rb3.isChecked()) || (rb4.isChecked()) {
@@ -62,8 +60,8 @@ public class QuizLvActivity extends AppCompatActivity {
 //                } else {
 //                    showNextQuestion();
 //                }
-            }
-        });
+//            }
+//        });
 
     }
 
