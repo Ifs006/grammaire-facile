@@ -34,6 +34,7 @@ public class LesVerbesActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_les_verbes);
 
+        // Initialize database helper
         db = new DatabaseHelper(this);
 
         initViews();

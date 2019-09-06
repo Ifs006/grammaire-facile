@@ -10,8 +10,6 @@ import android.util.Log;
 import com.example.gramairefacile.R;
 import com.example.gramairefacile.database.entity.Materi;
 import com.example.gramairefacile.database.entity.Quiz;
-import com.example.gramairefacile.database.model.Conjonction;
-import com.example.gramairefacile.database.model.Interrogation;
 import com.example.gramairefacile.database.model.LesAdjectif;
 import com.example.gramairefacile.database.model.LesArticles;
 import com.example.gramairefacile.database.model.LesPronom;
@@ -25,21 +23,24 @@ import java.util.List;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
 
-    // Database Version
-    private static final int DATABASE_VERSION = 1;
-    // Database Name
-    private static final String DATABASE_NAME = "grammairefacile_db";
-    // Pretty print
-    private static Gson gson = new GsonBuilder().setPrettyPrinting().create();
     private SQLiteDatabase db;
 
-    public DatabaseHelper(Context context) {
-        super(context, DATABASE_NAME, null, DATABASE_VERSION);
-    }
+    // Database Version
+    private static final int DATABASE_VERSION = 1;
+
+    // Database Name
+    private static final String DATABASE_NAME = "grammairefacile_db";
+
+    // Pretty print
+    private static Gson gson = new GsonBuilder().setPrettyPrinting().create();
 
     // Convert JSON to Array
     public static int[] toArray(String json) {
         return gson.fromJson(json, int[].class);
+    }
+
+    public DatabaseHelper(Context context) {
+        super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
 
     // Creating Tables
@@ -72,15 +73,25 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         addNewMateri(Constants.Materi.TYPE_PRONOM, "LES INTÉROGATIFS SIMPLES", new int[]{R.drawable.pronom3_content1});
 
         // GENERATE MATERI ARTICLES
-        addNewMateri(Constants.Materi.TYPE_ARTICLES, "L'ARTICLES DEFINIS", new int[]{R.drawable.articles1_content1});
-        addNewMateri(Constants.Materi.TYPE_ADJECTIF, "L’ADJECTIFS POSSESSIF", new int[]{R.drawable.articles2_content1});
-        addNewMateri(Constants.Materi.TYPE_ARTICLES, "LES ARTICLES PARTITIF", new int[]{R.drawable.articles3_content1});
+        addNewMateri(Constants.Materi.TYPE_ARTICLES, "LES PRONOMS PERSONNELS SUJETS", new int[]{R.drawable.articles1_content1});
+        addNewMateri(Constants.Materi.TYPE_ARTICLES, "LES PRONOMS TONIQUES", new int[]{R.drawable.articles2_content1});
+        addNewMateri(Constants.Materi.TYPE_ARTICLES, "LES INTÉROGATIFS SIMPLES", new int[]{R.drawable.articles3_content1});
 
-        // GENERATE MATERI CONJOCTION
-        addNewMateri(Constants.Materi.TYPE_CONJONCTION, "CONJONCTION", new int[]{R.drawable.conjonction1_content1, R.drawable.conjonction1_content2});
+        // GENERATE MATERI ADJECTIF
+        addNewMateri(Constants.Materi.TYPE_ADJECTIF, "LES PRONOMS PERSONNELS SUJETS", new int[]{R.drawable.adjectif1_content1, R.drawable.adjectif1_content2});
+        addNewMateri(Constants.Materi.TYPE_ADJECTIF, "LES PRONOMS TONIQUES", new int[]{R.drawable.adjectif2_content1});
+        addNewMateri(Constants.Materi.TYPE_ADJECTIF, "LES INTÉROGATIFS SIMPLES", new int[]{R.drawable.adjectif3_content1, R.drawable.adjectif3_content2});
+
+        // GENERATE MATERI CONJONCTION
+        addNewMateri(Constants.Materi.TYPE_CONJONCTION, "LES PRONOMS PERSONNELS SUJETS", new int[]{R.drawable.conjonction1_content1, R.drawable.conjonction1_content2});
+
         // GENERATE MATERI INTERROGATION
-        addNewMateri(Constants.Materi.TYPE_INTERROGATION, "INTERROGATION", new int[]{R.drawable.interrogation1_content1, R.drawable.interrogation1_content2});
+        addNewMateri(Constants.Materi.TYPE_INTERROGATION, "LES PRONOMS PERSONNELS SUJETS", new int[]{R.drawable.interrogation1_content1, R.drawable.interrogation1_content2});
+
+
+
     }
+
 
 
     // Upgrading database
@@ -123,10 +134,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             type = Constants.Materi.TYPE_PRONOM;
         else if (dataClass == LesVerbes.class)
             type = Constants.Materi.TYPE_VERB;
-        else if (dataClass == Conjonction.class)
-            type = Constants.Materi.TYPE_CONJONCTION;
-        else if (dataClass == Interrogation.class)
-            type = Constants.Materi.TYPE_INTERROGATION;
 
         // get readable database as we are not inserting anything
         SQLiteDatabase db = this.getWritableDatabase();
@@ -141,16 +148,16 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             if (dataClass == LesAdjectif.class) {
                 do {
                     LesAdjectif adjectif = new LesAdjectif();
-                    adjectif.setIcon(R.drawable.ic_icon_lesadjectif);
+                    adjectif.setIcon(R.drawable.icon_lesadjectif);
                     adjectif.setId(cursor.getInt(cursor.getColumnIndex(Materi.COLUMN_ID)));
                     adjectif.setTitle(cursor.getString(cursor.getColumnIndex(Materi.COLUMN_TITLE)));
-                    adjectif.setContents(cursor.getString(cursor.getColumnIndex(Materi.COLUMN_CONTENTS)));
+
                     materies.add((T) adjectif);
                 } while (cursor.moveToNext());
             } else if (dataClass == LesArticles.class) {
                 do {
                     LesArticles articles = new LesArticles();
-                    articles.setIcon(R.drawable.ic_icon_lesarticles);
+                    articles.setIcon(R.drawable.icon_lesarticles);
                     articles.setId(cursor.getInt(cursor.getColumnIndex(Materi.COLUMN_ID)));
                     articles.setTitle(cursor.getString(cursor.getColumnIndex(Materi.COLUMN_TITLE)));
                     articles.setContents(cursor.getString(cursor.getColumnIndex(Materi.COLUMN_CONTENTS)));
@@ -159,7 +166,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             } else if (dataClass == LesVerbes.class) {
                 do {
                     LesVerbes verbes = new LesVerbes();
-                    verbes.setIcon(R.drawable.ic_icon_lesverbes);
+                    verbes.setIcon(R.drawable.icon_lesverbes);
                     verbes.setId(cursor.getInt(cursor.getColumnIndex(Materi.COLUMN_ID)));
                     verbes.setTitle(cursor.getString(cursor.getColumnIndex(Materi.COLUMN_TITLE)));
                     verbes.setContents(cursor.getString(cursor.getColumnIndex(Materi.COLUMN_CONTENTS)));
@@ -168,7 +175,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             } else if (dataClass == LesPronom.class) {
                 do {
                     LesPronom pronom = new LesPronom();
-                    pronom.setIcon(R.drawable.ic_icon_lespronom);
+                    pronom.setIcon(R.drawable.icon_lespronom);
                     pronom.setId(cursor.getInt(cursor.getColumnIndex(Materi.COLUMN_ID)));
                     pronom.setTitle(cursor.getString(cursor.getColumnIndex(Materi.COLUMN_TITLE)));
                     pronom.setContents(cursor.getString(cursor.getColumnIndex(Materi.COLUMN_CONTENTS)));
