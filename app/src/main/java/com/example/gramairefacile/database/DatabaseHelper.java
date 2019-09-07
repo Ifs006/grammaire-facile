@@ -9,6 +9,7 @@ import android.util.Log;
 
 import com.example.gramairefacile.R;
 import com.example.gramairefacile.database.entity.Materi;
+import com.example.gramairefacile.database.entity.Question;
 import com.example.gramairefacile.database.entity.Quiz;
 import com.example.gramairefacile.database.model.LesAdjectif;
 import com.example.gramairefacile.database.model.LesArticles;
@@ -55,11 +56,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         // create quiz table
         db.execSQL(Quiz.CREATE_TABLE);
 
-        initData();
+        generateMateri();
+        generateQuiz();
     }
 
 
-    private void initData() {
+    private void generateMateri() {
         // GENERATE MATERI VERB
         addNewMateri(Constants.Materi.TYPE_VERB, "LE VERBE RÉGULIER", new int[]{R.drawable.verb1_content1});
         addNewMateri(Constants.Materi.TYPE_VERB, "LE VERBE IRRÉGULIER", new int[]{R.drawable.verb2_content1, R.drawable.verb2_content2});
@@ -73,6 +75,148 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         addNewMateri(Constants.Materi.TYPE_PRONOM, "LES PRONOMS PERSONNELS SUJETS", new int[]{R.drawable.pronom1_content1});
         addNewMateri(Constants.Materi.TYPE_PRONOM, "LES PRONOMS TONIQUES", new int[]{R.drawable.pronom2_content1, R.drawable.pronom2_content2});
         addNewMateri(Constants.Materi.TYPE_PRONOM, "LES INTÉROGATIFS SIMPLES", new int[]{R.drawable.pronom3_content1});
+
+    }
+
+    private void generateQuiz(){
+        List<Question> questions;
+        Question question;
+
+        /*******************************************************************************************
+         *  ADD QUIZ 1
+         *******************************************************************************************/
+        // Create new list question
+        questions = new ArrayList<>();
+        // Create new class
+        question = new Question();
+        question.setQuestion("J’ …. (habiter) à Paris.");
+        question.setChoices(new String[]{"a.\thabite", "b.\thabites", "c.\thabitez", "d.\thabitent"});
+        question.setCorrectIndexofChoices(0);
+        questions.add(question);
+        // Reset question to new class
+        question = new Question();
+        question.setQuestion("Nous …. (parler) de son travail.");
+        question.setChoices(new String[]{"a.\tparle", "b.\tparles", "c.\tparlons", "d.\tparlez"});
+        question.setCorrectIndexofChoices(2);
+        questions.add(question);
+
+        question = new Question();
+        question.setQuestion("Tu …. (jouer) le football.");
+        question.setChoices(new String[]{"a.\tjoue", "b.\tjoues", "c.\tjouons", "d.\tjouez"});
+        question.setCorrectIndexofChoices(1);
+        questions.add(question);
+
+        question = new Question();
+        question.setQuestion("Il …. (crier) tous les nuits.");
+        question.setChoices(new String[]{"a.\tcrie", "b.\tcries", "c.\tcrions", "d.\tcriez"});
+        question.setCorrectIndexofChoices(0);
+        questions.add(question);
+
+        question = new Question();
+        question.setQuestion("Vous …. (danser) avec Marie.");
+        question.setChoices(new String[]{"a.\tdanse", "b.\tdanses", "c.\tdansons", "d.\tdansez"});
+        question.setCorrectIndexofChoices(3);
+        questions.add(question);
+
+        question = new Question();
+        question.setQuestion("Ma mère …. (travailler) à l’université.");
+        question.setChoices(new String[]{"a.\ttravaillent", "b.\ttravailles", "c.\ttravaillez", "d.\ttravaille"});
+        question.setCorrectIndexofChoices(3);
+        questions.add(question);
+
+        question = new Question();
+        question.setQuestion("Jacques …. (acheter) des œufs.");
+        question.setChoices(new String[]{"a.\tachète", "b.\tachètes", "c.\tachetez", "d.\tachetons"});
+        question.setCorrectIndexofChoices(0);
+        questions.add(question);
+
+        question = new Question();
+        question.setQuestion("Erick et moi …. (regarder) la télé.");
+        question.setChoices(new String[]{"a.\tregardez", "b.\tregarde", "c.\tregardons", "d.\tregardes"});
+        question.setCorrectIndexofChoices(2);
+        questions.add(question);
+
+        question = new Question();
+        question.setQuestion("Julien et Paul …. (parler) français avec Monsieur Dupont.");
+        question.setChoices(new String[]{"a.\tparle", "b.\tparlez", "c.\tparlent", "d.\tparlons"});
+        question.setCorrectIndexofChoices(2);
+        questions.add(question);
+
+        question = new Question();
+        question.setQuestion("Vous …. (fermer) la porte.");
+        question.setChoices(new String[]{"a.\tfermes", "b.\tfermez", "c.\tferment", "d.\tfermons"});
+        question.setCorrectIndexofChoices(1);
+        questions.add(question);
+
+        addNewQuiz(1, "Pilihlah konjugasi yang tepat dari kata kerja berakhiran -er di dalam kurung !", questions);
+
+        /*******************************************************************************************
+         *  ADD QUIZ 2
+         *******************************************************************************************/
+        // Reset questions to new class
+        questions = new ArrayList<>();
+        // Create new class
+        question = new Question();
+        question.setQuestion("Je …. (être) japonais.");
+        question.setChoices(new String[]{"a.\tsuis", "b.\test", "c.\tsommes", "d.\tavez"});
+        question.setCorrectIndexofChoices(0);
+        questions.add(question);
+        // Reset question to new class
+        question = new Question();
+        question.setQuestion("Nous …. (avoir) des stylos.");
+        question.setChoices(new String[]{"a.\tsommes", "b.\ta", "c.\tavons", "d.\tai"});
+        question.setCorrectIndexofChoices(2);
+        questions.add(question);
+
+        question = new Question();
+        question.setQuestion("Elle …. (faire) de la cuisine.");
+        question.setChoices(new String[]{"a.\tfais", "b.\tfait", "c.\tfaisons", "d.\tfont"});
+        question.setCorrectIndexofChoices(1);
+        questions.add(question);
+
+        question = new Question();
+        question.setQuestion("Vous .… (aller) à l’anniversaire de Paul.");
+        question.setChoices(new String[]{"a.\tva", "b.\tvais", "c.\tallons", "d.\tallez"});
+        question.setCorrectIndexofChoices(3);
+        questions.add(question);
+
+        question = new Question();
+        question.setQuestion("Ils …. (être) professeurs de grammaire.");
+        question.setChoices(new String[]{"a.\tsuis", "b.\tont", "c.\tsommes", "d.\tsont"});
+        question.setCorrectIndexofChoices(3);
+        questions.add(question);
+
+        question = new Question();
+        question.setQuestion("J’…. (avoir) un portable.");
+        question.setChoices(new String[]{"a.\tai", "b.\tavons", "c.\tas", "d.\ta"});
+        question.setCorrectIndexofChoices(0);
+        questions.add(question);
+
+        question = new Question();
+        question.setQuestion("Tu … (être) belle, Amanda.");
+        question.setChoices(new String[]{"a.\tsuis", "b.\tont", "c.\tes", "d.\tas"});
+        question.setCorrectIndexofChoices(2);
+        questions.add(question);
+
+        question = new Question();
+        question.setQuestion("Michelle et moi …. (aller) à Paris aujourd’hui.");
+        question.setChoices(new String[]{"a.\tallons", "b.\tva", "c.\tvais", "d.\tvont"});
+        question.setCorrectIndexofChoices(0);
+        questions.add(question);
+
+        question = new Question();
+        question.setQuestion("Mon père et ma mère …. (faire) de la cuisine.");
+        question.setChoices(new String[]{"a.\tfais", "b.\tfait", "c.\tfaisons", "d.\tfont"});
+        question.setCorrectIndexofChoices(3);
+        questions.add(question);
+
+        question = new Question();
+        question.setQuestion("Suzane …. (avoir) deux enfants.");
+        question.setChoices(new String[]{"a.\tas", "b.\ta", "c.\tont", "d.\tavons"});
+        question.setCorrectIndexofChoices(1);
+        questions.add(question);
+
+        addNewQuiz(2, "Pilihlah konjugasi yang tepat dari kata kerja irrégulier di dalam kurung !", questions);
     }
 
     // Upgrading database
@@ -94,10 +238,26 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         values.put(Materi.COLUMN_TITLE, title);
         values.put(Materi.COLUMN_CONTENTS, gson.toJson(contents));
 
-        Log.i("@@@", gson.toJson(contents));
+        Log.i("@MATERI", gson.toJson(contents));
 
         // insert row
         long id = db.insert(Materi.TABLE_NAME, null, values);
+        // return newly inserted row id
+        return id;
+    }
+
+    public long addNewQuiz(int idMateri, String title, List<Question> questions) {
+        ContentValues values = new ContentValues();
+        // `id` will be inserted automatically.
+        // no need to add them
+        values.put(Quiz.COLUMN_ID_MATERI, idMateri);
+        values.put(Quiz.COLUMN_TITLE, title);
+        values.put(Quiz.COLUMN_QUESTIONS, gson.toJson(questions));
+
+        Log.i("@QUIZ", gson.toJson(questions));
+
+        // insert row
+        long id = db.insert(Quiz.CREATE_TABLE, null, values);
         // return newly inserted row id
         return id;
     }
