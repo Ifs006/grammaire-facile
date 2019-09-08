@@ -21,6 +21,6 @@ public class Constants {
         public static int TYPE_ARTICLES = 3;
         public static int TYPE_ADJECTIF = 4;
         public static int TYPE_CONJONCTION = 5;
-        public static int TYPE_INTERROGATION = 6;
+        public static int TYPE_INTERROGATIF = 6;
     }
 }

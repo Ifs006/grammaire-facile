@@ -45,9 +45,13 @@ public class ScoreActivity extends AppCompatActivity {
         wrongAnswer.setText(String.valueOf(10 - score));
 
         if (score == 10) {
-            infoResult.setText("Super");
+            infoResult.setText("Bravo!");
+        } else if (score >= 8 && score <= 9) {
+            infoResult.setText("Super!");
+        } else if (score >= 5 && score <= 7) {
+            infoResult.setText("Pas mal!");
         } else {
-            infoResult.setText("Noob");
+            infoResult.setText(":(");
         }
 
         btnFinish.setOnClickListener(new View.OnClickListener() {

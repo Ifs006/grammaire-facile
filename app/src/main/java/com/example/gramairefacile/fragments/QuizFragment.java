@@ -69,6 +69,7 @@ public class QuizFragment extends Fragment {
         choiceC.setValue(choices[2]);
         choiceD.setValue(choices[3]);
 
+
         choiceRadioGroup.setOnCheckedChangeListener(new PresetRadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(View radioGroup, View radioButton, boolean isChecked, int checkedId) {
@@ -76,6 +77,7 @@ public class QuizFragment extends Fragment {
             }
         });
     }
+
 
     public String getAnswer() {
         return answer;
