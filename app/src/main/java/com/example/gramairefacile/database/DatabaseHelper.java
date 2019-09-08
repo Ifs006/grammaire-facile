@@ -38,9 +38,15 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static Gson gson = new GsonBuilder().setPrettyPrinting().create();
 
     // Convert JSON to Array
-    public static int[] toArray(String json) {
-        return gson.fromJson(json, int[].class);
+    public static final <T> T toArray(String json, Class<T> type) {
+        return gson.fromJson(json, type);
     }
+
+    public static <T> List<T> toQuestionList(String json) {
+        Type listType = new TypeToken<List<Question>>() {}.getType();
+        return gson.fromJson(json, listType);
+    }
+
 
     public DatabaseHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -53,7 +59,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         // create materi table
         db.execSQL(Materi.CREATE_TABLE);
-        // create quiz table
+        // create btn_quiz table
         db.execSQL(Quiz.CREATE_TABLE);
 
         generateMateri();
@@ -257,7 +263,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         Log.i("@QUIZ", gson.toJson(questions));
 
         // insert row
-        long id = db.insert(Quiz.CREATE_TABLE, null, values);
+        long id = db.insert(Quiz.TABLE_NAME, null, values);
         // return newly inserted row id
         return id;
     }
@@ -330,5 +336,28 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         // return list
         return materies;
+    }
+
+    public Quiz getQuizByMateri(int idMateri){
+        // get readable database as we are not inserting anything
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        String QUERY = "SELECT tbl_quiz.id, tbl_quiz.title_quiz, tbl_quiz.questions FROM tbl_quiz INNER JOIN tbl_materi ON tbl_quiz.id_materi= tbl_materi.id WHERE tbl_quiz.id_materi=?";
+
+        Cursor cursor = db.rawQuery(QUERY, new String[]{String.valueOf(idMateri)});
+
+        if (cursor != null)
+            cursor.moveToFirst();
+
+        // prepare quiz object
+        Quiz quiz= new Quiz();
+        quiz.setId(cursor.getInt(cursor.getColumnIndex(Quiz.COLUMN_ID)));
+        quiz.setTitleQuiz(cursor.getString(cursor.getColumnIndex(Quiz.COLUMN_TITLE)));
+        quiz.setQuestions(cursor.getString(cursor.getColumnIndex(Quiz.COLUMN_QUESTIONS)));
+
+        // close the db connection
+        cursor.close();
+
+        return quiz;
     }
 }

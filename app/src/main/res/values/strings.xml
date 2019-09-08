@@ -1,40 +1,8 @@
 <resources>
     <string name="app_name">Gramaire Facile</string>
-    <string name="title_activity_menuawalactivity">Menuawalactivity</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Android Studio</string>
-    <string name="nav_header_subtitle">android.studio@android.com</string>
-    <string name="nav_header_desc">Navigation header</string>
-    <string name="action_settings">Settings</string>
 
-    <string name="menu_home">Home</string>
-    <string name="menu_gallery">Gallery</string>
-    <string name="menu_slideshow">Slideshow</string>
-    <string name="menu_tools">Tools</string>
-    <string name="menu_share">Share</string>
-    <string name="menu_send">Send</string>
-    <string name="title_activity_menuawal">MenuawalActivity</string>
-    <string name="title_activity_les_verbes">LesVerbesActivity</string>
-    <string name="title_activity_regular_verb">regular_verb</string>
-    <string name="title_activity_lvm1">lvm1</string>
-    <string name="title_activity_lvm2">lvm2</string>
-    <string name="title_activity_lvm3">lvm3</string>
-    <string name="title_activity_lvm4">lvm4</string>
-    <string name="title_activity_lvm5">lvm5</string>
-    <string name="title_activity_lvm6">lvm6</string>
-    <string name="title_activity_lvm7">lvm7</string>
-    <string name="title_activity_lpm1">lpm1</string>
-    <string name="title_activity_lpm2">lpm2</string>
-    <string name="title_activity_lpm3">lpm3</string>
-    <string name="title_activity_lam1">lam1</string>
-    <string name="title_activity_lam2">lam2</string>
-    <string name="title_activity_lam3">lam3</string>
-    <string name="title_activity_quizlv1">quizlv1</string>
     <string name="title_activity_les_adjectif">LesAdjectifActivity</string>
-    <string name="title_activity_conjonction">ConjonctionActivity</string>
-    <string name="title_activity_interrogation">InterrogationActivity</string>
-    <string name="title_activity_les_article_materi">LesArticleMateriActivity</string>
     <string name="title_activity_les_pronom_materi">LesPronomMateriActivity</string>
-    <string name="title_activity_les_adjectif_materi">LesAdjectifMateriActivity</string>
 </resources>

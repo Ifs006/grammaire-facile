@@ -64,7 +64,7 @@ public class LesAdjectifActivity extends AppCompatActivity {
     }
 
     public void showDetail(int position) {
-        Intent intent = new Intent(this, LesAdjectifMateriActivity.class);
+        Intent intent = new Intent(this, DetailMateriActivity.class);
         startActivity(intent);
     }
 

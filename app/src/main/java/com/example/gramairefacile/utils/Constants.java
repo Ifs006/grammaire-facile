@@ -4,8 +4,15 @@ public class Constants {
 
     // EXTRA
     public static String EXTRA_ID = "id";
+    public static String EXTRA_ID_MATERI = "id_materi";
     public static String EXTRA_TITLE = "title";
     public static String EXTRA_CONTENTS = "contents";
+    public static String EXTRA_SCORE = "score";
+
+    // ARGUMENTS
+    public static String ARGS_QUESTION = "question";
+    public static String ARGS_CHOICES = "choices";
+
 
     public static class Materi {
         // TYPE MATERI

@@ -36,6 +36,12 @@
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.Dark" />
 
+
+        <activity
+            android:name=".activities.LesAdjectifActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.Dark" />
+
         <activity
             android:name=".activities.LesArticlesActivity"
             android:screenOrientation="portrait"
@@ -46,32 +52,19 @@
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.Dark" />
 
-        <!-- Refactor code -->
         <activity
-            android:name=".activities.LesAdjectifMateriActivity"
-            android:label="@string/title_activity_les_adjectif_materi" />
+            android:name=".activities.QuizActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.Light"/>
+
         <activity
-            android:name=".activities.LesPronomMateriActivity"
-            android:label="@string/title_activity_les_pronom_materi" />
-        <activity
-            android:name=".activities.LesArticleMateriActivity"
-            android:label="@string/title_activity_les_article_materi" />
-        <activity
-            android:name=".activities.InterrogationMateriActivity"
-            android:label="@string/title_activity_interrogation" />
-        <activity
-            android:name=".activities.ConjonctionMateriActivity"
-            android:label="@string/title_activity_conjonction" />
-        <activity
-            android:name=".activities.LesAdjectifActivity"
-            android:label="@string/title_activity_les_adjectif" />
-        <activity
-            android:name=".activities.QuizLvActivity"
-            android:label="@string/title_activity_quizlv1" />
-        <activity
-            android:name=".activities.RegularVerbActivity"
-            android:label="@string/title_activity_regular_verb" />
-        <activity android:name=".activities.CreditActivity" />
+            android:name=".activities.ScoreActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.Light"/>
+
+        <activity android:name=".activities.CreditActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.Dark" />
     </application>
 
 </manifest>

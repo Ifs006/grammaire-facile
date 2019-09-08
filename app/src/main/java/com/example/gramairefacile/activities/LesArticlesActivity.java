@@ -64,7 +64,7 @@ public class LesArticlesActivity extends AppCompatActivity {
     }
 
     public void showDetail(int position) {
-        Intent intent = new Intent(this, LesPronomMateriActivity.class);
+        Intent intent = new Intent(this, QuizActivity.class);
         startActivity(intent);
     }
 

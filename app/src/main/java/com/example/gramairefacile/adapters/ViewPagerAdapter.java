@@ -5,8 +5,6 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.view.ViewGroup;
 
-import com.example.gramairefacile.activities.LesPronomMateriActivity;
-
 import java.util.List;
 
 
@@ -17,6 +15,8 @@ public class ViewPagerAdapter extends FragmentStatePagerAdapter {
 
     public ViewPagerAdapter(FragmentManager fm, List<Fragment> fragments) {
         super(fm);
+
+        this.fragments = fragments;
     }
 
     @Override

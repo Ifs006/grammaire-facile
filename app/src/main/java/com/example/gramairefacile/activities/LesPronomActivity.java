@@ -17,7 +17,6 @@ import com.example.gramairefacile.database.model.LesPronom;
 import com.example.gramairefacile.utils.ItemClickListener;
 import com.example.gramairefacile.utils.SimpleDividerItemDecoration;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class LesPronomActivity extends AppCompatActivity {
@@ -62,7 +61,7 @@ public class LesPronomActivity extends AppCompatActivity {
     }
 
     public void showDetail(int position) {
-        Intent intent = new Intent(this, LesPronomMateriActivity.class);
+        Intent intent = new Intent(this, QuizActivity.class);
         startActivity(intent);
     }
 }

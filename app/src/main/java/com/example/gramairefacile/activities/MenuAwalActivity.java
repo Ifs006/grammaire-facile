@@ -87,14 +87,14 @@ public class MenuAwalActivity extends AppCompatActivity
                 intent = new Intent(this, LesAdjectifActivity.class);
                 break;
             }
-            case R.id.ibtn_lesconjonction: {
-                intent = new Intent(this, ConjonctionMateriActivity.class);
-                break;
-            }
-            case R.id.ibtn_interogatif: {
-                intent = new Intent(this, InterrogationMateriActivity.class);
-                break;
-            }
+//            case R.id.ibtn_lesconjonction: {
+//                intent = new Intent(this, ConjonctionMateriActivity.class);
+//                break;
+//            }
+//            case R.id.ibtn_interogatif: {
+//                intent = new Intent(this, InterrogationMateriActivity.class);
+//                break;
+//            }
 
         }
 
@@ -118,7 +118,7 @@ public class MenuAwalActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.credit) {
-            // Handle the camera action
+
         } else if (id == R.id.a_propos_de_lauteur) {
 
         } else if (id == R.id.les_aides) {
