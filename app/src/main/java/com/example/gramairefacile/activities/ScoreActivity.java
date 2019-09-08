@@ -7,7 +7,6 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.gramairefacile.R;
-import com.example.gramairefacile.database.DatabaseHelper;
 import com.example.gramairefacile.utils.Constants;
 
 public class ScoreActivity extends AppCompatActivity {
@@ -39,6 +38,7 @@ public class ScoreActivity extends AppCompatActivity {
         infoResult = findViewById(R.id.tv_result);
         correctAnswer = findViewById(R.id.tv_correct_answer_count);
         wrongAnswer = findViewById(R.id.tv_wrong_answer_count);
+        btnFinish = findViewById(R.id.btn_finish);
 
         infoScore.setText(String.valueOf(score*10));
         correctAnswer.setText(String.valueOf(score));
