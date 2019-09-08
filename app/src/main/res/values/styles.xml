@@ -25,7 +25,28 @@
         <item name="colorPrimaryDark">@color/chathamsBlue</item>
     </style>
 
+    <style name="AppTheme.Light" parent="AppTheme">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+    </style>
+
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
+    <style name="PresetLayoutButton">
+        <item name="android:background">@drawable/bg_selector_preset_button</item>
+        <item name="android:paddingBottom">20dp</item>
+        <item name="android:clickable">true</item>
+        <item name="android:paddingLeft">30dp</item>
+        <item name="android:paddingRight">30dp</item>
+        <item name="android:paddingTop">20dp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="PresetLayoutButton_ValueText">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">@font/caviar_dreams_bold</item>
+    </style>
 </resources>

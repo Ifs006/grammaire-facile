@@ -5,11 +5,10 @@
     <color name="colorAccent">#D81B60</color>
     <color name="colorWindowBackground">#EEEEEF</color>
     <color name="colorPrimaryText">@color/tundora</color>
-    <color name="colorPrimaryTextLight">@color/white</color>
-    <color name="colorPrimaryTextHint">@color/alto1</color>
     <color name="colorSecondaryText">@color/dustyGray</color>
 
     <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
     <color name="colorTransparent">#00ffffff</color>
     <color name="alto1">#d1d1d1</color>
     <color name="dustyGray">#9b9b9b</color>
@@ -17,6 +16,9 @@
     <color name="viking">#5DC5E2</color>
     <color name="chathamsBlue">#145569</color>
     <color name="elm">#1B6D85</color>
-
     <color name="colorShadow">#0F4C5E</color>
+    <color name="selectedButton">#6BBE76</color>
+    <color name="defaultButton">#E7E7E7</color>
+    <color name="colorScore">#C77132</color>
+    <color name="colorBackgroundScore">#FAF29D</color>
 </resources>

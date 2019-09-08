@@ -12,7 +12,7 @@
         android:layout_width="136dp"
         android:layout_height="44dp"
         android:layout_marginBottom="53dp"
-        android:background="@drawable/bt1"
+        android:background="@drawable/btn_entre"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -20,7 +20,6 @@
         tools:layout_editor_absolutex="633dp" />
 
     <ImageView
-        android:id="@+id/img_footer"
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:src="@drawable/background_footer"
@@ -51,7 +50,6 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tv_title2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/caviar_dreams_bold"
