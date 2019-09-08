@@ -57,10 +57,10 @@
             android:name=".activities.LesArticleMateriActivity"
             android:label="@string/title_activity_les_article_materi" />
         <activity
-            android:name=".activities.InterrogationActivity"
+            android:name=".activities.InterrogationMateriActivity"
             android:label="@string/title_activity_interrogation" />
         <activity
-            android:name=".activities.ConjonctionActivity"
+            android:name=".activities.ConjonctionMateriActivity"
             android:label="@string/title_activity_conjonction" />
         <activity
             android:name=".activities.LesAdjectifActivity"

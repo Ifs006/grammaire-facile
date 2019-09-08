@@ -64,7 +64,7 @@ public class DetailMateriActivity extends AppCompatActivity {
 //        imageView.setScaleType(ImageView.ScaleType.FIT_XY);
         imageView.setImageResource(resource);
 
-        contentContainer.addView(imageView);
 
+        contentContainer.addView(imageView);
     }
 }

@@ -14,7 +14,6 @@ import com.example.gramairefacile.R;
 import com.example.gramairefacile.adapters.LesPronomAdapter;
 import com.example.gramairefacile.database.DatabaseHelper;
 import com.example.gramairefacile.database.model.LesPronom;
-import com.example.gramairefacile.database.model.LesVerbes;
 import com.example.gramairefacile.utils.Constants;
 import com.example.gramairefacile.utils.ItemClickListener;
 import com.example.gramairefacile.utils.SimpleDividerItemDecoration;
@@ -28,7 +27,7 @@ public class LesPronomActivity extends AppCompatActivity {
 
     private LesPronomAdapter lesPronomsAdapter;
     private DatabaseHelper db;
-    private List<LesVerbes> dataList;
+    private List<LesPronom> dataList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,18 +37,17 @@ public class LesPronomActivity extends AppCompatActivity {
         // Initialize database helper
         db = new DatabaseHelper(this);
 
-        initView();
-
+        initViews();
     }
 
-    private void initView() {
+    private void initViews() {
         toolbar = findViewById(R.id.toolbar);
         recyclerView = findViewById(R.id.recyclerview);
         titleToolbar = findViewById(R.id.title_toolbar);
 
         titleToolbar.setText("LES PRONOMS");
 
-        List<LesPronom> dataList = db.getMateriByType(LesPronom.class);
+        dataList = db.getMateriByType(LesPronom.class);
         lesPronomsAdapter = new LesPronomAdapter(this, dataList);
 
         recyclerView.setAdapter(lesPronomsAdapter);
@@ -65,7 +63,7 @@ public class LesPronomActivity extends AppCompatActivity {
     }
 
     private void showDetail(int position) {
-        LesVerbes data = dataList.get(position);
+        LesPronom data = dataList.get(position);
 
         Intent intent = new Intent(this, DetailMateriActivity.class);
         intent.putExtra(Constants.EXTRA_ID, data.getId());

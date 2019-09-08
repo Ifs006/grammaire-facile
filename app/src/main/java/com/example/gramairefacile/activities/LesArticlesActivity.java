@@ -1,5 +1,6 @@
 package com.example.gramairefacile.activities;
 
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -23,22 +24,23 @@ public class LesArticlesActivity extends AppCompatActivity {
     private Toolbar toolbar;
     private TextView titleToolbar;
     private RecyclerView recyclerView;
+
+    private LesArticlesAdapter lesArticlesAdapter;
     private DatabaseHelper db;
     private List<LesArticles> dataList;
-    private LesArticlesAdapter lesArticlesAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_les_articles);
 
+        // Initialize database helper
         db = new DatabaseHelper(this);
 
-        initView();
-
+        initViews();
     }
 
-    private void initView() {
+    private void initViews() {
         toolbar = findViewById(R.id.toolbar);
         recyclerView = findViewById(R.id.recyclerview);
         titleToolbar = findViewById(R.id.title_toolbar);

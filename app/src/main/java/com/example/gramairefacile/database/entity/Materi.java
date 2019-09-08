@@ -9,6 +9,12 @@ public class Materi {
     public static final String COLUMN_TYPE = "type";
     public static final String COLUMN_TITLE = "title";
     public static final String COLUMN_CONTENTS = "contents";
+
+    private int id;
+    private int type;
+    private String title;
+    private String contents;
+
     // Create table SQL query
     public static final String CREATE_TABLE =
             "CREATE TABLE " + TABLE_NAME + "("
@@ -17,10 +23,6 @@ public class Materi {
                     + COLUMN_TITLE + " TEXT,"
                     + COLUMN_CONTENTS + " TEXT"
                     + ")";
-    private int id;
-    private int type;
-    private String title;
-    private String contents;
 
     public int getId() {
         return id;

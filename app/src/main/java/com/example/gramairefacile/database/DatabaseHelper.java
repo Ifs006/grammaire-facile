@@ -10,6 +10,8 @@ import android.util.Log;
 import com.example.gramairefacile.R;
 import com.example.gramairefacile.database.entity.Materi;
 import com.example.gramairefacile.database.entity.Quiz;
+import com.example.gramairefacile.database.model.Conjonction;
+import com.example.gramairefacile.database.model.Interrogation;
 import com.example.gramairefacile.database.model.LesAdjectif;
 import com.example.gramairefacile.database.model.LesArticles;
 import com.example.gramairefacile.database.model.LesPronom;
@@ -88,11 +90,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         // GENERATE MATERI INTERROGATION
         addNewMateri(Constants.Materi.TYPE_INTERROGATION, "LES PRONOMS PERSONNELS SUJETS", new int[]{R.drawable.interrogation1_content1, R.drawable.interrogation1_content2});
 
-
-
     }
-
-
 
     // Upgrading database
     @Override
@@ -134,6 +132,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             type = Constants.Materi.TYPE_PRONOM;
         else if (dataClass == LesVerbes.class)
             type = Constants.Materi.TYPE_VERB;
+        else if (dataClass == Conjonction.class)
+            type = Constants.Materi.TYPE_CONJONCTION;
+        else if (dataClass == Interrogation.class)
+            type = Constants.Materi.TYPE_INTERROGATION;
 
         // get readable database as we are not inserting anything
         SQLiteDatabase db = this.getWritableDatabase();

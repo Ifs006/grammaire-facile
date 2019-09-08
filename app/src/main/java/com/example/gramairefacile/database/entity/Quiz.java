@@ -9,14 +9,17 @@ public class Quiz {
     public static final String COLUMN_ID_MATERI = "id_materi";
     public static final String COLUMN_TITLE = "title_submateri";
     public static final String COLUMN_CONTENT = "content";
+
+    private int id;
+    private String titleMateri;
+
+
     // Create table SQL query
     public static final String CREATE_TABLE =
             "CREATE TABLE " + TABLE_NAME + "("
                     + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
                     + COLUMN_TITLE + " TEXT"
                     + ")";
-    private int id;
-    private String titleMateri;
 
     public int getId() {
         return id;
