@@ -584,6 +584,753 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         addNewQuiz(7, "Pilihlah konjugasi indicatif présent yang tepat dari kata kerja di dalam kurung ", questions);
 
+        /*******************************************************************************************
+         *  ADD QUIZ 8
+         *******************************************************************************************/
+        // Reset questions to new class
+        questions = new ArrayList<>();
+        // Create new class
+        question = new Question();
+        question.setQuestion("Amanda … toujours avec son costume officiel.");
+        question.setChoices(new String[]{"a.\tm’habille", "b.\tt’habille", "c.\ts’habille", "d.\tvous habillez"});
+        question.setCorrectIndexofChoices(2);
+        questions.add(question);
+
+        question = new Question();
+        question.setQuestion("Cette étudiante est très sympa. … s’appelle Marie.");
+        question.setChoices(new String[]{"a.\tNous", "b.\tTu", "c.\tElle", "d.\tIl"});
+        question.setCorrectIndexofChoices(2);
+        questions.add(question);
+
+        question = new Question();
+        question.setQuestion("Antoine et moi sommes français. …. parlons français et anglais.");
+        question.setChoices(new String[]{"a.\tNous", "b.\tTu", "c.\tElle", "d.\tIl"});
+        question.setCorrectIndexofChoices(0);
+        questions.add(question);
+
+        question = new Question();
+        question.setQuestion("…. aime le thé.");
+        question.setChoices(new String[]{"a.\tJe", "b.\tTu", "c.\tNous", "d.\tJ’"});
+        question.setCorrectIndexofChoices(3);
+        questions.add(question);
+
+        question = new Question();
+        question.setQuestion("Anne et Lucie sont amies. …. aiment le chocolat.");
+        question.setChoices(new String[]{"a.\tIls", "b.\tIl", "c.\tElles", "d.\tElle"});
+        question.setCorrectIndexofChoices(2);
+        questions.add(question);
+
+        question = new Question();
+        question.setQuestion("Jacques et moi sommes en vacances. ….. visitons le musée de Louvre.");
+        question.setChoices(new String[]{"a.\tJe", "b.\tTu", "c.\tNous", "d.\tJ’"});
+        question.setCorrectIndexofChoices(2);
+        questions.add(question);
+
+        question = new Question();
+        question.setQuestion("Quand mon frère va au cinéma, ….. achète toujours du pop-corn.");
+        question.setChoices(new String[]{"a.\tIls", "b.\tIl", "c.\tElles", "d.\tElle"});
+        question.setCorrectIndexofChoices(1);
+        questions.add(question);
+
+        question = new Question();
+        question.setQuestion("Salut, Natalie. ….vas bien?");
+        question.setChoices(new String[]{"a.\tNous", "b.\tTu", "c.\tElle", "d.\tIl"});
+        question.setCorrectIndexofChoices(1);
+        questions.add(question);
+
+        question = new Question();
+        question.setQuestion("A : Tu connais Laura ?\nA : Tu connais Laura ?");
+        question.setChoices(new String[]{"a.\tJe", "b.\tTu", "c.\tElle", "d.\tIl"});
+        question.setCorrectIndexofChoices(2);
+        questions.add(question);
+
+        question = new Question();
+        question.setQuestion("A : Vous ….. comment ?\nB : Je m’appelle Sara.");
+        question.setChoices(new String[]{"a.\tt’appelle", "b.\tvous appelez", "c.\tnous appelons", "d.\tm’appelle"});
+        question.setCorrectIndexofChoices(1);
+        questions.add(question);
+
+        addNewQuiz(8, "Pilihlah pronom personnel yang sesuai untuk melengkapi kalimat-kalimat berikut !", questions);
+
+        /*******************************************************************************************
+         *  ADD QUIZ 9
+         *******************************************************************************************/
+        // Reset questions to new class
+        questions = new ArrayList<>();
+        // Create new class
+        question = new Question();
+        question.setQuestion("1.\tJ’ai rendez-vous avec Nathalie -> J’ai rendez-vous avec….");
+        question.setChoices(new String[]{"a.\tmoi", "b.\tlui", "c.\teux", "d.\telle"});
+        question.setCorrectIndexofChoices(3);
+        questions.add(question);
+
+        question = new Question();
+        question.setQuestion("Ce soir, je vais au cinéma avec mes sœur ->Ce soir, je vais au cinéma avec ….");
+        question.setChoices(new String[]{"a.\telle", "b.\telles", "c.\teux", "d.\tmoi"});
+        question.setCorrectIndexofChoices(1);
+        questions.add(question);
+
+        question = new Question();
+        question.setQuestion("A : Ce stylo est à Marie?\nB : Oui, C’est à …. ");
+        question.setChoices(new String[]{"a.\telle", "b.\teux", "c.\tlui", "d.\ttoi"});
+        question.setCorrectIndexofChoices(0);
+        questions.add(question);
+
+        question = new Question();
+        question.setQuestion("4.A : On se retrouve chez moi samedi ?\nB : Non, je ne peux pas venir chez ….., je travaille.");
+        question.setChoices(new String[]{"a.\telle", "b.\ttoi", "c.\tlui", "d.\tvous"});
+        question.setCorrectIndexofChoices(1);
+        questions.add(question);
+
+        question = new Question();
+        question.setQuestion("Il part en vacances avec son ami -> Il part en vacances avec …..");
+        question.setChoices(new String[]{"a.\tmoi", "b.\teux", "c.\tlui", "d.\ttoi"});
+        question.setCorrectIndexofChoices(2);
+        questions.add(question);
+
+        question = new Question();
+        question.setQuestion("Monsieur et Madame Dupont vont au cinéma avec ses enfants -> Ils vont au cinéma avec ….");
+        question.setChoices(new String[]{"a.\telle", "b.\teux", "c.\tlui", "d.\tvous"});
+        question.setCorrectIndexofChoices(1);
+        questions.add(question);
+
+        question = new Question();
+        question.setQuestion("A : Salut ! Tu vas bien ?\nA : Salut ! Tu vas bien ?");
+        question.setChoices(new String[]{"a.\ttoi", "b.	elles", "c.\teux", "d.\tmoi"});
+        question.setCorrectIndexofChoices(0);
+        questions.add(question);
+
+        question = new Question();
+        question.setQuestion("Il vient avec ses parents -> Il vient avec ….");
+        question.setChoices(new String[]{"a.\ttoi", "b.\telles", "c.\teux", "d.\tmoi"});
+        question.setCorrectIndexofChoices(2);
+        questions.add(question);
+
+        question = new Question();
+        question.setQuestion("A : C’est pour moi?\nB : Oui, c’est pour …..");
+        question.setChoices(new String[]{"a.\ttoi", "b.\telles", "c.\teux", "d.\tmoi"});
+        question.setCorrectIndexofChoices(0);
+        questions.add(question);
+
+        question = new Question();
+        question.setQuestion("A : Tu sors avec ce garçon?\nB : Oui, je sors avec ….");
+        question.setChoices(new String[]{"a.\ttoi", "b.\tlui", "c.\teux", "d.\tmoi"});
+        question.setCorrectIndexofChoices(1);
+        questions.add(question);
+
+        addNewQuiz(9, "Pilihlah pronom tonique yang sesuai untuk melengkapi kalimat-kalimat berikut ini !", questions);
+
+        /*******************************************************************************************
+         *  ADD QUIZ 10
+         *******************************************************************************************/
+        // Reset questions to new class
+        questions = new ArrayList<>();
+        // Create new class
+        question = new Question();
+        question.setQuestion("A : …. habitez-vous ? \n B : Avec ma famille");
+        question.setChoices(new String[]{"a.\tAvec quoi", "b.\tAvec qui", "c.\tDe quoi", "d.\tQui"});
+        question.setCorrectIndexofChoices(1);
+        questions.add(question);
+
+        question = new Question();
+        question.setQuestion("A : …. tu parles ? \n B : De mon travail");
+        question.setChoices(new String[]{"a.\tAvec quoi", "b.\tAvec qui", "c.\tDe quoi", "d.\tQui"});
+        question.setCorrectIndexofChoices(2);
+        questions.add(question);
+
+        question = new Question();
+        question.setQuestion("A : …. lisez-vous ? \n B : le livre de petit prince");
+        question.setChoices(new String[]{"a.\tAvec quoi", "b.\tAvec qui", "c.\tDe quoi", "d.\tQui"});
+        question.setCorrectIndexofChoices(1);
+        questions.add(question);
+
+        question = new Question();
+        question.setQuestion("A : Vous parlez …. avec Madame Directrice? \n B : Nous parlons de Jeanne");
+        question.setChoices(new String[]{"a.\tAvec quoi", "b.\tAvec qui", "c.\tDe quoi", "d.\tQui"});
+        question.setCorrectIndexofChoices(2);
+        questions.add(question);
+
+        question = new Question();
+        question.setQuestion("A : …. a mangé mon gâteau ? \n B : Moi");
+        question.setChoices(new String[]{"a.\tAvec quoi", "b.\tAvec qui", "c.\tDe quoi", "d.\tQui"});
+        question.setCorrectIndexofChoices(3);
+        questions.add(question);
+
+        question = new Question();
+        question.setQuestion("A : ……. avez-vous parlé?  \n B : Au médecin.");
+        question.setChoices(new String[]{"a.\tAvec quoi", "b.\tAvec qui", "c.\tDe quoi", "d.\tQui"});
+        question.setCorrectIndexofChoices(3);
+        questions.add(question);
+
+        question = new Question();
+        question.setQuestion("A : …… êtes-vous ? ? \n B : Je suis le père de Léa.");
+        question.setChoices(new String[]{"a.\tAvec quoi", "b.\tAvec qui", "c.\tDe quoi", "d.\tQui"});
+        question.setCorrectIndexofChoices(0);
+        questions.add(question);
+
+        question = new Question();
+        question.setQuestion("A : …… tu vas au restaurant ce soir ? \n B : Avec ma mère");
+        question.setChoices(new String[]{"a.\tAvec quoi", "b.\tAvec qui", "c.\tDe quoi", "d.\tQui"});
+        question.setCorrectIndexofChoices(1);
+        questions.add(question);
+
+        question = new Question();
+        question.setQuestion("A : …… tu as parlé ?  \n B : Au boulanger.");
+        question.setChoices(new String[]{"a.\tAvec quoi", "b.\tAvec qui", "c.\tDe quoi", "d.\tQui"});
+        question.setCorrectIndexofChoices(3);
+        questions.add(question);
+
+        question = new Question();
+        question.setQuestion("A : …… avez-vous vu ? \n B : Les concours de français.");
+        question.setChoices(new String[]{"a.\tAvec quoi", "b.\tAvec qui", "c.\tDe quoi", "d.\tQui"});
+        question.setCorrectIndexofChoices(0);
+        questions.add(question);
+
+        addNewQuiz(10, "Pilihlah pronom interrogatif yang tepat untuk melengkapi dialog-dialog berikut !", questions);
+
+        /*******************************************************************************************
+         *  ADD QUIZ 11
+         *******************************************************************************************/
+        // Reset questions to new class
+        questions = new ArrayList<>();
+        // Create new class
+        question = new Question();
+        question.setQuestion("Je connais …. maison d’Andrew.");
+        question.setChoices(new String[]{"a.\tle", "b.\tla", "c.\tles", "d.\tl'"});
+        question.setCorrectIndexofChoices(1);
+        questions.add(question);
+
+        question = new Question();
+        question.setQuestion("Donnez-moi … livre de Paul.");
+        question.setChoices(new String[]{"a.\tle", "b.\tla", "c.\tles", "d.\tl'"});
+        question.setCorrectIndexofChoices(0);
+        questions.add(question);
+
+        question = new Question();
+        question.setQuestion("Passe-moi …. papiers qui sont sur la table.");
+        question.setChoices(new String[]{"a.\tle", "b.\tla", "c.\tles", "d.\tl'"});
+        question.setCorrectIndexofChoices(2);
+        questions.add(question);
+
+        question = new Question();
+        question.setQuestion("Mon école est près de …. hôtel de Paris.");
+        question.setChoices(new String[]{"a.\tle", "b.\tla", "c.\tles", "d.\tl'"});
+        question.setCorrectIndexofChoices(3);
+        questions.add(question);
+
+        question = new Question();
+        question.setQuestion("…. chats sont très mignons, les couleurs sont gris.");
+        question.setChoices(new String[]{"a.\tle", "b.\tla", "c.\tles", "d.\tl'"});
+        question.setCorrectIndexofChoices(2);
+        questions.add(question);
+
+        question = new Question();
+        question.setQuestion("Jane cherche ….. clé de son copain.");
+        question.setChoices(new String[]{"a.\tle", "b.\tla", "c.\tles", "d.\tl'"});
+        question.setCorrectIndexofChoices(1);
+        questions.add(question);
+
+        question = new Question();
+        question.setQuestion("…… maison de Sophie est très grande.");
+        question.setChoices(new String[]{"a.\tle", "b.\tla", "c.\tles", "d.\tl'"});
+        question.setCorrectIndexofChoices(1);
+        questions.add(question);
+
+        question = new Question();
+        question.setQuestion("……. téléphone portable de Xavier est cassé.");
+        question.setChoices(new String[]{"a.\tle", "b.\tla", "c.\tles", "d.\tl'"});
+        question.setCorrectIndexofChoices(0);
+        questions.add(question);
+
+        question = new Question();
+        question.setQuestion("…… chaleur est très forte.");
+        question.setChoices(new String[]{"a.\tle", "b.\tla", "c.\tles", "d.\tl'"});
+        question.setCorrectIndexofChoices(0);
+        questions.add(question);
+
+        question = new Question();
+        question.setQuestion("…… nuages arrivent.");
+        question.setChoices(new String[]{"a.\tle", "b.\tla", "c.\tles", "d.\tl'"});
+        question.setCorrectIndexofChoices(2);
+        questions.add(question);
+
+        addNewQuiz(11, "Pilihlah article défini yang sesuai untuk melengkapi kalimat-kalimat berikut !", questions);
+
+        /*******************************************************************************************
+         *  ADD QUIZ 12
+         *******************************************************************************************/
+        // Reset questions to new class
+        questions = new ArrayList<>();
+        // Create new class
+        question = new Question();
+        question.setQuestion("Pierre accroché …. tableaux sur le mur.");
+        question.setChoices(new String[]{"a.\tdu", "b.\tdes", "c.\tune", "d.\tun"});
+        question.setCorrectIndexofChoices(1);
+        questions.add(question);
+
+        question = new Question();
+        question.setQuestion("Je vais à la plage avec … ami.");
+        question.setChoices(new String[]{"a.\tune", "b.\tun", "c.\tdes", "d.\tdu"});
+        question.setCorrectIndexofChoices(1);
+        questions.add(question);
+
+        question = new Question();
+        question.setQuestion("Ma mère a …. voiture");
+        question.setChoices(new String[]{"a.\tune", "b.\tun", "c.\tdes", "d.\tdu"});
+        question.setCorrectIndexofChoices(0);
+        questions.add(question);
+
+        question = new Question();
+        question.setQuestion("Alice achète …. stylos");
+        question.setChoices(new String[]{"a.\tune", "b.\tun", "c.\tdes", "d.\tdu"});
+        question.setCorrectIndexofChoices(2);
+        questions.add(question);
+
+        question = new Question();
+        question.setQuestion("Pierre regarde …. film");
+        question.setChoices(new String[]{"a.\tune", "b.\tun", "c.\tdes", "d.\tdu"});
+        question.setCorrectIndexofChoices(1);
+        questions.add(question);
+
+        question = new Question();
+        question.setQuestion("Les touristes prennent ….. photos.");
+        question.setChoices(new String[]{"a.\tune", "b.\tun", "c.\tdes", "d.\tdu"});
+        question.setCorrectIndexofChoices(2);
+        questions.add(question);
+
+        question = new Question();
+        question.setQuestion("….. jeune femme lit un livre");
+        question.setChoices(new String[]{"a.\tune", "b.\tun", "c.\tdes", "d.\tdu"});
+        question.setCorrectIndexofChoices(0);
+        questions.add(question);
+
+        question = new Question();
+        question.setQuestion("….. fillettes mangent une glace.");
+        question.setChoices(new String[]{"a.\tune", "b.\tun", "c.\tdes", "d.\tdu"});
+        question.setCorrectIndexofChoices(2);
+        questions.add(question);
+
+        question = new Question();
+        question.setQuestion("…… musicien joue du violon.");
+        question.setChoices(new String[]{"a.\tune", "b.\tun", "c.\tdes", "d.\tdu"});
+        question.setCorrectIndexofChoices(1);
+        questions.add(question);
+
+        question = new Question();
+        question.setQuestion("le serveur parle avec ….. cliente.");
+        question.setChoices(new String[]{"a.\tune", "b.\tun", "c.\tdes", "d.\tdu"});
+        question.setCorrectIndexofChoices(0);
+        questions.add(question);
+
+        addNewQuiz(12, "Pilihlah article indéfini yang sesuai untuk melengkapi kalimat-kalimat berikut !", questions);
+
+        /*******************************************************************************************
+         *  ADD QUIZ 13
+         *******************************************************************************************/
+        // Reset questions to new class
+        questions = new ArrayList<>();
+        // Create new class
+        question = new Question();
+        question.setQuestion("Hélène et Marie mangent du pain avec …. beurre.");
+        question.setChoices(new String[]{"a.\tdu", "b.\tde la", "c.\tde", "d.\tde l'"});
+        question.setCorrectIndexofChoices(0);
+        questions.add(question);
+
+        question = new Question();
+        question.setQuestion("En général, les Français boivent …. vin aux repas.");
+        question.setChoices(new String[]{"a.\tdu", "b.\tde la", "c.\tde", "d.\tde l'"});
+        question.setCorrectIndexofChoices(0);
+        questions.add(question);
+
+        question = new Question();
+        question.setQuestion("Cette centrale nucléaire fournit …. énergie à toute la région.");
+        question.setChoices(new String[]{"a.\tdu", "b.\tde la", "c.\tde", "d.\tde l'"});
+        question.setCorrectIndexofChoices(3);
+        questions.add(question);
+
+        question = new Question();
+        question.setQuestion("Il faut avoir …. patience pour faire un puzzle.");
+        question.setChoices(new String[]{"a.\tdu", "b.\tde la", "c.\tde", "d.\tde l'"});
+        question.setCorrectIndexofChoices(1);
+        questions.add(question);
+
+        question = new Question();
+        question.setQuestion("Elle achete …. farine.");
+        question.setChoices(new String[]{"a.\tde la", "b.\tde l'", "c.\tde", "d.\tdu"});
+        question.setCorrectIndexofChoices(0);
+        questions.add(question);
+
+        question = new Question();
+        question.setQuestion("Il y a ….. jambon.");
+        question.setChoices(new String[]{"a.\tde la", "b.\tde l'", "c.\tde", "d.\tdu"});
+        question.setCorrectIndexofChoices(3);
+        questions.add(question);
+
+        question = new Question();
+        question.setQuestion("Je veux ….. vin.");
+        question.setChoices(new String[]{"a.\tde la", "b.\tde l'", "c.\tde", "d.\tdu"});
+        question.setCorrectIndexofChoices(3);
+        questions.add(question);
+
+        question = new Question();
+        question.setQuestion("Je prends …. gâteau.");
+        question.setChoices(new String[]{"a.\tde la", "b.\tde l'", "c.\tde", "d.\tdu"});
+        question.setCorrectIndexofChoices(3);
+        questions.add(question);
+
+        question = new Question();
+        question.setQuestion("Il y a ….. confiture mais il n’y a du pain.");
+        question.setChoices(new String[]{"a.\tde la", "b.\tde l'", "c.\tde", "d.\tdu"});
+        question.setCorrectIndexofChoices(1);
+        questions.add(question);
+
+        question = new Question();
+        question.setQuestion("Il boit ….. café.");
+        question.setChoices(new String[]{"a.\tde la", "b.\tde l'", "c.\tde", "d.\tdu"});
+        question.setCorrectIndexofChoices(0);
+        questions.add(question);
+
+        addNewQuiz(13, "Pilihlah article partitif yang sesuai untuk melengkapi kalimat-kalimat berikut !", questions);
+
+        /*******************************************************************************************
+         *  ADD QUIZ 14
+         *******************************************************************************************/
+        // Reset questions to new class
+        questions = new ArrayList<>();
+        // Create new class
+        question = new Question();
+        question.setQuestion("…. yeux sont d’un bleu profond");
+        question.setChoices(new String[]{"a.\tSa", "b.\tSon", "c.\tSes", "d.\tMon"});
+        question.setCorrectIndexofChoices(2);
+        questions.add(question);
+
+        question = new Question();
+        question.setQuestion("…. école est loin d’ici");
+        question.setChoices(new String[]{"a.\tMa", "b.\tMes", "c.\tSes", "d.\tMon"});
+        question.setCorrectIndexofChoices(3);
+        questions.add(question);
+
+        question = new Question();
+        question.setQuestion("…. maison est très belle");
+        question.setChoices(new String[]{"a.\tTa", "b.\tTon", "c.\tTes", "d.\tSes"});
+        question.setCorrectIndexofChoices(3);
+        questions.add(question);
+
+        question = new Question();
+        question.setQuestion("C’est …. petit frère. Il s’appelle Erick.");
+        question.setChoices(new String[]{"a.\tma", "b.\tmon", "c.\tmes", "d.\ttes"});
+        question.setCorrectIndexofChoices(1);
+        questions.add(question);
+
+        question = new Question();
+        question.setQuestion("tA : Est-ce que …. mère est allée en vacances ? \n B : Bien sûr.");
+        question.setChoices(new String[]{"a.\tvotre", "b.\tton", "c.\tmon", "d.\tson"});
+        question.setCorrectIndexofChoices(0);
+        questions.add(question);
+
+        question = new Question();
+        question.setQuestion("J’ai perdu …. veste bleue.");
+        question.setChoices(new String[]{"a.\tvotre", "b.\tma", "c.\tmon", "d.\tson"});
+        question.setCorrectIndexofChoices(1);
+        questions.add(question);
+
+        question = new Question();
+        question.setQuestion("Je dois passer chez Catherine mais je n’ai pas …. adresse.");
+        question.setChoices(new String[]{"a.\tvotre", "b.\tsa", "c.\tmon", "d.\tson"});
+        question.setCorrectIndexofChoices(3);
+        questions.add(question);
+
+        question = new Question();
+        question.setQuestion("Posez …. affaires sur la table, s’il vous plaît.");
+        question.setChoices(new String[]{"a.\tvotre", "b.\tton", "c.\tvos", "d.\tson"});
+        question.setCorrectIndexofChoices(2);
+        questions.add(question);
+
+        question = new Question();
+        question.setQuestion("Vous avez …. permis de conduire, madame ?");
+        question.setChoices(new String[]{"a.\tvotre", "b.\tton", "c.\tvos", "d.\tses"});
+        question.setCorrectIndexofChoices(0);
+        questions.add(question);
+
+        question = new Question();
+        question.setQuestion("Je ne retrouve plus …. lunettes.");
+        question.setChoices(new String[]{"a.\tsa", "b.\tmes", "c.\tmon", "d.\tma"});
+        question.setCorrectIndexofChoices(1);
+        questions.add(question);
+
+        addNewQuiz(14, "Pilihlah adjectif possesif yang sesuai untuk melengkapi kalimat-kalimat berikut!", questions);
+
+        /*******************************************************************************************
+         *  ADD QUIZ 15
+         *******************************************************************************************/
+        // Reset questions to new class
+        questions = new ArrayList<>();
+        // Create new class
+        question = new Question();
+        question.setQuestion("Je n’aime pas …. stylos : Ils m’échappent tous des mains.");
+        question.setChoices(new String[]{"a.\tCa", "b.\tCes", "c.\tCet", "d.\tCette"});
+        question.setCorrectIndexofChoices(1);
+        questions.add(question);
+
+        question = new Question();
+        question.setQuestion("…. endroit est désertique : c’est un désert humain");
+        question.setChoices(new String[]{"a.\tCes", "b.\tCe", "c.\tCette", "d.\tCet"});
+        question.setCorrectIndexofChoices(3);
+        questions.add(question);
+
+        question = new Question();
+        question.setQuestion("…. station de sports d’hiver est très grande");
+        question.setChoices(new String[]{"a.\tCes", "b.\tCe", "c.\tCette", "d.\tCet"});
+        question.setCorrectIndexofChoices(2);
+        questions.add(question);
+
+        question = new Question();
+        question.setQuestion("…. porte-avions était le plus grand de la seconde Guerre Mondiale");
+        question.setChoices(new String[]{"a.\tCette", "b.\tCe", "c.\tCet", "d.\tCes"});
+        question.setCorrectIndexofChoices(1);
+        questions.add(question);
+
+        question = new Question();
+        question.setQuestion("Passez-moi …. livre.");
+        question.setChoices(new String[]{"a.\tCette", "b.\tCe", "c.\tCet", "d.\tCes"});
+        question.setCorrectIndexofChoices(1);
+        questions.add(question);
+
+        question = new Question();
+        question.setQuestion("Vous préférez ce bonnet ou ….. casquette ?");
+        question.setChoices(new String[]{"a.\tCette", "b.\tCe", "c.\tCet", "d.\tCes"});
+        question.setCorrectIndexofChoices(0);
+        questions.add(question);
+
+        question = new Question();
+        question.setQuestion("…. homme a l’air très sympathique, tu ne trouves pas ?");
+        question.setChoices(new String[]{"a.\tCette", "b.\tCe", "c.\tCet", "d.\tCes"});
+        question.setCorrectIndexofChoices(2);
+        questions.add(question);
+
+        question = new Question();
+        question.setQuestion("J’hésite entre …. chemisier et cette tunique.");
+        question.setChoices(new String[]{"a.\tCette", "b.\tCe", "c.\tCet", "d.\tCes"});
+        question.setCorrectIndexofChoices(1);
+        questions.add(question);
+
+        question = new Question();
+        question.setQuestion("Je voudrais essayer …. jupe, s’il vous plaît.");
+        question.setChoices(new String[]{"a.\tCette", "b.\tCe", "c.\tCet", "d.\tCes"});
+        question.setCorrectIndexofChoices(0);
+        questions.add(question);
+
+        question = new Question();
+        question.setQuestion("….. billets ne sont plus valables, je regrette mademoiselle.");
+        question.setChoices(new String[]{"a.\tCette", "b.\tCe", "c.\tCet", "d.\tCes"});
+        question.setCorrectIndexofChoices(3);
+        questions.add(question);
+
+        addNewQuiz(15, "Pilihlah adjectif démonstratif yang sesuai untuk melengkapi kalimat-kalimat berikut!", questions);
+
+        /*******************************************************************************************
+         *  ADD QUIZ 16
+         *******************************************************************************************/
+        // Reset questions to new class
+        questions = new ArrayList<>();
+        // Create new class
+        question = new Question();
+        question.setQuestion("Madame Soirée aime aider n’importe qui. Elle est une personne …..");
+        question.setChoices(new String[]{"a.\tbelle", "b.\tbeau", "c.\tgentile", "d.\triche"});
+        question.setCorrectIndexofChoices(2);
+        questions.add(question);
+
+        question = new Question();
+        question.setQuestion("Erick jamais fait son devoir. Il est une personne …..");
+        question.setChoices(new String[]{"a.\tbelle", "b.\tbeau", "c.\tgentile", "d.\tparreuseux"});
+        question.setCorrectIndexofChoices(3);
+        questions.add(question);
+
+        question = new Question();
+        question.setQuestion("Il s’appelle Hulk. Maintenant Il a 57 ans, donc il est……….");
+        question.setChoices(new String[]{"a.\tvieux", "b.\tgentil", "c.\tgentile", "d.\triche"});
+        question.setCorrectIndexofChoices(0);
+        questions.add(question);
+
+        question = new Question();
+        question.setQuestion("J’aime bien cette …. robe.");
+        question.setChoices(new String[]{"a.\tbelle", "b.\tbeau", "c.\tlaid", "d.\tlaide"});
+        question.setCorrectIndexofChoices(0);
+        questions.add(question);
+
+        question = new Question();
+        question.setQuestion(". C’est une …. table.");
+        question.setChoices(new String[]{"a.\tbelle", "b.\tbeau", "c.\tlaid", "d.\tnouveau"});
+        question.setCorrectIndexofChoices(1);
+        questions.add(question);
+
+        question = new Question();
+        question.setQuestion("Je dois acheter un ….. stylo.");
+        question.setChoices(new String[]{"a.\tbelle", "b.\tnouveau", "c.\tbonne", "d.\tdouce"});
+        question.setCorrectIndexofChoices(0);
+        questions.add(question);
+
+        question = new Question();
+        question.setQuestion("La température est vraiment ….");
+        question.setChoices(new String[]{"a.\tgros", "b.\tbeau", "c.\tbon", "d.\tfraiche"});
+        question.setCorrectIndexofChoices(3);
+        questions.add(question);
+
+        question = new Question();
+        question.setQuestion("Elle a de bonnes notes. Elle est très ….");
+        question.setChoices(new String[]{"a.\tintelligente", "b.\tintelligent", "c.\tgentil", "d.\tgentile"});
+        question.setCorrectIndexofChoices(0);
+        questions.add(question);
+
+        question = new Question();
+        question.setQuestion("Vous avez un ….. chapeau");
+        question.setChoices(new String[]{"a.\tbelle", "b.\tbeau", "c.\tnouvelle", "d.\tnouveau"});
+        question.setCorrectIndexofChoices(3);
+        questions.add(question);
+
+        question = new Question();
+        question.setQuestion("Son mari est vraiment ….");
+        question.setChoices(new String[]{"a.\tbelle", "b.\tdouce", "a.\tdouce", "d.\tgentille"});
+        question.setCorrectIndexofChoices(1);
+        questions.add(question);
+
+        addNewQuiz(16, "Pilihlah adjectif qualificatif yang sesuai untuk melengkapi kalimat-kalimat berikut!", questions);
+
+        /*******************************************************************************************
+         *  ADD QUIZ 17
+         *******************************************************************************************/
+        // Reset questions to new class
+        questions = new ArrayList<>();
+        // Create new class
+        question = new Question();
+        question.setQuestion("1.\tMa cousine est venue pour les fêtes de Nöel, …. Elle est arrivée en retard.");
+        question.setChoices(new String[]{"a.\tet", "b.\tou", "c.\tmais", "d.\talors"});
+        question.setCorrectIndexofChoices(2);
+        questions.add(question);
+
+        question = new Question();
+        question.setQuestion("Il y a six paquets : trois pour moi … trois pour elle.");
+        question.setChoices(new String[]{"a.\tet", "b.\tou", "c.\tmais", "d.\talors"});
+        question.setCorrectIndexofChoices(0);
+        questions.add(question);
+
+        question = new Question();
+        question.setQuestion("Paul … Alexandra sont partis à la piscine.");
+        question.setChoices(new String[]{"a.\tet", "b.\tou", "c.\tmais", "d.\talors"});
+        question.setCorrectIndexofChoices(0);
+        questions.add(question);
+
+        question = new Question();
+        question.setQuestion("Il fait beau temps, …. On n’a pas fait grand-chose finalement.");
+        question.setChoices(new String[]{"a.\tet", "b.\tou", "c.\tmais", "d.\talors"});
+        question.setCorrectIndexofChoices(2);
+        questions.add(question);
+
+        question = new Question();
+        question.setQuestion("Les animaux sauvages …. les animaux domestiques n’ont rien à voir entre eux.");
+        question.setChoices(new String[]{"a.\tet", "b.\tou", "c.\tmais", "d.\talors"});
+        question.setCorrectIndexofChoices(0);
+        questions.add(question);
+
+        question = new Question();
+        question.setQuestion("Il est jeune … malgré les apparences il est mature");
+        question.setChoices(new String[]{"a.\tet", "b.\tou", "c.\tmais", "d.\talors"});
+        question.setCorrectIndexofChoices(2);
+        questions.add(question);
+
+        question = new Question();
+        question.setQuestion("Veut-elle manger une tarte aux framboises … aux myrtilles ?");
+        question.setChoices(new String[]{"a.\tet", "b.\tou", "c.\tmais", "d.\talors"});
+        question.setCorrectIndexofChoices(1);
+        questions.add(question);
+
+        question = new Question();
+        question.setQuestion("J’ai fini de manger … j’ai encore faim.");
+        question.setChoices(new String[]{"a.\tet", "b.\tou", "c.\tmais", "d.\talors"});
+        question.setCorrectIndexofChoices(2);
+        questions.add(question);
+
+        question = new Question();
+        question.setQuestion("L’anniversaire de Phillipe est aujourd’hui … demain ?");
+        question.setChoices(new String[]{"a.\tet", "b.\tou", "c.\tmais", "d.\talors"});
+        question.setCorrectIndexofChoices(1);
+        questions.add(question);
+
+        question = new Question();
+        question.setQuestion("Ma mère …. mon père se marient en 1996.");
+        question.setChoices(new String[]{"a.\tet", "b.\tou", "c.\tmais", "d.\talors"});
+        question.setCorrectIndexofChoices(0);
+        questions.add(question);
+
+        addNewQuiz(17, "Pilihlah conjonction yang tepat untuk melengkapi kalimat-kalimat berikut! ", questions);
+
+        /*******************************************************************************************
+         *  ADD QUIZ 17
+         *******************************************************************************************/
+        // Reset questions to new class
+        questions = new ArrayList<>();
+        // Create new class
+        question = new Question();
+        question.setQuestion("1.\tA : …. est-ce que la conférence a lieu ? \n B : Dans le grand amphithéâtre. ");
+        question.setChoices(new String[]{"a.\tCombien", "b.\tOù", "c.\tQue", "d.\tQuand"});
+        question.setCorrectIndexofChoices(1);
+        questions.add(question);
+
+        question = new Question();
+        question.setQuestion("tA : …. Arthur ne vient pas ? \n B : Il n’est pas libre.");
+        question.setChoices(new String[]{"a.\tPourquoi", "b.\tQuand", "c.\tQui", "d.\tQuoi"});
+        question.setCorrectIndexofChoices(0);
+        questions.add(question);
+
+        question = new Question();
+        question.setQuestion("…. de touristes séjournent dans votre hôtel? Trente personnes.");
+        question.setChoices(new String[]{"a.\tCombien", "b.\tComment", "c.\tQui", "d.\tQuoi"});
+        question.setCorrectIndexofChoices(0);
+        questions.add(question);
+
+        question = new Question();
+        question.setQuestion("…. a oublié de fermer la fenêtre ? Moi");
+        question.setChoices(new String[]{"a.\tOù", "b.\tCombien", "c.\tQui", "d.\tPourquoi"});
+        question.setCorrectIndexofChoices(2);
+        questions.add(question);
+
+        question = new Question();
+        question.setQuestion("A : Tu vas …. en France \n B : En janvier");
+        question.setChoices(new String[]{"a.\tquand", "b.\tcombien", "c.\tqui", "d.\tpourquoi"});
+        question.setCorrectIndexofChoices(0);
+        questions.add(question);
+
+        question = new Question();
+        question.setQuestion("A : Ils habitent …. ? \n B : Ils habitents à Nice");
+        question.setChoices(new String[]{"a.\toù", "b.\tcombien", "c.\tqui", "d.\tpourquoi"});
+        question.setCorrectIndexofChoices(0);
+        questions.add(question);
+
+        question = new Question();
+        question.setQuestion("A : …. elles ne mangent pas de chocolat ? \n B : parce qu’elles n’aiment pas ça. ");
+        question.setChoices(new String[]{"a.\tOù", "b.\tCombien", "c.\tQui", "d.\tPourquoi"});
+        question.setCorrectIndexofChoices(3);
+        questions.add(question);
+
+        question = new Question();
+        question.setQuestion("A : …. Est-ce que ça finit ? \n B : vers 5 heures");
+        question.setChoices(new String[]{"a.\tOù", "b.\tComment", "c.\tQuand", "d.\tPourquoi"});
+        question.setCorrectIndexofChoices(2);
+        questions.add(question);
+
+        question = new Question();
+        question.setQuestion("A : …. on y va ? \n B : En voiture, si tu veux.");
+        question.setChoices(new String[]{"a.\tOù", "b.\tComment", "c.\tQui", "d.\tPourquoi"});
+        question.setCorrectIndexofChoices(1);
+        questions.add(question);
+
+        question = new Question();
+        question.setQuestion("A : …… est-ce que ça commence à 18h seuleument ? \nB : Parce que la salle n’est pas libre avant.");
+        question.setChoices(new String[]{"a.\tOù", "b.\tComment", "c.\tCombien de", "d.\tPourquoi"});
+        question.setCorrectIndexofChoices(3);
+        questions.add(question);
+
+        addNewQuiz(18, "Pilihlah mot interrogation yang sesuai untuk melengkapi kalimat-kalimat berikut!", questions);
     }
 
 
