@@ -71,13 +71,12 @@ public class DetailMateriActivity extends AppCompatActivity {
     private void addContent(int resource) {
         BitmapDrawable bd = (BitmapDrawable) getResources().getDrawable(resource);
         int imageHeight = bd.getIntrinsicHeight();
-        int imageWidth = bd.getIntrinsicWidth();
 
         ImageView imageView = new ImageView(this);
         imageView.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, imageHeight));
         imageView.setAdjustViewBounds(true);
-//        imageView.setScaleType(ImageView.ScaleType.FIT_XY);
-        imageView.setBackground(bd);
+        imageView.setScaleType(ImageView.ScaleType.FIT_XY);
+        imageView.setImageResource(resource);
 
         contentContainer.addView(imageView);
 
