@@ -67,8 +67,11 @@ public class QuizFragment extends Fragment {
         choiceA.setValue(choices[0]);
         choiceB.setValue(choices[1]);
         choiceC.setValue(choices[2]);
-        choiceD.setValue(choices[3]);
-
+        if (choices.length > 3) {
+            choiceD.setValue(choices[3]);
+        } else {
+            choiceD.setVisibility(View.GONE);
+        }
 
         choiceRadioGroup.setOnCheckedChangeListener(new PresetRadioGroup.OnCheckedChangeListener() {
             @Override

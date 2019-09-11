@@ -1442,25 +1442,25 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                     pronom.setContents(cursor.getString(cursor.getColumnIndex(Materi.COLUMN_CONTENTS)));
                     materies.add((T) pronom);
                 } while (cursor.moveToNext());
+            } else if (dataClass == Conjonction.class) {
+                do {
+                    Conjonction conjonction = new Conjonction();
+                    conjonction.setIcon(R.drawable.icon_conjonction);
+                    conjonction.setId(cursor.getInt(cursor.getColumnIndex(Materi.COLUMN_ID)));
+                    conjonction.setTitle(cursor.getString(cursor.getColumnIndex(Materi.COLUMN_TITLE)));
+                    conjonction.setContents(cursor.getString(cursor.getColumnIndex(Materi.COLUMN_CONTENTS)));
+                    materies.add((T) conjonction);
+                } while (cursor.moveToNext());
+            } else if (dataClass == Interrogatif.class) {
+                do {
+                    Interrogatif interrogatif = new Interrogatif();
+                    interrogatif.setIcon(R.drawable.icon_interrogatif);
+                    interrogatif.setId(cursor.getInt(cursor.getColumnIndex(Materi.COLUMN_ID)));
+                    interrogatif.setTitle(cursor.getString(cursor.getColumnIndex(Materi.COLUMN_TITLE)));
+                    interrogatif.setContents(cursor.getString(cursor.getColumnIndex(Materi.COLUMN_CONTENTS)));
+                    materies.add((T) interrogatif);
+                } while (cursor.moveToNext());
             }
-        } else if (dataClass == Conjonction.class) {
-            do {
-                Conjonction conjonction = new Conjonction();
-                conjonction.setIcon(R.drawable.icon_conjonction);
-                conjonction.setId(cursor.getInt(cursor.getColumnIndex(Materi.COLUMN_ID)));
-                conjonction.setTitle(cursor.getString(cursor.getColumnIndex(Materi.COLUMN_TITLE)));
-                conjonction.setContents(cursor.getString(cursor.getColumnIndex(Materi.COLUMN_CONTENTS)));
-                materies.add((T) conjonction);
-            } while (cursor.moveToNext());
-        } else if (dataClass == Interrogatif.class) {
-            do {
-                Interrogatif interrogatif = new Interrogatif();
-                interrogatif.setIcon(R.drawable.icon_interrogatif);
-                interrogatif.setId(cursor.getInt(cursor.getColumnIndex(Materi.COLUMN_ID)));
-                interrogatif.setTitle(cursor.getString(cursor.getColumnIndex(Materi.COLUMN_TITLE)));
-                interrogatif.setContents(cursor.getString(cursor.getColumnIndex(Materi.COLUMN_CONTENTS)));
-                materies.add((T) interrogatif);
-            } while (cursor.moveToNext());
         }
 
         // close db connection
