@@ -75,15 +75,9 @@ public class DetailMateriActivity extends AppCompatActivity {
     }
 
     private void addContent(int resource) {
-        BitmapFactory.Options dimensions = new BitmapFactory.Options();
-        dimensions.inJustDecodeBounds = true;
-        Bitmap bitmap = BitmapFactory.decodeResource(getResources(), resource, dimensions);
-        int height= (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dimensions.outHeight, getResources().getDisplayMetrics()) ;
-
         ImageView imageView = new ImageView(this);
-        imageView.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, height));
+        imageView.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
         imageView.setAdjustViewBounds(true);
-        imageView.setScaleType(ImageView.ScaleType.FIT_START);
         imageView.setImageResource(resource);
 
         contentContainer.addView(imageView);
