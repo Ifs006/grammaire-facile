@@ -141,7 +141,12 @@ public class PresetValueButton extends RelativeLayout implements RadioCheckable 
     //================================================================================
 
     public void setCheckedState() {
-        setBackgroundResource(R.drawable.bg_shape_preset_button_pressed);
+        setBackgroundResource(R.drawable.bg_shape_preset_button_correct);
+        mValueTextView.setTextColor(mPressedTextColor);
+    }
+
+    public void setErrorState() {
+        setBackgroundResource(R.drawable.bg_shape_preset_button_incorrect);
         mValueTextView.setTextColor(mPressedTextColor);
     }
 

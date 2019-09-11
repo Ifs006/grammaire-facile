@@ -12,6 +12,7 @@ public class Constants {
     // ARGUMENTS
     public static String ARGS_QUESTION = "question";
     public static String ARGS_CHOICES = "choices";
+    public static String ARGS_CORRECT_INDEX_OF_CHOICES = "correct_index_of_choices";
 
 
     public static class Materi {

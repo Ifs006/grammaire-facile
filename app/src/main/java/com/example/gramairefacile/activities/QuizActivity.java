@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
@@ -77,7 +76,8 @@ public class QuizActivity extends AppCompatActivity {
         Collections.shuffle(questions);
 
         for (Question question : questions) {
-            fragments.add(QuizFragment.newInstance(question.getQuestion(), new Gson().toJson(question.getChoices())));
+            fragments.add(QuizFragment.newInstance(question.getQuestion(), new Gson().toJson(question.getChoices()),
+                    question.getCorrectIndexofChoices()));
         }
 
         viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager(), fragments);
@@ -116,19 +116,15 @@ public class QuizActivity extends AppCompatActivity {
             if (fragment.getAnswer().isEmpty()) {
                 Toast.makeText(this, "Please select the answer!", Toast.LENGTH_SHORT).show();
                 return;
+            } else if (fragment.isDoubleTap()) {
+                viewPager.setCurrentItem(viewPager.getCurrentItem() + 1);
             }
-            viewPager.setCurrentItem(viewPager.getCurrentItem() + 1);
         }
     }
 
     private void checkAnswer() {
         QuizFragment fragment = (QuizFragment) viewPagerAdapter.getItem(viewPager.getCurrentItem());
-        Question question = questions.get(viewPager.getCurrentItem());
-        String answer = question.getChoices()[question.getCorrectIndexofChoices()];
-
-        Log.i("@ANSWER", answer);
-
-        if (fragment.getAnswer().equals(answer)) {
+        if (fragment.isCorrectAnswer()) {
             currentScore += 1;
         }
     }

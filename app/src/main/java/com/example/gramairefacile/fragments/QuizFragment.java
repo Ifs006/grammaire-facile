@@ -4,6 +4,10 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.content.ContextCompat;
+import android.text.Spannable;
+import android.text.SpannableString;
+import android.text.style.ForegroundColorSpan;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,20 +19,29 @@ import com.example.gramairefacile.utils.Constants;
 import com.example.gramairefacile.widgets.radiobutton.PresetRadioGroup;
 import com.example.gramairefacile.widgets.radiobutton.PresetValueButton;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 public class QuizFragment extends Fragment {
 
-    private TextView titleQuestion;
+    private TextView titleQuestion, labelAlert;
     private PresetRadioGroup choiceRadioGroup;
     private PresetValueButton choiceA, choiceB, choiceC, choiceD;
 
     private String title;
-    private String[] choices;
-    private String answer = "";
+    private List<String> choices;
+    private List<PresetValueButton> presetValueButtons;
+    private int correctIndexofChoices;
 
-    public static QuizFragment newInstance(String question, String choices) {
+    private String answer = "";
+    private boolean doubleTap = false;
+
+    public static QuizFragment newInstance(String question, String choices, int index) {
         Bundle args = new Bundle();
         args.putString(Constants.ARGS_QUESTION, question);
         args.putString(Constants.ARGS_CHOICES, choices);
+        args.putInt(Constants.ARGS_CORRECT_INDEX_OF_CHOICES, index);
 
         QuizFragment fragment = new QuizFragment();
         fragment.setArguments(args);
@@ -52,11 +65,13 @@ public class QuizFragment extends Fragment {
 
     private void readArguments() {
         title = getArguments().getString(Constants.ARGS_QUESTION, "");
-        choices = DatabaseHelper.toArray(getArguments().getString(Constants.ARGS_CHOICES, ""), String[].class);
+        choices = Arrays.asList(DatabaseHelper.toArray(getArguments().getString(Constants.ARGS_CHOICES, ""), String[].class));
+        correctIndexofChoices = getArguments().getInt(Constants.ARGS_CORRECT_INDEX_OF_CHOICES, 0);
     }
 
     private void initViews(View view) {
         titleQuestion = view.findViewById(R.id.tv_question);
+        labelAlert = view.findViewById(R.id.tv_alert_answer);
         choiceRadioGroup = view.findViewById(R.id.rdgroup_choice);
         choiceA = view.findViewById(R.id.rdbtn_choice_a);
         choiceB = view.findViewById(R.id.rdbtn_choice_b);
@@ -64,11 +79,18 @@ public class QuizFragment extends Fragment {
         choiceD = view.findViewById(R.id.rdbtn_choice_d);
 
         titleQuestion.setText(title);
-        choiceA.setValue(choices[0]);
-        choiceB.setValue(choices[1]);
-        choiceC.setValue(choices[2]);
-        if (choices.length > 3) {
-            choiceD.setValue(choices[3]);
+
+        presetValueButtons = new ArrayList<>();
+        presetValueButtons.add(choiceA);
+        presetValueButtons.add(choiceB);
+        presetValueButtons.add(choiceC);
+        presetValueButtons.add(choiceD);
+
+        choiceA.setValue(choices.get(0));
+        choiceB.setValue(choices.get(1));
+        choiceC.setValue(choices.get(2));
+        if (choices.size() > 3) {
+            choiceD.setValue(choices.get(3));
         } else {
             choiceD.setVisibility(View.GONE);
         }
@@ -81,8 +103,33 @@ public class QuizFragment extends Fragment {
         });
     }
 
-
     public String getAnswer() {
         return answer;
+    }
+
+    public boolean isDoubleTap() {
+        return doubleTap;
+    }
+
+    public boolean isCorrectAnswer() {
+        boolean correct = answer.equals(choices.get(correctIndexofChoices));
+        if (correct) doubleTap = true;
+        else {
+            presetValueButtons.get(choices.indexOf(answer)).setErrorState();
+
+            if (labelAlert.getVisibility() != View.VISIBLE) {
+                labelAlert.setVisibility(View.VISIBLE);
+
+                String label = getString(R.string.alert_incorrect_answer, choices.get(correctIndexofChoices));
+                Spannable wordtoSpan = new SpannableString(label);
+                wordtoSpan.setSpan(new ForegroundColorSpan(ContextCompat.getColor(getContext(), R.color.selectedButton)),
+                        label.length() - choices.get(correctIndexofChoices).length() - 5, label.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+
+                labelAlert.setText(wordtoSpan);
+            } else {
+                doubleTap = true;
+            }
+        }
+        return correct && doubleTap;
     }
 }
