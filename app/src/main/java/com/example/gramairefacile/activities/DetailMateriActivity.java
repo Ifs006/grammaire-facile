@@ -1,10 +1,16 @@
 package com.example.gramairefacile.activities;
 
+import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.DisplayMetrics;
+import android.util.TypedValue;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
@@ -69,16 +75,13 @@ public class DetailMateriActivity extends AppCompatActivity {
     }
 
     private void addContent(int resource) {
-        BitmapDrawable bd = (BitmapDrawable) getResources().getDrawable(resource);
-        int imageHeight = bd.getIntrinsicHeight();
-
         ImageView imageView = new ImageView(this);
-        imageView.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, imageHeight));
+        imageView.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
         imageView.setAdjustViewBounds(true);
-        imageView.setScaleType(ImageView.ScaleType.FIT_XY);
         imageView.setImageResource(resource);
 
         contentContainer.addView(imageView);
 
     }
+
 }

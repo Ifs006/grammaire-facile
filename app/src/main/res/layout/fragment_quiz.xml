@@ -1,68 +1,88 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingTop="70dp"
-    tools:context=".activities.QuizActivity">
+    android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/tv_question"
+    <android.support.constraint.ConstraintLayout
+        android:paddingTop="70dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="25dp"
-        android:layout_marginTop="70dp"
-        android:layout_marginEnd="25dp"
-        android:fontFamily="@font/caviar_dreams_bold"
-        android:gravity="center"
-        android:text="Here will be the question"
-        android:textColor="@color/black"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        tools:context=".activities.QuizActivity">
 
-    <com.example.gramairefacile.widgets.radiobutton.PresetRadioGroup
-        android:id="@+id/rdgroup_choice"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:gravity="center"
-        android:orientation="vertical"
-        app:layout_constraintTop_toBottomOf="@id/tv_question">
-
-        <com.example.gramairefacile.widgets.radiobutton.PresetValueButton
-            android:id="@+id/rdbtn_choice_a"
-            style="@style/PresetLayoutButton"
-            android:layout_width="180dp"
+        <TextView
+            android:id="@+id/tv_question"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:presetButtonValueText="a. " />
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="70dp"
+            android:layout_marginEnd="25dp"
+            android:fontFamily="@font/caviar_dreams_bold"
+            android:gravity="center"
+            android:text="Here will be the question"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-        <com.example.gramairefacile.widgets.radiobutton.PresetValueButton
-            android:id="@+id/rdbtn_choice_b"
-            style="@style/PresetLayoutButton"
-            android:layout_width="180dp"
+        <com.example.gramairefacile.widgets.radiobutton.PresetRadioGroup
+            android:id="@+id/rdgroup_choice"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            app:presetButtonValueText="b." />
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/tv_question">
 
-        <com.example.gramairefacile.widgets.radiobutton.PresetValueButton
-            android:id="@+id/rdbtn_choice_c"
-            style="@style/PresetLayoutButton"
-            android:layout_width="180dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            app:presetButtonValueText="c." />
+            <com.example.gramairefacile.widgets.radiobutton.PresetValueButton
+                android:id="@+id/rdbtn_choice_a"
+                style="@style/PresetLayoutButton"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                app:presetButtonValueText="a. " />
 
-        <com.example.gramairefacile.widgets.radiobutton.PresetValueButton
-            android:id="@+id/rdbtn_choice_d"
-            style="@style/PresetLayoutButton"
-            android:layout_width="180dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            app:presetButtonValueText="d." />
+            <com.example.gramairefacile.widgets.radiobutton.PresetValueButton
+                android:id="@+id/rdbtn_choice_b"
+                style="@style/PresetLayoutButton"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:presetButtonValueText="b." />
 
-    </com.example.gramairefacile.widgets.radiobutton.PresetRadioGroup>
+            <com.example.gramairefacile.widgets.radiobutton.PresetValueButton
+                android:id="@+id/rdbtn_choice_c"
+                style="@style/PresetLayoutButton"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:presetButtonValueText="c." />
 
-</android.support.constraint.ConstraintLayout>
+            <com.example.gramairefacile.widgets.radiobutton.PresetValueButton
+                android:id="@+id/rdbtn_choice_d"
+                style="@style/PresetLayoutButton"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:presetButtonValueText="d." />
+
+        </com.example.gramairefacile.widgets.radiobutton.PresetRadioGroup>
+
+        <TextView
+            android:id="@+id/tv_alert_answer"
+            android:layout_marginTop="20dp"
+            android:visibility="gone"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:textColor="@color/colorPrimaryText"
+            android:fontFamily="@font/caviar_dreams_bold"
+            android:text="@string/alert_incorrect_answer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rdgroup_choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>

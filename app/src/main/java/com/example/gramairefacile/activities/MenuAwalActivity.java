@@ -13,6 +13,10 @@ import android.view.View;
 import android.widget.ImageButton;
 
 import com.example.gramairefacile.R;
+import com.example.gramairefacile.database.DatabaseHelper;
+import com.example.gramairefacile.database.model.Conjonction;
+import com.example.gramairefacile.database.model.Interrogatif;
+import com.example.gramairefacile.utils.Constants;
 
 public class MenuAwalActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener {
@@ -29,11 +33,14 @@ public class MenuAwalActivity extends AppCompatActivity
     private ImageButton ibtnConjonction;
     private ImageButton ibtnInterogatif;
 
+    private DatabaseHelper db;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menuawal);
-
+        // Initialization database helper
+        db = new DatabaseHelper(this);
         initViews();
     }
 
@@ -41,12 +48,12 @@ public class MenuAwalActivity extends AppCompatActivity
         toolbar = findViewById(R.id.toolbar);
         drawerLayout = findViewById(R.id.drawer_layout);
         navigationView = findViewById(R.id.nav_view);
-        ibtnLesVerbes = (ImageButton) findViewById(R.id.ibtn_lesverbes);
-        ibtnLesPronom = (ImageButton) findViewById(R.id.ibtn_lespronom);
-        ibtnLesArticle = (ImageButton) findViewById(R.id.ibtn_lesarticles);
-        ibtnLesAdjectif = (ImageButton) findViewById(R.id.ibtn_lesadjectif);
-        ibtnConjonction = (ImageButton) findViewById(R.id.ibtn_lesconjonction);
-        ibtnInterogatif = (ImageButton) findViewById(R.id.ibtn_interogatif);
+        ibtnLesVerbes = findViewById(R.id.ibtn_lesverbes);
+        ibtnLesPronom = findViewById(R.id.ibtn_lespronom);
+        ibtnLesArticle = findViewById(R.id.ibtn_lesarticles);
+        ibtnLesAdjectif = findViewById(R.id.ibtn_lesadjectif);
+        ibtnConjonction = findViewById(R.id.ibtn_lesconjonction);
+        ibtnInterogatif = findViewById(R.id.ibtn_interogatif);
 
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("");
@@ -88,11 +95,11 @@ public class MenuAwalActivity extends AppCompatActivity
                 break;
             }
             case R.id.ibtn_lesconjonction: {
-                intent = new Intent(this, ConjonctionActivity.class);
+                intent = showDetail(Conjonction.class);
                 break;
             }
             case R.id.ibtn_interogatif: {
-                intent = new Intent(this, InterrogatifActivity.class);
+                intent = showDetail(Interrogatif.class);
                 break;
             }
 
@@ -100,6 +107,24 @@ public class MenuAwalActivity extends AppCompatActivity
 
         if (intent != null)
             startActivity(intent);
+    }
+
+    private <T> Intent showDetail(Class<T> dataClass) {
+        T data = db.getMateriByType(dataClass).get(0);
+
+        Intent intent = new Intent(this, DetailMateriActivity.class);
+
+        if (dataClass == Conjonction.class) {
+            intent.putExtra(Constants.EXTRA_ID, ((Conjonction) data).getId());
+            intent.putExtra(Constants.EXTRA_TITLE, ((Conjonction) data).getTitle());
+            intent.putExtra(Constants.EXTRA_CONTENTS, ((Conjonction) data).getContents());
+        } else {
+            intent.putExtra(Constants.EXTRA_ID, ((Interrogatif) data).getId());
+            intent.putExtra(Constants.EXTRA_TITLE, ((Interrogatif) data).getTitle());
+            intent.putExtra(Constants.EXTRA_CONTENTS, ((Interrogatif) data).getContents());
+        }
+
+        return intent;
     }
 
     @Override

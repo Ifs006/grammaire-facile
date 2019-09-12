@@ -12,13 +12,14 @@ public class Constants {
     // ARGUMENTS
     public static String ARGS_QUESTION = "question";
     public static String ARGS_CHOICES = "choices";
+    public static String ARGS_CORRECT_INDEX_OF_CHOICES = "correct_index_of_choices";
 
 
     public static class Materi {
         // TYPE MATERI
         public static int TYPE_VERB = 1;
         public static int TYPE_PRONOM = 2;
-        public static int TYPE_ARTICLES = 3;
+        public static int TYPE_ARTICLE = 3;
         public static int TYPE_ADJECTIF = 4;
         public static int TYPE_CONJONCTION = 5;
         public static int TYPE_INTERROGATIF = 6;

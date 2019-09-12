@@ -72,13 +72,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     private void generateMateri() {
         // GENERATE MATERI VERB
-        addNewMateri(Constants.Materi.TYPE_VERB, "LE VERBE RÉGULIER", new int[]{R.drawable.verb1_content1});
-        addNewMateri(Constants.Materi.TYPE_VERB, "LE VERBE IRRÉGULIER", new int[]{R.drawable.verb2_content1, R.drawable.verb2_content2});
-        addNewMateri(Constants.Materi.TYPE_VERB, "LE CONDITIONNEL DE POLITESSE", new int[]{R.drawable.verb3_content1});
-        addNewMateri(Constants.Materi.TYPE_VERB, "LA NÉGATION", new int[]{R.drawable.verb4_content1, R.drawable.verb4_content2});
-        addNewMateri(Constants.Materi.TYPE_VERB, "LA FORME IMPERSONNELLE SIMPLE", new int[]{R.drawable.verb5_content1, R.drawable.verb5_content2});
-        addNewMateri(Constants.Materi.TYPE_VERB, "L’IMPÉRATIF", new int[]{R.drawable.verb6_content1, R.drawable.verb6_content2});
-        addNewMateri(Constants.Materi.TYPE_VERB, "LA PRÉSENT DE L’INDICATIF", new int[]{R.drawable.verb7_content1, R.drawable.verb7_content2, R.drawable.verb7_content3, R.drawable.verb7_content4});
+        addNewMateri(Constants.Materi.TYPE_VERB, "LE VERBE RÉGULIER", new int[]{R.drawable.verbes1_content1});
+        addNewMateri(Constants.Materi.TYPE_VERB, "LE VERBE IRRÉGULIER", new int[]{R.drawable.verbes2_content1, R.drawable.verbes2_content2});
+        addNewMateri(Constants.Materi.TYPE_VERB, "LE CONDITIONNEL DE POLITESSE", new int[]{R.drawable.verbes3_content1});
+        addNewMateri(Constants.Materi.TYPE_VERB, "LA NÉGATION", new int[]{R.drawable.verbes4_content1, R.drawable.verbes4_content2});
+        addNewMateri(Constants.Materi.TYPE_VERB, "LA FORME IMPERSONNELLE SIMPLE", new int[]{R.drawable.verbes5_content1, R.drawable.verbes5_content2});
+        addNewMateri(Constants.Materi.TYPE_VERB, "L’IMPÉRATIF", new int[]{R.drawable.verbes6_content1, R.drawable.verbes6_content2});
+        addNewMateri(Constants.Materi.TYPE_VERB, "LA PRÉSENT DE L’INDICATIF", new int[]{R.drawable.verbes7_content1, R.drawable.verbes7_content2, R.drawable.verbes7_content3, R.drawable.verbes7_content4});
 
         // GENERATE MATERI PRONOM
         addNewMateri(Constants.Materi.TYPE_PRONOM, "LES PRONOMS PERSONNELS SUJETS", new int[]{R.drawable.pronom1_content1});
@@ -86,12 +86,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         addNewMateri(Constants.Materi.TYPE_PRONOM, "LES INTÉROGATIFS SIMPLES", new int[]{R.drawable.pronom3_content1});
 
         // GENERATE MATERI ARTICLES
-        addNewMateri(Constants.Materi.TYPE_ARTICLES, "LES PRONOMS PERSONNELS SUJETS", new int[]{R.drawable.articles1_content1});
-        addNewMateri(Constants.Materi.TYPE_ARTICLES, "LES PRONOMS TONIQUES", new int[]{R.drawable.articles2_content1});
-        addNewMateri(Constants.Materi.TYPE_ARTICLES, "LES INTÉROGATIFS SIMPLES", new int[]{R.drawable.articles3_content1});
+        addNewMateri(Constants.Materi.TYPE_ARTICLE, "LES PRONOMS PERSONNELS SUJETS", new int[]{R.drawable.article1_content1});
+        addNewMateri(Constants.Materi.TYPE_ARTICLE, "LES PRONOMS TONIQUES", new int[]{R.drawable.article2_content1});
+        addNewMateri(Constants.Materi.TYPE_ARTICLE, "LES INTÉROGATIFS SIMPLES", new int[]{R.drawable.article3_content1});
 
         // GENERATE MATERI ADJECTIF
-        addNewMateri(Constants.Materi.TYPE_ADJECTIF, "LES PRONOMS PERSONNELS SUJETS", new int[]{R.drawable.adjectif1_content1, R.drawable.adjectif1_content2});
+        addNewMateri(Constants.Materi.TYPE_ADJECTIF, "LES PRONOMS PERSONNELS SUJETS", new int[]{R.drawable.adjectif1_content1});
         addNewMateri(Constants.Materi.TYPE_ADJECTIF, "LES PRONOMS TONIQUES", new int[]{R.drawable.adjectif2_content1});
         addNewMateri(Constants.Materi.TYPE_ADJECTIF, "LES INTÉROGATIFS SIMPLES", new int[]{R.drawable.adjectif3_content1, R.drawable.adjectif3_content2});
 
@@ -1385,7 +1385,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         if (dataClass == LesAdjectif.class)
             type = Constants.Materi.TYPE_ADJECTIF;
         else if (dataClass == LesArticles.class)
-            type = Constants.Materi.TYPE_ARTICLES;
+            type = Constants.Materi.TYPE_ARTICLE;
         else if (dataClass == LesPronom.class)
             type = Constants.Materi.TYPE_PRONOM;
         else if (dataClass == LesVerbes.class)
