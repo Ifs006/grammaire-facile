@@ -2,5 +2,5 @@
     <string name="app_name">Gramaire Facile</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="alert_incorrect_answer">Sorry, your answer is incorrect.\nCorrect answer is \" %1$s \"</string>
+    <string name="alert_incorrect_answer">Jawaban yang Benar \" %1$s \"</string>
 </resources>

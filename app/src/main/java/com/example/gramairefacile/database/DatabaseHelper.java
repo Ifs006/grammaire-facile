@@ -86,20 +86,20 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         addNewMateri(Constants.Materi.TYPE_PRONOM, "LES INTÉROGATIFS SIMPLES", new int[]{R.drawable.pronom3_content1});
 
         // GENERATE MATERI ARTICLES
-        addNewMateri(Constants.Materi.TYPE_ARTICLE, "LES PRONOMS PERSONNELS SUJETS", new int[]{R.drawable.article1_content1});
-        addNewMateri(Constants.Materi.TYPE_ARTICLE, "LES PRONOMS TONIQUES", new int[]{R.drawable.article2_content1});
-        addNewMateri(Constants.Materi.TYPE_ARTICLE, "LES INTÉROGATIFS SIMPLES", new int[]{R.drawable.article3_content1});
+        addNewMateri(Constants.Materi.TYPE_ARTICLE, "L’ARTICLE DÉFINI", new int[]{R.drawable.article1_content1});
+        addNewMateri(Constants.Materi.TYPE_ARTICLE, "L’ARTICLE INDÉFINI", new int[]{R.drawable.article2_content1});
+        addNewMateri(Constants.Materi.TYPE_ARTICLE, "L’ARTICLE PARTITIF", new int[]{R.drawable.article3_content1});
 
         // GENERATE MATERI ADJECTIF
-        addNewMateri(Constants.Materi.TYPE_ADJECTIF, "LES PRONOMS PERSONNELS SUJETS", new int[]{R.drawable.adjectif1_content1});
-        addNewMateri(Constants.Materi.TYPE_ADJECTIF, "LES PRONOMS TONIQUES", new int[]{R.drawable.adjectif2_content1});
-        addNewMateri(Constants.Materi.TYPE_ADJECTIF, "LES INTÉROGATIFS SIMPLES", new int[]{R.drawable.adjectif3_content1, R.drawable.adjectif3_content2});
+        addNewMateri(Constants.Materi.TYPE_ADJECTIF, "L’ADJECTIF POSSESIF", new int[]{R.drawable.adjectif1_content1});
+        addNewMateri(Constants.Materi.TYPE_ADJECTIF, "L’ADJECTIF DÉMONSTRATIF", new int[]{R.drawable.adjectif2_content1});
+        addNewMateri(Constants.Materi.TYPE_ADJECTIF, "L’ADJECTIF QUALIFICATIF", new int[]{R.drawable.adjectif3_content1, R.drawable.adjectif3_content2});
 
         // GENERATE MATERI CONJONCTION
-        addNewMateri(Constants.Materi.TYPE_CONJONCTION, "LES PRONOMS PERSONNELS SUJETS", new int[]{R.drawable.conjonction1_content1, R.drawable.conjonction1_content2});
+        addNewMateri(Constants.Materi.TYPE_CONJONCTION, "LE CONJONCTION", new int[]{R.drawable.conjonction1_content1, R.drawable.conjonction1_content2});
 
-        // GENERATE MATERI INTERROGATION
-        addNewMateri(Constants.Materi.TYPE_INTERROGATIF, "LES PRONOMS PERSONNELS SUJETS", new int[]{R.drawable.interrogation1_content1, R.drawable.interrogation1_content2});
+        // GENERATE MATERI INTERROGATIF
+        addNewMateri(Constants.Materi.TYPE_INTERROGATIF, "L'INTERROGATIF", new int[]{R.drawable.interrogation1_content1, R.drawable.interrogation1_content2});
 
 
     }
