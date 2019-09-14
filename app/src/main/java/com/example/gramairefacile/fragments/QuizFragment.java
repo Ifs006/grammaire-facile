@@ -127,9 +127,17 @@ public class QuizFragment extends Fragment {
 
                 labelAlert.setText(wordtoSpan);
             } else {
+                disableChoices();
                 doubleTap = true;
             }
         }
         return correct && doubleTap;
+    }
+
+    private void disableChoices() {
+        choiceA.setEnabled(false);
+        choiceB.setEnabled(false);
+        choiceC.setEnabled(false);
+        choiceD.setEnabled(false);
     }
 }

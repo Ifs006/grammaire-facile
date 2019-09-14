@@ -107,23 +107,22 @@ public class QuizActivity extends AppCompatActivity {
     }
 
     private void showNextQuestion() {
-        checkAnswer();
+        QuizFragment fragment = (QuizFragment) viewPagerAdapter.getItem(viewPager.getCurrentItem());
+        if (fragment.getAnswer().isEmpty()) {
+            Toast.makeText(this, "Please select the answer!", Toast.LENGTH_SHORT).show();
+            return;
+        } else if (fragment.isDoubleTap()) {
+            viewPager.setCurrentItem(viewPager.getCurrentItem() + 1);
+        }
+
+        checkAnswer(fragment);
 
         if (viewPager.getCurrentItem() == 9) {
             finishQuiz();
-        } else {
-            QuizFragment fragment = (QuizFragment) viewPagerAdapter.getItem(viewPager.getCurrentItem());
-            if (fragment.getAnswer().isEmpty()) {
-                Toast.makeText(this, "Please select the answer!", Toast.LENGTH_SHORT).show();
-                return;
-            } else if (fragment.isDoubleTap()) {
-                viewPager.setCurrentItem(viewPager.getCurrentItem() + 1);
-            }
         }
     }
 
-    private void checkAnswer() {
-        QuizFragment fragment = (QuizFragment) viewPagerAdapter.getItem(viewPager.getCurrentItem());
+    private void checkAnswer(QuizFragment fragment) {
         if (fragment.isCorrectAnswer()) {
             currentScore += 1;
         }
