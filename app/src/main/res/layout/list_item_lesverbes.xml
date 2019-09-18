@@ -7,8 +7,8 @@
 
     <ImageView
         android:id="@+id/img_logo_verbes"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:src="@mipmap/ic_launcher" />
 
     <TextView
@@ -17,13 +17,14 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
         android:layout_centerVertical="true"
+        android:gravity="center_vertical"
         android:textAllCaps="true"
         android:layout_toRightOf="@id/img_logo_verbes"
         android:ellipsize="end"
         android:fontFamily="@font/warung_kopi"
-        android:lines="1"
-        android:maxLines="1"
+        android:lines="2"
+        android:maxLines="2"
         android:text="Le Verbe Reguliere"
         android:textColor="@color/white"
-        android:textSize="30sp" />
+        android:textSize="25sp" />
 </RelativeLayout>

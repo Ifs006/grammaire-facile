@@ -76,12 +76,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         addNewMateri(Constants.Materi.TYPE_VERB, "LE VERBE IRRÉGULIER", new int[]{R.drawable.verbes2_content1, R.drawable.verbes2_content2});
         addNewMateri(Constants.Materi.TYPE_VERB, "LE CONDITIONNEL DE POLITESSE", new int[]{R.drawable.verbes3_content1});
         addNewMateri(Constants.Materi.TYPE_VERB, "LA NÉGATION", new int[]{R.drawable.verbes4_content1, R.drawable.verbes4_content2});
-        addNewMateri(Constants.Materi.TYPE_VERB, "LA FORME IMPERSONNELLE SIMPLE", new int[]{R.drawable.verbes5_content1, R.drawable.verbes5_content2});
+        addNewMateri(Constants.Materi.TYPE_VERB, "LA FORME IMPERSONNELLE\nSIMPLE", new int[]{R.drawable.verbes5_content1, R.drawable.verbes5_content2});
         addNewMateri(Constants.Materi.TYPE_VERB, "L’IMPÉRATIF", new int[]{R.drawable.verbes6_content1, R.drawable.verbes6_content2});
         addNewMateri(Constants.Materi.TYPE_VERB, "LA PRÉSENT DE L’INDICATIF", new int[]{R.drawable.verbes7_content1, R.drawable.verbes7_content2, R.drawable.verbes7_content3, R.drawable.verbes7_content4});
 
         // GENERATE MATERI PRONOM
-        addNewMateri(Constants.Materi.TYPE_PRONOM, "LES PRONOMS PERSONNELS SUJETS", new int[]{R.drawable.pronom1_content1});
+        addNewMateri(Constants.Materi.TYPE_PRONOM, "LES PRONOMS PERSONNELS\nSUJETS", new int[]{R.drawable.pronom1_content1});
         addNewMateri(Constants.Materi.TYPE_PRONOM, "LES PRONOMS TONIQUES", new int[]{R.drawable.pronom2_content1, R.drawable.pronom2_content2});
         addNewMateri(Constants.Materi.TYPE_PRONOM, "LES INTÉROGATIFS SIMPLES", new int[]{R.drawable.pronom3_content1});
 
@@ -1412,7 +1412,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                     adjectif.setIcon(R.drawable.icon_lesadjectif);
                     adjectif.setId(cursor.getInt(cursor.getColumnIndex(Materi.COLUMN_ID)));
                     adjectif.setTitle(cursor.getString(cursor.getColumnIndex(Materi.COLUMN_TITLE)));
-
+                    adjectif.setContents(cursor.getString(cursor.getColumnIndex(Materi.COLUMN_CONTENTS)));
                     materies.add((T) adjectif);
                 } while (cursor.moveToNext());
             } else if (dataClass == LesArticles.class) {
