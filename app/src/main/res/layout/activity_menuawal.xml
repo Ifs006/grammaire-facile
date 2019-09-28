@@ -23,5 +23,6 @@
         app:itemTextColor="@color/white"
         app:headerLayout="@layout/nav_header_menuawal"
         app:menu="@menu/menu_awal_drawer" />
+
 </android.support.v4.widget.DrawerLayout>
 

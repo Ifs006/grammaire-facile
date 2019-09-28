@@ -55,6 +55,7 @@ public class MenuAwalActivity extends AppCompatActivity
         ibtnConjonction = findViewById(R.id.ibtn_lesconjonction);
         ibtnInterogatif = findViewById(R.id.ibtn_interogatif);
 
+
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("");
 
@@ -71,6 +72,7 @@ public class MenuAwalActivity extends AppCompatActivity
         ibtnLesAdjectif.setOnClickListener(this);
         ibtnConjonction.setOnClickListener(this);
         ibtnInterogatif.setOnClickListener(this);
+
     }
 
     @Override
@@ -145,8 +147,6 @@ public class MenuAwalActivity extends AppCompatActivity
         if (id == R.id.credit) {
 
         } else if (id == R.id.a_propos_de_lauteur) {
-
-        } else if (id == R.id.les_aides) {
 
         }
 

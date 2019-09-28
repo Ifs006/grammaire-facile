@@ -113,7 +113,7 @@ public class QuizFragment extends Fragment {
 
     public boolean isCorrectAnswer() {
         boolean correct = answer.equals(choices.get(correctIndexofChoices));
-        if (correct) doubleTap = true;
+        if (correct) doubleTap = false;
         else {
             presetValueButtons.get(choices.indexOf(answer)).setErrorState();
 
@@ -139,5 +139,6 @@ public class QuizFragment extends Fragment {
         choiceB.setEnabled(false);
         choiceC.setEnabled(false);
         choiceD.setEnabled(false);
+
     }
 }

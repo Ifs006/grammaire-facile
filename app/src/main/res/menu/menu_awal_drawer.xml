@@ -9,8 +9,5 @@
         <item
             android:id="@+id/a_propos_de_lauteur"
             android:title="A Propos De L'auteur" />
-        <item
-            android:id="@+id/les_aides"
-            android:title="Les Aides" />
     </group>
 </menu>
