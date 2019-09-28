@@ -35,7 +35,8 @@ public class QuizFragment extends Fragment {
     private int correctIndexofChoices;
 
     private String answer = "";
-    private boolean doubleTap = false;
+    private boolean answerSelected = false;
+    private int numberOfTap = 0;
 
     public static QuizFragment newInstance(String question, String choices, int index) {
         Bundle args = new Bundle();
@@ -99,39 +100,37 @@ public class QuizFragment extends Fragment {
             @Override
             public void onCheckedChanged(View radioGroup, View radioButton, boolean isChecked, int checkedId) {
                 answer = ((PresetValueButton) radioButton).getValue();
+                answerSelected = true;
             }
         });
     }
 
-    public String getAnswer() {
-        return answer;
+    public boolean isAnswerSelected() {
+        return answerSelected;
     }
 
-    public boolean isDoubleTap() {
-        return doubleTap;
+    public boolean isAlreadyChecked() {
+        return numberOfTap == 2;
     }
 
     public boolean isCorrectAnswer() {
         boolean correct = answer.equals(choices.get(correctIndexofChoices));
-        if (correct) doubleTap = false;
-        else {
+        if (!correct) {
+            numberOfTap += 1;
+
             presetValueButtons.get(choices.indexOf(answer)).setErrorState();
+            labelAlert.setVisibility(View.VISIBLE);
 
-            if (labelAlert.getVisibility() != View.VISIBLE) {
-                labelAlert.setVisibility(View.VISIBLE);
+            String label = getString(R.string.alert_incorrect_answer, choices.get(correctIndexofChoices));
+            Spannable wordtoSpan = new SpannableString(label);
+            wordtoSpan.setSpan(new ForegroundColorSpan(ContextCompat.getColor(getContext(), R.color.selectedButton)),
+                    label.length() - choices.get(correctIndexofChoices).length() - 5, label.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
 
-                String label = getString(R.string.alert_incorrect_answer, choices.get(correctIndexofChoices));
-                Spannable wordtoSpan = new SpannableString(label);
-                wordtoSpan.setSpan(new ForegroundColorSpan(ContextCompat.getColor(getContext(), R.color.selectedButton)),
-                        label.length() - choices.get(correctIndexofChoices).length() - 5, label.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+            labelAlert.setText(wordtoSpan);
 
-                labelAlert.setText(wordtoSpan);
-            } else {
-                disableChoices();
-                doubleTap = true;
-            }
+            disableChoices();
         }
-        return correct && doubleTap;
+        return correct;
     }
 
     private void disableChoices() {
@@ -139,6 +138,5 @@ public class QuizFragment extends Fragment {
         choiceB.setEnabled(false);
         choiceC.setEnabled(false);
         choiceD.setEnabled(false);
-
     }
 }

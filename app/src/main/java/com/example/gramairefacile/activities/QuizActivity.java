@@ -107,24 +107,33 @@ public class QuizActivity extends AppCompatActivity {
     }
 
     private void showNextQuestion() {
+        // Mengambil quiz fragment yang sedang aktif
         QuizFragment fragment = (QuizFragment) viewPagerAdapter.getItem(viewPager.getCurrentItem());
-        if (fragment.getAnswer().isEmpty()) {
+
+        // Cek jawaban sudah dipilih atau belum
+        if (!fragment.isAnswerSelected()) {
             Toast.makeText(this, "Please select the answer!", Toast.LENGTH_SHORT).show();
-            return;
-        } else if (fragment.isDoubleTap()) {
-            viewPager.setCurrentItem(viewPager.getCurrentItem() + 1);
-        }
-
-        checkAnswer(fragment);
-
-        if (viewPager.getCurrentItem() == 9) {
-            finishQuiz();
+        } else {
+            // Cek jawaban kuis benar atau tidak
+            if (checkAnswer(fragment) || fragment.isAlreadyChecked()){
+               goToNextPage();
+            }
         }
     }
 
-    private void checkAnswer(QuizFragment fragment) {
-        if (fragment.isCorrectAnswer()) {
+    private boolean checkAnswer(QuizFragment fragment) {
+        boolean isCorrect = fragment.isCorrectAnswer();
+        if (isCorrect) {
             currentScore += 1;
+        }
+        return isCorrect;
+    }
+
+    private void goToNextPage(){
+        if (viewPager.getCurrentItem() == 9) {
+            finishQuiz();
+        } else {
+            viewPager.setCurrentItem(viewPager.getCurrentItem() + 1);
         }
     }
 
