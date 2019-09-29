@@ -145,11 +145,12 @@ public class MenuAwalActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.credit) {
-
+            Intent intent = new Intent(this, CreditActivity.class);
+            startActivity(intent);
         } else if (id == R.id.a_propos_de_lauteur) {
-
+            Intent intent = new Intent(this, AProposDeLauteurActivity.class);
+            startActivity(intent);
         }
-
         drawerLayout.closeDrawer(GravityCompat.START);
         return true;
     }

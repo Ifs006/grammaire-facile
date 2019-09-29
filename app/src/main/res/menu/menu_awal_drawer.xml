@@ -5,9 +5,9 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/credit"
-            android:title="Credit" />
+            android:title="Crédit" />
         <item
             android:id="@+id/a_propos_de_lauteur"
-            android:title="A Propos De L'auteur" />
+            android:title="À propos de" />
     </group>
 </menu>

@@ -80,6 +80,11 @@
             android:name=".activities.CreditActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.Dark" />
+
+        <activity
+            android:name=".activities.AProposDeLauteurActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.Dark" />
     </application>
 
 </manifest>

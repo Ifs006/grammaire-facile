@@ -660,13 +660,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         questions = new ArrayList<>();
         // Create new class
         question = new Question();
-        question.setQuestion("1.\tJ’ai rendez-vous avec Nathalie -> J’ai rendez-vous avec….");
+        question.setQuestion("J’ai rendez-vous avec Nathalie -> J’ai rendez-vous avec….");
         question.setChoices(new String[]{"a.\tmoi", "b.\tlui", "c.\teux", "d.\telle"});
         question.setCorrectIndexofChoices(3);
         questions.add(question);
 
         question = new Question();
-        question.setQuestion("Ce soir, je vais au cinéma avec mes sœur ->Ce soir, je vais au cinéma avec ….");
+        question.setQuestion("Ce soir, je vais au cinéma avec mes sœur -> Ce soir, je vais au cinéma avec ….");
         question.setChoices(new String[]{"a.\telle", "b.\telles", "c.\teux", "d.\tmoi"});
         question.setCorrectIndexofChoices(1);
         questions.add(question);
@@ -678,7 +678,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         questions.add(question);
 
         question = new Question();
-        question.setQuestion("4.A : On se retrouve chez moi samedi ?\nB : Non, je ne peux pas venir chez ….., je travaille.");
+        question.setQuestion("A : On se retrouve chez moi samedi ?\nB : Non, je ne peux pas venir chez ….., je travaille.");
         question.setChoices(new String[]{"a.\telle", "b.\ttoi", "c.\tlui", "d.\tvous"});
         question.setCorrectIndexofChoices(1);
         questions.add(question);
@@ -821,7 +821,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         question = new Question();
         question.setQuestion("…. chats sont très mignons, les couleurs sont gris.");
-        question.setChoices(new String[]{"a.\tle", "b.\tla", "c.\tles", "d.\tl'"});
+        question.setChoices(new String[]{"a.\tLe", "b.\tLa", "c.\tLes", "d.\tL'"});
         question.setCorrectIndexofChoices(2);
         questions.add(question);
 
@@ -833,25 +833,25 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         question = new Question();
         question.setQuestion("…… maison de Sophie est très grande.");
-        question.setChoices(new String[]{"a.\tle", "b.\tla", "c.\tles", "d.\tl'"});
+        question.setChoices(new String[]{"a.\tLe", "b.\tLa", "c.\tLes", "d.\tL'"});
         question.setCorrectIndexofChoices(1);
         questions.add(question);
 
         question = new Question();
         question.setQuestion("……. téléphone portable de Xavier est cassé.");
-        question.setChoices(new String[]{"a.\tle", "b.\tla", "c.\tles", "d.\tl'"});
+        question.setChoices(new String[]{"a.\tLe", "b.\tLa", "c.\tLes", "d.\tL'"});
         question.setCorrectIndexofChoices(0);
         questions.add(question);
 
         question = new Question();
         question.setQuestion("…… chaleur est très forte.");
-        question.setChoices(new String[]{"a.\tle", "b.\tla", "c.\tles", "d.\tl'"});
+        question.setChoices(new String[]{"a.\tLe", "b.\tLa", "c.\tLes", "d.\tL'"});
         question.setCorrectIndexofChoices(0);
         questions.add(question);
 
         question = new Question();
         question.setQuestion("…… nuages arrivent.");
-        question.setChoices(new String[]{"a.\tle", "b.\tla", "c.\tles", "d.\tl'"});
+        question.setChoices(new String[]{"a.\tLe", "b.\tLa", "c.\tLes", "d.\tL'"});
         question.setCorrectIndexofChoices(2);
         questions.add(question);
 
@@ -901,19 +901,19 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         question = new Question();
         question.setQuestion("….. jeune femme lit un livre");
-        question.setChoices(new String[]{"a.\tune", "b.\tun", "c.\tdes", "d.\tdu"});
+        question.setChoices(new String[]{"a.\tUne", "b.\tUn", "c.\tDes", "d.\tDu"});
         question.setCorrectIndexofChoices(0);
         questions.add(question);
 
         question = new Question();
         question.setQuestion("….. fillettes mangent une glace.");
-        question.setChoices(new String[]{"a.\tune", "b.\tun", "c.\tdes", "d.\tdu"});
+        question.setChoices(new String[]{"a.\tUne", "b.\tUn", "c.\tDes", "d.\tDu"});
         question.setCorrectIndexofChoices(2);
         questions.add(question);
 
         question = new Question();
         question.setQuestion("…… musicien joue du violon.");
-        question.setChoices(new String[]{"a.\tune", "b.\tun", "c.\tdes", "d.\tdu"});
+        question.setChoices(new String[]{"a.\tUne", "b.\tUn", "c.\tDes", "d.\tDu"});
         question.setCorrectIndexofChoices(1);
         questions.add(question);
 
@@ -1069,7 +1069,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         // Create new class
         question = new Question();
         question.setQuestion("Je n’aime pas …. stylos : Ils m’échappent tous des mains.");
-        question.setChoices(new String[]{"a.\tCa", "b.\tCes", "c.\tCet", "d.\tCette"});
+        question.setChoices(new String[]{"a.\tca", "b.\tces", "c.\tcet", "d.\tcette"});
         question.setCorrectIndexofChoices(1);
         questions.add(question);
 
@@ -1093,13 +1093,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         question = new Question();
         question.setQuestion("Passez-moi …. livre.");
-        question.setChoices(new String[]{"a.\tCette", "b.\tCe", "c.\tCet", "d.\tCes"});
+        question.setChoices(new String[]{"a.\tcette", "b.\tce", "c.\tcet", "d.\tces"});
         question.setCorrectIndexofChoices(1);
         questions.add(question);
 
         question = new Question();
         question.setQuestion("Vous préférez ce bonnet ou ….. casquette ?");
-        question.setChoices(new String[]{"a.\tCette", "b.\tCe", "c.\tCet", "d.\tCes"});
+        question.setChoices(new String[]{"a.\tcette", "b.\tce", "c.\tcet", "d.\tces"});
         question.setCorrectIndexofChoices(0);
         questions.add(question);
 
@@ -1111,13 +1111,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         question = new Question();
         question.setQuestion("J’hésite entre …. chemisier et cette tunique.");
-        question.setChoices(new String[]{"a.\tCette", "b.\tCe", "c.\tCet", "d.\tCes"});
+        question.setChoices(new String[]{"a.\tcette", "b.\tce", "c.\tcet", "d.\tces"});
         question.setCorrectIndexofChoices(1);
         questions.add(question);
 
         question = new Question();
         question.setQuestion("Je voudrais essayer …. jupe, s’il vous plaît.");
-        question.setChoices(new String[]{"a.\tCette", "b.\tCe", "c.\tCet", "d.\tCes"});
+        question.setChoices(new String[]{"a.\tcette", "b.\tce", "c.\tcet", "d.\tces"});
         question.setCorrectIndexofChoices(0);
         questions.add(question);
 
@@ -1204,7 +1204,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         questions = new ArrayList<>();
         // Create new class
         question = new Question();
-        question.setQuestion("1.\tMa cousine est venue pour les fêtes de Nöel, …. Elle est arrivée en retard.");
+        question.setQuestion("Ma cousine est venue pour les fêtes de Nöel, …. elle est arrivée en retard.");
         question.setChoices(new String[]{"a.\tet", "b.\tou", "c.\tmais", "d.\talors"});
         question.setCorrectIndexofChoices(2);
         questions.add(question);
@@ -1222,7 +1222,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         questions.add(question);
 
         question = new Question();
-        question.setQuestion("Il fait beau temps, …. On n’a pas fait grand-chose finalement.");
+        question.setQuestion("Il fait beau temps, …. on n’a pas fait grand-chose finalement.");
         question.setChoices(new String[]{"a.\tet", "b.\tou", "c.\tmais", "d.\talors"});
         question.setCorrectIndexofChoices(2);
         questions.add(question);
@@ -1272,25 +1272,25 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         questions = new ArrayList<>();
         // Create new class
         question = new Question();
-        question.setQuestion("1.\tA : …. est-ce que la conférence a lieu ? \n B : Dans le grand amphithéâtre. ");
+        question.setQuestion("A : …. est-ce que la conférence a lieu ? \n B : Dans le grand amphithéâtre. ");
         question.setChoices(new String[]{"a.\tCombien", "b.\tOù", "c.\tQue", "d.\tQuand"});
         question.setCorrectIndexofChoices(1);
         questions.add(question);
 
         question = new Question();
-        question.setQuestion("tA : …. Arthur ne vient pas ? \n B : Il n’est pas libre.");
+        question.setQuestion("A : …. Arthur ne vient pas ? \n B : Il n’est pas libre.");
         question.setChoices(new String[]{"a.\tPourquoi", "b.\tQuand", "c.\tQui", "d.\tQuoi"});
         question.setCorrectIndexofChoices(0);
         questions.add(question);
 
         question = new Question();
-        question.setQuestion("…. de touristes séjournent dans votre hôtel? Trente personnes.");
+        question.setQuestion("A : …. de touristes séjournent dans votre hôtel? \n B : Trente personnes.");
         question.setChoices(new String[]{"a.\tCombien", "b.\tComment", "c.\tQui", "d.\tQuoi"});
         question.setCorrectIndexofChoices(0);
         questions.add(question);
 
         question = new Question();
-        question.setQuestion("…. a oublié de fermer la fenêtre ? Moi");
+        question.setQuestion("A : …. a oublié de fermer la fenêtre ? \n B : Moi");
         question.setChoices(new String[]{"a.\tOù", "b.\tCombien", "c.\tQui", "d.\tPourquoi"});
         question.setCorrectIndexofChoices(2);
         questions.add(question);
@@ -1314,7 +1314,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         questions.add(question);
 
         question = new Question();
-        question.setQuestion("A : …. Est-ce que ça finit ? \n B : vers 5 heures");
+        question.setQuestion("A : …. est-ce que ça finit ? \n B : vers 5 heures");
         question.setChoices(new String[]{"a.\tOù", "b.\tComment", "c.\tQuand", "d.\tPourquoi"});
         question.setCorrectIndexofChoices(2);
         questions.add(question);
