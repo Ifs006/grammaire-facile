@@ -2,12 +2,13 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="@color/elm"
     android:padding="16dp">
 
     <ImageView
         android:id="@+id/img_logo_adjectif"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_50sdp"
         android:src="@mipmap/ic_launcher" />
 
     <TextView
@@ -15,7 +16,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
-        android:layout_marginLeft="20dp"
+        android:layout_marginLeft="@dimen/_15sdp"
         android:layout_toRightOf="@id/img_logo_adjectif"
         android:ellipsize="end"
         android:fontFamily="@font/warung_kopi"
@@ -24,5 +25,5 @@
         android:text="Le Verbe Reguliere"
         android:textAllCaps="true"
         android:textColor="@color/white"
-        android:textSize="25sp" />
+        android:textSize="@dimen/_20ssp" />
 </RelativeLayout>

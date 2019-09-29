@@ -1,22 +1,17 @@
 package com.example.gramairefacile.activities;
 
-import android.content.Context;
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.util.DisplayMetrics;
-import android.util.TypedValue;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.content.ContextCompat;
 
 import com.example.gramairefacile.R;
 import com.example.gramairefacile.database.DatabaseHelper;
@@ -72,6 +67,8 @@ public class DetailMateriActivity extends AppCompatActivity {
                         .putExtra(Constants.EXTRA_ID_MATERI, id));
             }
         });
+
+        contentContainer.setBackground(ContextCompat.getDrawable(this,R.drawable.bg_card_top_rounded));
     }
 
     private void addContent(int resource) {

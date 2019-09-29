@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -9,38 +9,39 @@
         android:layout_width="match_parent"
         android:background="@color/chathamsBlue" />
 
-    <android.support.design.widget.AppBarLayout
+    <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:background="@color/colorTransparent"
         android:layout_height="wrap_content"
         android:theme="@style/AppTheme.AppBarOverlay">
 
-        <android.support.design.widget.CollapsingToolbarLayout
+        <com.google.android.material.appbar.CollapsingToolbarLayout
             android:layout_width="match_parent"
-            android:layout_height="120dp"
+            android:layout_height="@dimen/_90sdp"
             app:contentScrim="@color/chathamsBlue"
             app:layout_scrollFlags="scroll|exitUntilCollapsed"
             app:titleEnabled="false">
 
 
-            <android.support.v7.widget.Toolbar
+            <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:minHeight="80dp"
+                android:minHeight="@dimen/_60sdp"
                 app:layout_collapseMode="pin"
                 app:popupTheme="@style/AppTheme.PopupOverlay">
 
                 <RelativeLayout
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginRight="@dimen/_14sdp"
                     android:layout_width="match_parent"
-                    android:padding="16dp">
+                    android:padding="@dimen/_14sdp">
 
                     <ImageButton
                         android:id="@+id/ibtn_quiz"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
+                        android:layout_width="@dimen/_35sdp"
+                        android:layout_height="@dimen/_35sdp"
                         android:layout_alignParentEnd="true"
                         android:background="@drawable/btn_quiz" />
 
@@ -49,25 +50,25 @@
                         android:layout_width="match_parent"
                         android:layout_centerVertical="true"
                         android:layout_height="wrap_content"
-                        android:layout_marginRight="25dp"
+                        android:layout_marginRight="@dimen/_15sdp"
                         android:layout_alignParentStart="true"
                         android:layout_toLeftOf="@id/ibtn_quiz"
                         android:fontFamily="@font/warung_kopi"
                         android:textColor="@color/white"
                         android:text="VERBE REGULIERRE"
-                        android:textSize="25sp" />
+                        android:textSize="@dimen/_20ssp" />
 
                 </RelativeLayout>
-            </android.support.v7.widget.Toolbar>
+            </androidx.appcompat.widget.Toolbar>
 
-        </android.support.design.widget.CollapsingToolbarLayout>
-    </android.support.design.widget.AppBarLayout>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
 
-    <android.support.v4.widget.NestedScrollView
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fillViewport="true"
-        app:behavior_overlapTop="10dp"
+        app:behavior_overlapTop="@dimen/_10sdp"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
         <LinearLayout
@@ -75,9 +76,9 @@
             android:layout_height="wrap_content"
             android:id="@+id/content_container"
             android:orientation="vertical"
-            android:paddingBottom="150dp"
+            android:paddingBottom="@dimen/_90sdp"
             android:layout_width="match_parent" />
 
-    </android.support.v4.widget.NestedScrollView>
+    </androidx.core.widget.NestedScrollView>
 
-</android.support.design.widget.CoordinatorLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

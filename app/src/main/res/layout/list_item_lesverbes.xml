@@ -7,15 +7,15 @@
 
     <ImageView
         android:id="@+id/img_logo_verbes"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_50sdp"
         android:src="@mipmap/ic_launcher" />
 
     <TextView
         android:id="@+id/tv_title_verbes"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
+        android:layout_marginLeft="@dimen/_15sdp"
         android:layout_centerVertical="true"
         android:gravity="center_vertical"
         android:textAllCaps="true"
@@ -26,5 +26,5 @@
         android:maxLines="2"
         android:text="Le Verbe Reguliere"
         android:textColor="@color/white"
-        android:textSize="25sp" />
+        android:textSize="@dimen/_20ssp" />
 </RelativeLayout>
