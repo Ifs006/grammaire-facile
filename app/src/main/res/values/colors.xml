@@ -3,7 +3,7 @@
     <color name="colorPrimary">@color/viking</color>
     <color name="colorPrimaryDark">@color/viking</color>
     <color name="colorAccent">#D81B60</color>
-    <color name="colorWindowBackground">#EEEEEF</color>
+    <color name="colorWindowBackground">#FFFFFF</color>
     <color name="colorPrimaryText">@color/tundora</color>
     <color name="colorSecondaryText">@color/dustyGray</color>
 
