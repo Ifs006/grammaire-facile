@@ -2,14 +2,16 @@ package com.example.gramairefacile.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
-import androidx.fragment.app.Fragment;
-import androidx.viewpager.widget.ViewPager;
-import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.text.HtmlCompat;
+import androidx.fragment.app.Fragment;
+import androidx.viewpager.widget.ViewPager;
 
 import com.example.gramairefacile.R;
 import com.example.gramairefacile.adapters.ViewPagerAdapter;
@@ -70,7 +72,7 @@ public class QuizActivity extends AppCompatActivity {
         quiz = db.getQuizByMateri(idMateri);
         fragments = new ArrayList<>();
 
-        titleCommand.setText(quiz.getTitleQuiz());
+        titleCommand.setText(HtmlCompat.fromHtml(quiz.getTitleQuiz(), HtmlCompat.FROM_HTML_MODE_LEGACY));
 
         questions = DatabaseHelper.toQuestionList(quiz.getQuestions());
         Collections.shuffle(questions);
@@ -115,18 +117,20 @@ public class QuizActivity extends AppCompatActivity {
             Toast.makeText(this, "Please select the answer!", Toast.LENGTH_SHORT).show();
         } else {
             // Cek jawaban kuis benar atau tidak
-            if (checkAnswer(fragment) || fragment.isAlreadyChecked()){
+            checkAnswer(fragment);
+
+            if (fragment.isAlreadyChecked()) {
                goToNextPage();
             }
         }
     }
 
-    private boolean checkAnswer(QuizFragment fragment) {
+    private void checkAnswer(QuizFragment fragment) {
         boolean isCorrect = fragment.isCorrectAnswer();
-        if (isCorrect) {
+        boolean isAlreadyChecked = fragment.isAlreadyChecked();
+        if (isCorrect && !isAlreadyChecked) {
             currentScore += 1;
         }
-        return isCorrect;
     }
 
     private void goToNextPage(){

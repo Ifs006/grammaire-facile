@@ -243,7 +243,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         question.setCorrectIndexofChoices(1);
         questions.add(question);
 
-        addNewQuiz(2, "Pilihlah konjugasi yang tepat dari kata kerja irrégulier di dalam kurung !", questions);
+        addNewQuiz(2, "Pilihlah konjugasi yang tepat dari kata kerja <i>irrégulier</i> di dalam kurung !", questions);
 
         /*******************************************************************************************
          *  ADD QUIZ 3
@@ -272,7 +272,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         question = new Question();
         question.setQuestion("Vous .… (préférer) du café ou du thé ?");
         question.setChoices(new String[]{"a.\tpréférerais", "b.\tpréférerions", "c.\tpréféreriez", "d.\tpréféreraient"});
-        question.setCorrectIndexofChoices(1);
+        question.setCorrectIndexofChoices(2);
         questions.add(question);
 
         question = new Question();
@@ -311,7 +311,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         question.setCorrectIndexofChoices(3);
         questions.add(question);
 
-        addNewQuiz(3, "Pilihlah konjugasi conditionnel présent yang tepat dari kata kerja di dalam kurung !", questions);
+        addNewQuiz(3, "Pilihlah konjugasi <i>conditionnel présent</i> yang tepat dari kata kerja di dalam kurung !", questions);
 
         /*******************************************************************************************
          *  ADD QUIZ 4
@@ -327,14 +327,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         question = new Question();
         question.setQuestion("A : Tu habites à Paris ? \n B : Non, …………..");
-        question.setChoices(new String[]{"a.\tje n’habite pas à Paris", "b.\tje n’habite pas à Nièce", "c.\tje n’habite pas à Nièce ", "d.\tje n’habite pas à Bordeaux"});
+        question.setChoices(new String[]{"a.\tje n’habite pas à Paris", "b.\tje n’habite pas à Nièce", "c.\tje n’habite pas à Marseille ", "d.\tje n’habite pas à Bordeaux"});
         question.setCorrectIndexofChoices(0);
         questions.add(question);
 
         question = new Question();
         question.setQuestion("A : Est-ce que vous achetez des légumes ? \n B : Non, …………");
-        question.setChoices(new String[]{"a.\tje n’achète pas de légumes", "b.\tje n’ai pas de légumes", "c.\tpourriez", "d.\tpourrions"});
-        question.setCorrectIndexofChoices(1);
+        question.setChoices(new String[]{"a.\tje n’achète pas de légumes", "b.\tje n’ai pas de légumes", "c.\tje ne suis pas de légumes", "d.\tje ne donne pas de légumes"});
+        question.setCorrectIndexofChoices(0);
         questions.add(question);
 
         question = new Question();
@@ -357,13 +357,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         question = new Question();
         question.setQuestion("A : C’est un chat? \n B : Non, …………...");
-        question.setChoices(new String[]{"a.\tce n’est pas de chat.", "b.\tce n’est pas un chat.", "c.\tce n’est pas le chat.", "d.\tce n’est pas le chat."});
+        question.setChoices(new String[]{"a.\tce n’est pas de chat.", "b.\tce n’est pas un chat.", "c.\tce n’est pas le chat.", "d.\tce n’est pas des chat."});
         question.setCorrectIndexofChoices(1);
         questions.add(question);
 
         question = new Question();
         question.setQuestion("A : Vous voulez du pain ?\n B : Non,…………….");
-        question.setChoices(new String[]{"a.\tnous ne voulons pas des pains", "b.\tnous ne voulons pas des pains", "c.\tnous ne voulons pas un pain", "d.\tnous ne voulons pas de pain"});
+        question.setChoices(new String[]{"a.\tnous ne voulons pas des pains", "b.\tnous ne voulons pas du pains", "c.\tnous ne voulons pas un pain", "d.\tnous ne voulons pas de pain"});
         question.setCorrectIndexofChoices(3);
         questions.add(question);
 
@@ -375,7 +375,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         question = new Question();
         question.setQuestion("A : Tu regardes la télévision? \n B : Non, ……………………….");
-        question.setChoices(new String[]{"a.\tje ne regarde pas de télévision.", "b.\tje ne regarde pas la télévision.", "c.\tje ne regarde pas la nouvelle.", "d.\tje ne regarde pas la nouvelle."});
+        question.setChoices(new String[]{"a.\tje ne regarde pas de télévision.", "b.\tje ne regarde pas la télévision.", "c.\tje ne regarde pas la nouvelle.", "d.\tje ne regarde pas de nouvelle."});
         question.setCorrectIndexofChoices(1);
         questions.add(question);
 
@@ -447,7 +447,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         question.setCorrectIndexofChoices(3);
         questions.add(question);
 
-        addNewQuiz(5, "Pilihlah kata kerja impersonnelle yang sesuai pada kalimat berikut!", questions);
+        addNewQuiz(5, "Pilihlah kata kerja <i>impersonnelle</i> yang sesuai pada kalimat berikut!", questions);
 
         /*******************************************************************************************
          *  ADD QUIZ 6
@@ -457,65 +457,65 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         // Create new class
         question = new Question();
         question.setQuestion("Vous achetez un billet -> ….. un billet !");
-        question.setChoices(new String[]{"a.\tAchète", "b.\tAchetez", "c.\tAchetons", ""});
+        question.setChoices(new String[]{"a.\tAchète", "b.\tAchetez", "c.\tAchetons"});
         question.setCorrectIndexofChoices(1);
         questions.add(question);
 
         question = new Question();
         question.setQuestion("Tu passes l’aspirateur ->…. l’aspirateur !");
-        question.setChoices(new String[]{"a.\tpasse", "b.\tpassez", "c.\t.passons", ""});
+        question.setChoices(new String[]{"a.\tpasse", "b.\tpassez", "c.\tpassons"});
         question.setCorrectIndexofChoices(0);
         questions.add(question);
 
         question = new Question();
         question.setQuestion("Tu jettes les papiers -> …. les papiers !");
-        question.setChoices(new String[]{"a.\tjette", "b.\tjetez", "c.\tjetons", ""});
+        question.setChoices(new String[]{"a.\tjette", "b.\tjetez", "c.\tjetons"});
         question.setCorrectIndexofChoices(0);
         questions.add(question);
 
         question = new Question();
         question.setQuestion("Nous coupons le poulet en morceaux -> …. le poulet en morceaux !");
-        question.setChoices(new String[]{"a.\tCoupe", "b.\tCoupez", "c.\tCoupons", ""});
+        question.setChoices(new String[]{"a.\tCoupe", "b.\tCoupez", "c.\tCoupons"});
         question.setCorrectIndexofChoices(2);
         questions.add(question);
 
         question = new Question();
         question.setQuestion("Nous montons les escaliers -> …. les escaliers !");
-        question.setChoices(new String[]{"a.\tMonte", "b.\tMontez", "c.\tMontons", ""});
+        question.setChoices(new String[]{"a.\tMonte", "b.\tMontez", "c.\tMontons"});
         question.setCorrectIndexofChoices(2);
         questions.add(question);
 
         question = new Question();
         question.setQuestion("Vous demandez au professeur -> …. au professeur !");
-        question.setChoices(new String[]{"a.\tDemande", "b.\tDemandez", "c.\tDemandons", ""});
+        question.setChoices(new String[]{"a.\tDemande", "b.\tDemandez", "c.\tDemandons"});
         question.setCorrectIndexofChoices(1);
         questions.add(question);
 
         question = new Question();
         question.setQuestion("Vous allez au bâtiment 4! -> …. au bâtiment 4 !");
-        question.setChoices(new String[]{"a.\tVa", "b.\tAllez", "c.\tAllons", ""});
+        question.setChoices(new String[]{"a.\tVa", "b.\tAllez", "c.\tAllons"});
         question.setCorrectIndexofChoices(1);
         questions.add(question);
 
         question = new Question();
         question.setQuestion("Tu n’as pas peur -> …. pas peur !");
-        question.setChoices(new String[]{"a.\tN’aie", "b.\tN’ayons", "c.\tN’ayez", ""});
+        question.setChoices(new String[]{"a.\tN’aie", "b.\tN’ayons", "c.\tN’ayez"});
         question.setCorrectIndexofChoices(0);
         questions.add(question);
 
         question = new Question();
         question.setQuestion("Vous ne fumez pas -> …. !");
-        question.setChoices(new String[]{"a.\tNe fume pas", "b.\tNe fumez pas", "c.\tNe fumons pas", ""});
+        question.setChoices(new String[]{"a.\tNe fume pas", "b.\tNe fumez pas", "c.\tNe fumons pas"});
         question.setCorrectIndexofChoices(1);
         questions.add(question);
 
         question = new Question();
         question.setQuestion("Vous n’êtes pas nerveux -> ….. nerveux !");
-        question.setChoices(new String[]{"a.\tNe sois pas", "b.\tNe soyons pas", "c.\tNe soyez pas", ""});
+        question.setChoices(new String[]{"a.\tNe sois pas", "b.\tNe soyons pas", "c.\tNe soyez pas"});
         question.setCorrectIndexofChoices(2);
         questions.add(question);
 
-        addNewQuiz(6, "Pilihlah konjugasi l’impératif yang tepat!", questions);
+        addNewQuiz(6, "Pilihlah konjugasi <i>l’impératif</i> yang tepat!", questions);
 
         /*******************************************************************************************
          *  ADD QUIZ 7
@@ -583,7 +583,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         question.setCorrectIndexofChoices(3);
         questions.add(question);
 
-        addNewQuiz(7, "Pilihlah konjugasi indicatif présent yang tepat dari kata kerja di dalam kurung ", questions);
+        addNewQuiz(7, "Pilihlah konjugasi <i>indicatif présent</i> yang tepat dari kata kerja di dalam kurung ", questions);
 
         /*******************************************************************************************
          *  ADD QUIZ 8
@@ -641,7 +641,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         question = new Question();
         question.setQuestion("A : Tu connais Laura ?\nB : Bien sûr, … est dans ma classe. ?");
-        question.setChoices(new String[]{"a.\tJe", "b.\tTu", "c.\tElle", "d.\tIl"});
+        question.setChoices(new String[]{"a.\tje", "b.\ttu", "c.\telle", "d.\til"});
         question.setCorrectIndexofChoices(2);
         questions.add(question);
 
@@ -719,7 +719,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         question.setCorrectIndexofChoices(1);
         questions.add(question);
 
-        addNewQuiz(9, "Pilihlah pronom tonique yang sesuai untuk melengkapi kalimat-kalimat berikut ini !", questions);
+        addNewQuiz(9, "Pilihlah <i>pronom tonique</i> yang sesuai untuk melengkapi kalimat-kalimat berikut ini !", questions);
 
         /*******************************************************************************************
          *  ADD QUIZ 10
@@ -741,8 +741,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         question = new Question();
         question.setQuestion("A : …. lisez-vous ? \n B : le livre de petit prince");
-        question.setChoices(new String[]{"a.\tAvec quoi", "b.\tAvec qui", "c.\tDe quoi", "d.\tQui"});
-        question.setCorrectIndexofChoices(2);
+        question.setChoices(new String[]{"a.\tAvec quoi", "b.\tQue", "c.\tDe quoi", "d.\tQui"});
+        question.setCorrectIndexofChoices(1);
         questions.add(question);
 
         question = new Question();
@@ -782,12 +782,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         questions.add(question);
 
         question = new Question();
-        question.setQuestion("A : …… avez-vous vu ? \n B : Les concours de français.");
+        question.setQuestion("A : …… avez-vous vu? \n B : Les concours de français.");
         question.setChoices(new String[]{"a.\tQu'", "b.\tQue", "c.\tDe quoi", "d.\tÀ qui"});
         question.setCorrectIndexofChoices(0);
         questions.add(question);
 
-        addNewQuiz(10, "Pilihlah pronom interrogatif yang tepat untuk melengkapi dialog-dialog berikut !", questions);
+        addNewQuiz(10, "Pilihlah <i>pronom interrogatif</i> yang tepat untuk melengkapi dialog-dialog berikut !", questions);
 
         /*******************************************************************************************
          *  ADD QUIZ 11

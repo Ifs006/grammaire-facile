@@ -1,10 +1,6 @@
 package com.example.gramairefacile.fragments;
 
 import android.os.Bundle;
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
-import androidx.core.content.ContextCompat;
 import android.text.Spannable;
 import android.text.SpannableString;
 import android.text.style.ForegroundColorSpan;
@@ -12,6 +8,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.core.content.ContextCompat;
+import androidx.fragment.app.Fragment;
 
 import com.example.gramairefacile.R;
 import com.example.gramairefacile.database.DatabaseHelper;
@@ -115,11 +116,9 @@ public class QuizFragment extends Fragment {
 
     public boolean isCorrectAnswer() {
         boolean correct = answer.equals(choices.get(correctIndexofChoices));
-        if (!correct) {
-            numberOfTap += 1;
 
+        if (!correct) {
             presetValueButtons.get(choices.indexOf(answer)).setErrorState();
-            labelAlert.setVisibility(View.VISIBLE);
 
             String label = getString(R.string.alert_incorrect_answer, choices.get(correctIndexofChoices));
             Spannable wordtoSpan = new SpannableString(label);
@@ -128,8 +127,18 @@ public class QuizFragment extends Fragment {
 
             labelAlert.setText(wordtoSpan);
 
-            disableChoices();
+        } else {
+            String label = "SELAMAT ANDA BENAR!";
+            labelAlert.setText(label);
+            labelAlert.setTextColor(ContextCompat.getColor(getContext(), R.color.benul));
         }
+
+        disableChoices();
+
+
+        labelAlert.setVisibility(View.VISIBLE);
+        numberOfTap += 1;
+
         return correct;
     }
 

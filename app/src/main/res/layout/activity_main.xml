@@ -9,8 +9,8 @@
 
     <ImageButton
         android:id="@+id/ibtn_entre"
-        android:layout_width="@dimen/_105sdp"
-        android:layout_height="@dimen/_32sdp"
+        android:layout_width="@dimen/_103sdp"
+        android:layout_height="@dimen/_31sdp"
         android:layout_marginBottom="@dimen/_40sdp"
         android:background="@drawable/btn_entre"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -20,8 +20,9 @@
 
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_53sdp"
+        android:layout_height="@dimen/_52sdp"
         android:src="@drawable/background_footer"
+        android:layout_marginBottom="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
