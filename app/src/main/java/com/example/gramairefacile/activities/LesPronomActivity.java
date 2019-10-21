@@ -3,12 +3,13 @@ package com.example.gramairefacile.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-import androidx.appcompat.widget.Toolbar;
 import android.view.View;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.gramairefacile.R;
 import com.example.gramairefacile.adapters.LesPronomAdapter;
@@ -46,6 +47,7 @@ public class LesPronomActivity extends AppCompatActivity {
         titleToolbar = findViewById(R.id.title_toolbar);
 
         titleToolbar.setText("LES PRONOMS");
+
 
         dataList = db.getMateriByType(LesPronom.class);
         lesPronomsAdapter = new LesPronomAdapter(this, dataList);

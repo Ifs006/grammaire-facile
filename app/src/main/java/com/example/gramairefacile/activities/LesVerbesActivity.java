@@ -16,7 +16,6 @@ import com.example.gramairefacile.database.DatabaseHelper;
 import com.example.gramairefacile.database.model.LesVerbes;
 import com.example.gramairefacile.utils.Constants;
 import com.example.gramairefacile.utils.ItemClickListener;
-import com.example.gramairefacile.utils.SimpleDividerItemDecoration;
 
 import java.util.List;
 
@@ -46,7 +45,8 @@ public class LesVerbesActivity extends AppCompatActivity {
         recyclerView = findViewById(R.id.reyclerview);
         titleToolbar = findViewById(R.id.title_toolbar);
 
-        titleToolbar.setText("LES VERBES");
+        titleToolbar.setText("Les verbes");
+
 
         dataList = db.getMateriByType(LesVerbes.class);
         lesVerbesAdapter = new LesVerbesAdapter(this, dataList);
@@ -54,7 +54,6 @@ public class LesVerbesActivity extends AppCompatActivity {
         recyclerView.setAdapter(lesVerbesAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setHasFixedSize(true);
-        recyclerView.addItemDecoration(new SimpleDividerItemDecoration(this, R.drawable.divider_dashed));
         recyclerView.addOnItemTouchListener(new ItemClickListener(this, new ItemClickListener.OnItemClickListener() {
             @Override
             public void onItemClick(View view, int position) {

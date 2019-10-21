@@ -27,6 +27,7 @@ public class DetailMateriActivity extends AppCompatActivity {
     private TextView titleToolbar;
     private LinearLayout contentContainer;
     private ImageButton ibtnQuiz;
+    private ImageButton ibtnBack;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,9 +51,11 @@ public class DetailMateriActivity extends AppCompatActivity {
 
     private void initViews() {
         toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
         titleToolbar = findViewById(R.id.title_toolbar);
         contentContainer = findViewById(R.id.content_container);
         ibtnQuiz = findViewById(R.id.ibtn_quiz);
+        ibtnBack = findViewById(R.id.btn_back);
 
         titleToolbar.setText(title);
 
@@ -68,8 +71,16 @@ public class DetailMateriActivity extends AppCompatActivity {
             }
         });
 
+        ibtnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
         contentContainer.setBackground(ContextCompat.getDrawable(this,R.drawable.bg_card_top_rounded));
     }
+
 
     private void addContent(int resource) {
         ImageView imageView = new ImageView(this);

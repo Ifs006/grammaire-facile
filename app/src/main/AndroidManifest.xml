@@ -14,7 +14,7 @@
 
         <activity
             android:name=".activities.MainActivity"
-            android:theme="@style/AppTheme">
+            android:theme="@style/AppTheme.White">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -24,7 +24,8 @@
 
         <activity
             android:name=".activities.MenuAwalActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.Dark" />
 
         <activity
             android:name=".activities.LesVerbesActivity"

@@ -9,76 +9,54 @@
     tools:context=".activities.MenuAwalActivity"
     tools:showIn="@layout/app_bar_menuawal">
 
-    <ImageButton
-        android:id="@+id/ibtn_lespronom"
-        android:layout_width="@dimen/_90sdp"
-        android:layout_height="@dimen/_105sdp"
-        android:layout_marginTop="@dimen/_70sdp"
-        android:layout_marginEnd="@dimen/_50sdp"
-        android:background="@drawable/bg_menu_lespronom"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/ibtn_lesverbes"
-        app:layout_constraintTop_toTopOf="parent" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <ImageButton
-        android:id="@+id/ibtn_lesverbes"
-        android:layout_width="@dimen/_90sdp"
-        android:layout_height="@dimen/_105sdp"
-        android:layout_marginStart="@dimen/_50sdp"
-        android:layout_marginTop="@dimen/_70sdp"
-        android:layout_marginEnd="@dimen/_48sdp"
-        android:background="@drawable/bg_menu_lesverbes"
-        app:layout_constraintEnd_toStartOf="@+id/ibtn_lespronom"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-    <ImageButton
-        android:id="@+id/ibtn_lesarticles"
-        android:layout_width="@dimen/_90sdp"
-        android:layout_height="@dimen/_105sdp"
-        android:layout_marginStart="@dimen/_50sdp"
-        android:layout_marginTop="@dimen/_15sdp"
-        android:layout_marginEnd="@dimen/_48sdp"
-        android:layout_marginBottom="@dimen/_15sdp"
-        android:background="@drawable/bg_menu_lesarticles"
-        app:layout_constraintBottom_toTopOf="@+id/ibtn_lesconjonction"
-        app:layout_constraintEnd_toStartOf="@+id/ibtn_lesadjectif"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ibtn_lesverbes" />
 
-    <ImageButton
-        android:id="@+id/ibtn_lesadjectif"
-        android:layout_width="@dimen/_90sdp"
-        android:layout_height="@dimen/_105sdp"
-        android:layout_marginTop="@dimen/_15sdp"
-        android:layout_marginEnd="@dimen/_50sdp"
-        android:background="@drawable/bg_menu_lesadjective"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/ibtn_lesarticles"
-        app:layout_constraintTop_toBottomOf="@+id/ibtn_lespronom" />
+            <ImageButton
+                android:id="@+id/ibtn_lesverbes"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_140sdp"
+                android:background="@drawable/bg_menu_lesverbes" />
 
-    <ImageButton
-        android:id="@+id/ibtn_lesconjonction"
-        android:layout_width="@dimen/_90sdp"
-        android:layout_height="@dimen/_105sdp"
-        android:layout_marginStart="@dimen/_50sdp"
-        android:layout_marginTop="@dimen/_15sdp"
-        android:layout_marginEnd="@dimen/_48sdp"
-        android:background="@drawable/bg_menu_lesconjonction"
-        app:layout_constraintEnd_toStartOf="@+id/ibtn_interogatif"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ibtn_lesarticles" />
+            <ImageButton
+                android:id="@+id/ibtn_lespronom"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_140sdp"
+                android:background="@drawable/bg_menu_lespronom" />
 
-    <ImageButton
-        android:id="@+id/ibtn_interogatif"
-        android:layout_width="@dimen/_90sdp"
-        android:layout_height="@dimen/_105sdp"
-        android:layout_marginTop="@dimen/_15sdp"
-        android:layout_marginEnd="@dimen/_50sdp"
-        android:background="@drawable/bg_menu_introgatif"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/ibtn_lesconjonction"
-        app:layout_constraintTop_toBottomOf="@+id/ibtn_lesadjectif" />
+            <ImageButton
+                android:id="@+id/ibtn_lesarticles"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_140sdp"
+                android:background="@drawable/bg_menu_lesarticles" />
+
+            <ImageButton
+                android:id="@+id/ibtn_lesadjectif"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_140sdp"
+                android:background="@drawable/bg_menu_lesadjectifs" />
+
+            <ImageButton
+                android:id="@+id/ibtn_lesconjonction"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_140sdp"
+                android:background="@drawable/bg_menu_lesconjonction" />
+
+            <ImageButton
+                android:id="@+id/ibtn_interogatif"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_140sdp"
+                android:background="@drawable/bg_menu_introgatif" />
+
+        </LinearLayout>
+    </ScrollView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

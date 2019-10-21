@@ -18,7 +18,7 @@
         android:layout_width="300dp"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        android:background="@color/viking"
+        android:background="@color/chathamsBlue"
         android:fitsSystemWindows="true"
         app:itemTextColor="@color/white"
         app:headerLayout="@layout/nav_header_menuawal"

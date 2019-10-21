@@ -2,12 +2,13 @@ package com.example.gramairefacile.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-import androidx.appcompat.widget.Toolbar;
 import android.view.View;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.gramairefacile.R;
 import com.example.gramairefacile.adapters.LesAdjectifAdapter;
@@ -15,7 +16,6 @@ import com.example.gramairefacile.database.DatabaseHelper;
 import com.example.gramairefacile.database.model.LesAdjectif;
 import com.example.gramairefacile.utils.Constants;
 import com.example.gramairefacile.utils.ItemClickListener;
-import com.example.gramairefacile.utils.SimpleDividerItemDecoration;
 
 import java.util.List;
 
@@ -43,11 +43,10 @@ public class LesAdjectifActivity extends AppCompatActivity {
     private void initView() {
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        toolbar = findViewById(R.id.toolbar);
         recyclerView = findViewById(R.id.recyclerview);
         titleToolbar = findViewById(R.id.title_toolbar);
 
-        titleToolbar.setText("LES ADJECTIFS");
+        titleToolbar.setText("Les adjectifs");
 
         dataList = db.getMateriByType(LesAdjectif.class);
         lesAdjectifAdapter = new LesAdjectifAdapter(this, dataList);
@@ -55,7 +54,6 @@ public class LesAdjectifActivity extends AppCompatActivity {
         recyclerView.setAdapter(lesAdjectifAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setHasFixedSize(true);
-        recyclerView.addItemDecoration(new SimpleDividerItemDecoration(this, R.drawable.divider_dashed));
         recyclerView.addOnItemTouchListener(new ItemClickListener(this, new ItemClickListener.OnItemClickListener() {
             @Override
             public void onItemClick(View view, int position) {

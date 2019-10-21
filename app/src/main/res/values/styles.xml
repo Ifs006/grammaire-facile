@@ -19,6 +19,11 @@
         <item name="color">@color/white</item>
     </style>
 
+    <style name="AppTheme.White" parent="AppTheme">
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryDark">@color/white</item>
+    </style>
+
     <style name="AppTheme.Dark" parent="AppTheme">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/chathamsBlue</item>

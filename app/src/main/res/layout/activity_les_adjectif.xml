@@ -3,18 +3,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_materi"
+    android:background="@color/white"
     android:orientation="vertical"
     tools:context=".activities.LesPronomActivity">
 
     <include
         android:id="@+id/toolbar"
         layout="@layout/toolbar" />
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/_4sdp"
-        android:background="@color/colorShadow" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerview"

@@ -2,9 +2,12 @@ package com.example.gramairefacile.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageButton;
+import android.widget.TextView;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-import android.widget.TextView;
 
 import com.example.gramairefacile.R;
 import com.example.gramairefacile.database.DatabaseHelper;
@@ -19,6 +22,7 @@ public class ConjonctionActivity extends AppCompatActivity {
     private TextView titleToolbar;
     private DatabaseHelper db;
     private List<Conjonction> dataList;
+    private ImageButton ibtnBack;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,8 +39,17 @@ public class ConjonctionActivity extends AppCompatActivity {
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         titleToolbar = findViewById(R.id.title_toolbar);
+        ibtnBack = findViewById(R.id.btn_back);
 
         titleToolbar.setText("CONJONCTION");
+
+        ibtnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
 
         dataList = db.getMateriByType(Conjonction.class);
 

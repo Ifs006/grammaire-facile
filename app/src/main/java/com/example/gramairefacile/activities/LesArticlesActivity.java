@@ -3,12 +3,13 @@ package com.example.gramairefacile.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-import androidx.appcompat.widget.Toolbar;
 import android.view.View;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.gramairefacile.R;
 import com.example.gramairefacile.adapters.LesArticlesAdapter;
@@ -16,7 +17,6 @@ import com.example.gramairefacile.database.DatabaseHelper;
 import com.example.gramairefacile.database.model.LesArticles;
 import com.example.gramairefacile.utils.Constants;
 import com.example.gramairefacile.utils.ItemClickListener;
-import com.example.gramairefacile.utils.SimpleDividerItemDecoration;
 
 import java.util.List;
 
@@ -45,7 +45,8 @@ public class LesArticlesActivity extends AppCompatActivity {
         recyclerView = findViewById(R.id.recyclerview);
         titleToolbar = findViewById(R.id.title_toolbar);
 
-        titleToolbar.setText("LES ARTICLES");
+        titleToolbar.setText("Les articles");
+
 
         dataList = db.getMateriByType(LesArticles.class);
         lesArticlesAdapter = new LesArticlesAdapter(this, dataList);
@@ -53,7 +54,6 @@ public class LesArticlesActivity extends AppCompatActivity {
         recyclerView.setAdapter(lesArticlesAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setHasFixedSize(true);
-        recyclerView.addItemDecoration(new SimpleDividerItemDecoration(this, R.drawable.divider_dashed));
         recyclerView.addOnItemTouchListener(new ItemClickListener(this, new ItemClickListener.OnItemClickListener() {
             @Override
             public void onItemClick(View view, int position) {
