@@ -21,7 +21,7 @@
 
     <style name="AppTheme.White" parent="AppTheme">
         <item name="colorPrimary">@color/white</item>
-        <item name="colorPrimaryDark">@color/white</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
     </style>
 
     <style name="AppTheme.Dark" parent="AppTheme">

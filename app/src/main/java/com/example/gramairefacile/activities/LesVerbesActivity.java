@@ -3,6 +3,7 @@ package com.example.gramairefacile.activities;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -24,6 +25,7 @@ public class LesVerbesActivity extends AppCompatActivity {
     private Toolbar toolbar;
     private TextView titleToolbar;
     private RecyclerView recyclerView;
+    private ImageButton backToolbar;
 
     private LesVerbesAdapter lesVerbesAdapter;
     private DatabaseHelper db;

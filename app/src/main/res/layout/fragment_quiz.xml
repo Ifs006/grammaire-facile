@@ -71,9 +71,9 @@
 
         <TextView
             android:id="@+id/tv_alert_answer"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="@dimen/_15sdp"
             android:visibility="gone"
-            android:textSize="@dimen/_10ssp"
+            android:textSize="@dimen/_12ssp"
             android:gravity="center"
             android:textColor="@color/colorPrimaryText"
             android:fontFamily="@font/caviar_dreams_bold"

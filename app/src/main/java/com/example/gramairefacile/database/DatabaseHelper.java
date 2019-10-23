@@ -72,23 +72,23 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     private void generateMateri() {
         // GENERATE MATERI VERB
-        addNewMateri(Constants.Materi.TYPE_VERB, "LE VERBE REGULIER", new int[]{R.drawable.verbes1_content1});
-        addNewMateri(Constants.Materi.TYPE_VERB, "Le verbe irregulier", new int[]{R.drawable.verbes2_content1, R.drawable.verbes2_content2});
-        addNewMateri(Constants.Materi.TYPE_VERB, "Le conditionnel de politese", new int[]{R.drawable.verbes3_content1});
+        addNewMateri(Constants.Materi.TYPE_VERB, "Le verbe regulier", new int[]{R.drawable.verbes1_content1});
+        addNewMateri(Constants.Materi.TYPE_VERB, "Le verbe irregulier", new int[]{R.drawable.verbes2_content1, R.drawable.verbes2_content2, R.drawable.verbes2_content3, R.drawable.verbes2_content4});
+        addNewMateri(Constants.Materi.TYPE_VERB, "Le conditionnel\nde politese", new int[]{R.drawable.verbes3_content1});
         addNewMateri(Constants.Materi.TYPE_VERB, "La negation", new int[]{R.drawable.verbes4_content1, R.drawable.verbes4_content2});
-        addNewMateri(Constants.Materi.TYPE_VERB, "La forme impersonnelle\nsimple", new int[]{R.drawable.verbes5_content1, R.drawable.verbes5_content2});
-        addNewMateri(Constants.Materi.TYPE_VERB, "L’Imperatif", new int[]{R.drawable.verbes6_content1, R.drawable.verbes6_content2});
-        addNewMateri(Constants.Materi.TYPE_VERB, "La present de l'indicatifs", new int[]{R.drawable.verbes7_content1, R.drawable.verbes7_content2, R.drawable.verbes7_content3, R.drawable.verbes7_content4});
+        addNewMateri(Constants.Materi.TYPE_VERB, "La forme\nimpersonnelle simple", new int[]{R.drawable.verbes5_content1, R.drawable.verbes5_content2, R.drawable.verbes5_content3});
+        addNewMateri(Constants.Materi.TYPE_VERB, "L’Imperatif", new int[]{R.drawable.verbes6_content1, R.drawable.verbes6_content2, R.drawable.verbes6_content3});
+        addNewMateri(Constants.Materi.TYPE_VERB, "La present de l'indicatifs", new int[]{R.drawable.verbes7_content1, R.drawable.verbes7_content2, R.drawable.verbes7_content3, R.drawable.verbes7_content4, R.drawable.verbes7_content5});
 
         // GENERATE MATERI PRONOM
-        addNewMateri(Constants.Materi.TYPE_PRONOM, "LES PRONOMS PERSONNELS\nSUJETS", new int[]{R.drawable.pronom1_content1});
-        addNewMateri(Constants.Materi.TYPE_PRONOM, "LES PRONOMS TONIQUES", new int[]{R.drawable.pronom2_content1, R.drawable.pronom2_content2});
-        addNewMateri(Constants.Materi.TYPE_PRONOM, "LES INTÉROGATIFS SIMPLES", new int[]{R.drawable.pronom3_content1});
+        addNewMateri(Constants.Materi.TYPE_PRONOM, "Les pronoms\npersonnels sujets", new int[]{R.drawable.pronom1_content1, R.drawable.pronom1_content2});
+        addNewMateri(Constants.Materi.TYPE_PRONOM, "Les pronoms tonique", new int[]{R.drawable.pronom2_content1, R.drawable.pronom2_content2});
+        addNewMateri(Constants.Materi.TYPE_PRONOM, "Les interrogatif simple", new int[]{R.drawable.pronom3_content1, R.drawable.pronom3_content2});
 
         // GENERATE MATERI ARTICLES
-        addNewMateri(Constants.Materi.TYPE_ARTICLE, "L’ARTICLE DÉFINI", new int[]{R.drawable.article1_content1});
-        addNewMateri(Constants.Materi.TYPE_ARTICLE, "L’ARTICLE INDÉFINI", new int[]{R.drawable.article2_content1});
-        addNewMateri(Constants.Materi.TYPE_ARTICLE, "L’ARTICLE PARTITIF", new int[]{R.drawable.article3_content1});
+        addNewMateri(Constants.Materi.TYPE_ARTICLE, "L’Article defini", new int[]{R.drawable.article1_content1});
+        addNewMateri(Constants.Materi.TYPE_ARTICLE, "L’Article indefini", new int[]{R.drawable.article2_content1});
+        addNewMateri(Constants.Materi.TYPE_ARTICLE, "L’Article partitif", new int[]{R.drawable.article3_content1});
 
         // GENERATE MATERI ADJECTIF
         addNewMateri(Constants.Materi.TYPE_ADJECTIF, "L’Adjectif posesif", new int[]{R.drawable.adjectif1_content1});
@@ -96,10 +96,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         addNewMateri(Constants.Materi.TYPE_ADJECTIF, "L’Adjectif qualificatif", new int[]{R.drawable.adjectif3_content1, R.drawable.adjectif3_content2});
 
         // GENERATE MATERI CONJONCTION
-        addNewMateri(Constants.Materi.TYPE_CONJONCTION, "LE CONJONCTION", new int[]{R.drawable.conjonction1_content1, R.drawable.conjonction1_content2});
+        addNewMateri(Constants.Materi.TYPE_CONJONCTION, "Les conjonction", new int[]{R.drawable.conjonction1_content1, R.drawable.conjonction1_content2, R.drawable.conjonction1_content3});
 
         // GENERATE MATERI INTERROGATIF
-        addNewMateri(Constants.Materi.TYPE_INTERROGATIF, "L'INTERROGATIF", new int[]{R.drawable.interrogation1_content1, R.drawable.interrogation1_content2});
+        addNewMateri(Constants.Materi.TYPE_INTERROGATIF, "Les interrogatif", new int[]{R.drawable.interrogation1_content1, R.drawable.interrogation1_content2, R.drawable.interrogation1_content3, R.drawable.interrogation1_content4, R.drawable.interrogation1_content5});
 
 
     }
@@ -923,7 +923,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         question.setCorrectIndexofChoices(0);
         questions.add(question);
 
-        addNewQuiz(12, "Pilihlah article indéfini yang sesuai untuk melengkapi kalimat-kalimat berikut !", questions);
+        addNewQuiz(12, "Pilihlah <i>article indéfini<i> yang sesuai untuk melengkapi kalimat-kalimat berikut !", questions);
 
         /*******************************************************************************************
          *  ADD QUIZ 13
@@ -991,7 +991,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         question.setCorrectIndexofChoices(3);
         questions.add(question);
 
-        addNewQuiz(13, "Pilihlah article partitif yang sesuai untuk melengkapi kalimat-kalimat berikut !", questions);
+        addNewQuiz(13, "Pilihlah <i>article partitif<i> yang sesuai untuk melengkapi kalimat-kalimat berikut !", questions);
 
         /*******************************************************************************************
          *  ADD QUIZ 14
@@ -1059,7 +1059,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         question.setCorrectIndexofChoices(1);
         questions.add(question);
 
-        addNewQuiz(14, "Pilihlah adjectif possesif yang sesuai untuk melengkapi kalimat-kalimat berikut!", questions);
+        addNewQuiz(14, "Pilihlah <i>adjectif possesif<i> yang sesuai untuk melengkapi kalimat-kalimat berikut!", questions);
 
         /*******************************************************************************************
          *  ADD QUIZ 15
@@ -1127,7 +1127,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         question.setCorrectIndexofChoices(3);
         questions.add(question);
 
-        addNewQuiz(15, "Pilihlah adjectif démonstratif yang sesuai untuk melengkapi kalimat-kalimat berikut!", questions);
+        addNewQuiz(15, "Pilihlah <i>adjectif démonstratif<i> yang sesuai untuk melengkapi kalimat-kalimat berikut!", questions);
 
         /*******************************************************************************************
          *  ADD QUIZ 16
@@ -1195,7 +1195,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         question.setCorrectIndexofChoices(2);
         questions.add(question);
 
-        addNewQuiz(16, "Pilihlah adjectif qualificatif yang sesuai untuk melengkapi kalimat-kalimat berikut!", questions);
+        addNewQuiz(16, "Pilihlah <i>adjectif qualificatif<i> yang sesuai untuk melengkapi kalimat-kalimat berikut!", questions);
 
         /*******************************************************************************************
          *  ADD QUIZ 17
@@ -1263,7 +1263,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         question.setCorrectIndexofChoices(0);
         questions.add(question);
 
-        addNewQuiz(17, "Pilihlah conjonction yang tepat untuk melengkapi kalimat-kalimat berikut! ", questions);
+        addNewQuiz(17, "Pilihlah <i>conjonction<i> yang tepat untuk melengkapi kalimat-kalimat berikut! ", questions);
 
         /*******************************************************************************************
          *  ADD QUIZ 17
@@ -1331,7 +1331,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         question.setCorrectIndexofChoices(3);
         questions.add(question);
 
-        addNewQuiz(18, "Pilihlah mot interrogation yang sesuai untuk melengkapi kalimat-kalimat berikut!", questions);
+        addNewQuiz(18, "Pilihlah <i>mot interrogation<i> yang sesuai untuk melengkapi kalimat-kalimat berikut!", questions);
     }
 
 
