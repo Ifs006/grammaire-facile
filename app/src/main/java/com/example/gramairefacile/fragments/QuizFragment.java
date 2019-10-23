@@ -122,19 +122,20 @@ public class QuizFragment extends Fragment {
 
             String label = getString(R.string.alert_incorrect_answer, choices.get(correctIndexofChoices));
             Spannable wordtoSpan = new SpannableString(label);
+            wordtoSpan.setSpan(new ForegroundColorSpan(ContextCompat.getColor(getContext(), R.color.colorAccent)),
+                    0, 10, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
             wordtoSpan.setSpan(new ForegroundColorSpan(ContextCompat.getColor(getContext(), R.color.selectedButton)),
                     label.length() - choices.get(correctIndexofChoices).length() - 5, label.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
 
             labelAlert.setText(wordtoSpan);
 
         } else {
-            String label = "SELAMAT ANDA BENAR!";
+            String label = getString(R.string.alert_correct_answer);
             labelAlert.setText(label);
-            labelAlert.setTextColor(ContextCompat.getColor(getContext(), R.color.benul));
+            labelAlert.setTextColor(ContextCompat.getColor(getContext(), R.color.betul));
         }
 
         disableChoices();
-
 
         labelAlert.setVisibility(View.VISIBLE);
         numberOfTap += 1;
