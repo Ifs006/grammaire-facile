@@ -78,7 +78,7 @@
             android:theme="@style/AppTheme.White" />
 
         <activity
-            android:name=".activities.CreditActivity"
+            android:name=".activities.ReferenceActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.Dark" />
 

@@ -2,12 +2,14 @@ package com.example.gramairefacile.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -25,7 +27,7 @@ public class LesVerbesActivity extends AppCompatActivity {
     private Toolbar toolbar;
     private TextView titleToolbar;
     private RecyclerView recyclerView;
-    private ImageButton backToolbar;
+    private ImageButton btnBack;
 
     private LesVerbesAdapter lesVerbesAdapter;
     private DatabaseHelper db;
@@ -44,10 +46,22 @@ public class LesVerbesActivity extends AppCompatActivity {
 
     private void initViews() {
         toolbar = findViewById(R.id.toolbar);
-        recyclerView = findViewById(R.id.reyclerview);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
         titleToolbar = findViewById(R.id.title_toolbar);
+        titleToolbar.setText("Verbe");
+        titleToolbar.setGravity(Gravity.CENTER);
 
-        titleToolbar.setText("Les verbes");
+        recyclerView = findViewById(R.id.reyclerview);
+
+        btnBack = findViewById(R.id.btn_back);
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
+
 
 
         dataList = db.getMateriByType(LesVerbes.class);
@@ -56,6 +70,7 @@ public class LesVerbesActivity extends AppCompatActivity {
         recyclerView.setAdapter(lesVerbesAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setHasFixedSize(true);
+        recyclerView.setBackground(ContextCompat.getDrawable(this, R.drawable.bg_verbes));
         recyclerView.addOnItemTouchListener(new ItemClickListener(this, new ItemClickListener.OnItemClickListener() {
             @Override
             public void onItemClick(View view, int position) {
@@ -72,6 +87,8 @@ public class LesVerbesActivity extends AppCompatActivity {
         intent.putExtra(Constants.EXTRA_ID, data.getId());
         intent.putExtra(Constants.EXTRA_TITLE, data.getTitle());
         intent.putExtra(Constants.EXTRA_CONTENTS, data.getContents());
+        intent.putExtra(Constants.EXTRA_BACKGROUND, R.drawable.bg_verbes);
         startActivity(intent);
     }
+
 }

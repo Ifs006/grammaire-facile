@@ -4,8 +4,8 @@
     tools:showIn="navigation_view">
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/credit"
-            android:title="Crédit" />
+            android:id="@+id/reference"
+            android:title="Reference" />
         <item
             android:id="@+id/a_propos_de_lauteur"
             android:title="À propos de" />

@@ -8,6 +8,7 @@ public class Constants {
     public static String EXTRA_TITLE = "title";
     public static String EXTRA_CONTENTS = "contents";
     public static String EXTRA_SCORE = "score";
+    public static String EXTRA_BACKGROUND = "background";
 
     // ARGUMENTS
     public static String ARGS_QUESTION = "question";

@@ -1,13 +1,15 @@
 package com.example.gramairefacile.adapters;
 
 import android.content.Context;
-import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.gramairefacile.R;
 import com.example.gramairefacile.database.model.LesVerbes;
@@ -56,18 +58,28 @@ public class LesVerbesAdapter extends RecyclerView.Adapter<LesVerbesAdapter.LesV
 
         private ImageView logoVerbes;
         private TextView titleVerbes;
+        private RelativeLayout containerBackground;
 
         public LesVerbesViewHolder(View itemView) {
             super(itemView);
 
             logoVerbes = itemView.findViewById(R.id.img_logo_verbes);
             titleVerbes = itemView.findViewById(R.id.tv_title_verbes);
+            containerBackground = itemView.findViewById(R.id.container_background);
         }
 
         public void onBind(final int position) {
             LesVerbes data = lesVerbes.get(position);
 
+//            if (position > 0) {
+//                float alpha = 1 - (position / 10);
+//                containerBackground.setAlpha(alpha);
+//            } else {
+//                containerBackground.setAlpha(1);
+//            }
+
             logoVerbes.setImageResource(data.getIcon());
+
             titleVerbes.setText(data.getTitle());
         }
     }

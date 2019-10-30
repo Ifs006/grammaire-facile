@@ -4,6 +4,7 @@
     android:layout_height="wrap_content">
 
     <RelativeLayout
+        android:id="@+id/container_background"
         android:layout_width="@dimen/_280sdp"
         android:layout_height="@dimen/_65sdp"
         android:layout_centerHorizontal="true"

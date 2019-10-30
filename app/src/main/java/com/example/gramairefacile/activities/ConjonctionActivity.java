@@ -2,6 +2,7 @@ package com.example.gramairefacile.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
@@ -38,11 +39,13 @@ public class ConjonctionActivity extends AppCompatActivity {
     private void initView() {
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
+
         titleToolbar = findViewById(R.id.title_toolbar);
-        ibtnBack = findViewById(R.id.btn_back);
-
         titleToolbar.setText("CONJONCTION");
+        titleToolbar.setGravity(Gravity.CENTER);
 
+        ibtnBack = findViewById(R.id.btn_back);
         ibtnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -63,6 +66,7 @@ public class ConjonctionActivity extends AppCompatActivity {
         intent.putExtra(Constants.EXTRA_ID, data.getId());
         intent.putExtra(Constants.EXTRA_TITLE, data.getTitle());
         intent.putExtra(Constants.EXTRA_CONTENTS, data.getContents());
+        intent.putExtra(Constants.EXTRA_BACKGROUND, R.drawable.bg_conjonction);
         startActivity(intent);
     }
 }

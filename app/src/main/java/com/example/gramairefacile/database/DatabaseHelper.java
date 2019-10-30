@@ -72,10 +72,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     private void generateMateri() {
         // GENERATE MATERI VERB
-        addNewMateri(Constants.Materi.TYPE_VERB, "Le verbe regulier", new int[]{R.drawable.verbes1_content1});
-        addNewMateri(Constants.Materi.TYPE_VERB, "Le verbe irregulier", new int[]{R.drawable.verbes2_content1, R.drawable.verbes2_content2, R.drawable.verbes2_content3, R.drawable.verbes2_content4});
-        addNewMateri(Constants.Materi.TYPE_VERB, "Le conditionnel\nde politese", new int[]{R.drawable.verbes3_content1});
-        addNewMateri(Constants.Materi.TYPE_VERB, "La negation", new int[]{R.drawable.verbes4_content1, R.drawable.verbes4_content2});
+        addNewMateri(Constants.Materi.TYPE_VERB, "Verbe regulier", new int[]{R.drawable.verbes1_content1});
+        addNewMateri(Constants.Materi.TYPE_VERB, "Verbe irregulier", new int[]{R.drawable.verbes2_content1, R.drawable.verbes2_content2, R.drawable.verbes2_content3, R.drawable.verbes2_content4});
+        addNewMateri(Constants.Materi.TYPE_VERB, "Conditionnel\nde politese", new int[]{R.drawable.verbes3_content1});
+        addNewMateri(Constants.Materi.TYPE_VERB, "Negation", new int[]{R.drawable.verbes4_content1, R.drawable.verbes4_content2});
         addNewMateri(Constants.Materi.TYPE_VERB, "La forme\nimpersonnelle simple", new int[]{R.drawable.verbes5_content1, R.drawable.verbes5_content2, R.drawable.verbes5_content3});
         addNewMateri(Constants.Materi.TYPE_VERB, "L’Imperatif", new int[]{R.drawable.verbes6_content1, R.drawable.verbes6_content2, R.drawable.verbes6_content3});
         addNewMateri(Constants.Materi.TYPE_VERB, "La present de l'indicatifs", new int[]{R.drawable.verbes7_content1, R.drawable.verbes7_content2, R.drawable.verbes7_content3, R.drawable.verbes7_content4, R.drawable.verbes7_content5});
@@ -96,10 +96,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         addNewMateri(Constants.Materi.TYPE_ADJECTIF, "L’Adjectif qualificatif", new int[]{R.drawable.adjectif3_content1, R.drawable.adjectif3_content2});
 
         // GENERATE MATERI CONJONCTION
-        addNewMateri(Constants.Materi.TYPE_CONJONCTION, "Les conjonction", new int[]{R.drawable.conjonction1_content1, R.drawable.conjonction1_content2, R.drawable.conjonction1_content3});
+        addNewMateri(Constants.Materi.TYPE_CONJONCTION, "LES CONJONCTION", new int[]{R.drawable.conjonction1_content1, R.drawable.conjonction1_content2, R.drawable.conjonction1_content3});
 
         // GENERATE MATERI INTERROGATIF
-        addNewMateri(Constants.Materi.TYPE_INTERROGATIF, "Les interrogatif", new int[]{R.drawable.interrogation1_content1, R.drawable.interrogation1_content2, R.drawable.interrogation1_content3, R.drawable.interrogation1_content4, R.drawable.interrogation1_content5});
+        addNewMateri(Constants.Materi.TYPE_INTERROGATIF, "LES INTERROGATIF", new int[]{R.drawable.interrogation1_content1, R.drawable.interrogation1_content2, R.drawable.interrogation1_content3, R.drawable.interrogation1_content4, R.drawable.interrogation1_content5});
 
 
     }
@@ -122,7 +122,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         // Reset question to new class
         question = new Question();
         question.setQuestion("Nous …. (parler) de son travail.");
-        question.setChoices(new String[]{"a.\tparle", "b.\tparles", "c.\tparlons", "d.\tparlez"});
+        question.setChoices(new String[]{"a.\tportons", "b.\tpermettons", "c.\tparlons", "d.\tparlez"});
         question.setCorrectIndexofChoices(2);
         questions.add(question);
 
@@ -140,7 +140,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         question = new Question();
         question.setQuestion("Vous …. (danser) avec Marie.");
-        question.setChoices(new String[]{"a.\tdanse", "b.\tdanses", "c.\tdansons", "d.\tdansez"});
+        question.setChoices(new String[]{"a.\tdanse", "b.\tdanses", "c.\tdacisez", "d.\tdansez"});
         question.setCorrectIndexofChoices(3);
         questions.add(question);
 
@@ -174,7 +174,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         question.setCorrectIndexofChoices(1);
         questions.add(question);
 
-        addNewQuiz(1, "Pilihlah konjugasi yang tepat dari kata kerja berakhiran -er di dalam kurung !", questions);
+        addNewQuiz(1, "Pilihlah konjugasi yang tepat dari kata kerja berakhiran <i>-er</i> di dalam kurung !", questions);
 
         /*******************************************************************************************
          *  ADD QUIZ 2
@@ -651,7 +651,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         question.setCorrectIndexofChoices(1);
         questions.add(question);
 
-        addNewQuiz(8, "Pilihlah <i>pronom personnel<i> yang sesuai untuk melengkapi kalimat-kalimat berikut !", questions);
+        addNewQuiz(8, "Pilihlah <i>pronom personnel</i> yang sesuai untuk melengkapi kalimat-kalimat berikut !", questions);
 
         /*******************************************************************************************
          *  ADD QUIZ 9
@@ -855,7 +855,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         question.setCorrectIndexofChoices(2);
         questions.add(question);
 
-        addNewQuiz(11, "Pilihlah <i>article défini<i> yang sesuai untuk melengkapi kalimat-kalimat berikut !", questions);
+        addNewQuiz(11, "Pilihlah <i>article défini</i> yang sesuai untuk melengkapi kalimat-kalimat berikut !", questions);
 
         /*******************************************************************************************
          *  ADD QUIZ 12
@@ -923,7 +923,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         question.setCorrectIndexofChoices(0);
         questions.add(question);
 
-        addNewQuiz(12, "Pilihlah <i>article indéfini<i> yang sesuai untuk melengkapi kalimat-kalimat berikut !", questions);
+        addNewQuiz(12, "Pilihlah <i>article indéfini</i> yang sesuai untuk melengkapi kalimat-kalimat berikut !", questions);
 
         /*******************************************************************************************
          *  ADD QUIZ 13
@@ -991,7 +991,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         question.setCorrectIndexofChoices(3);
         questions.add(question);
 
-        addNewQuiz(13, "Pilihlah <i>article partitif<i> yang sesuai untuk melengkapi kalimat-kalimat berikut !", questions);
+        addNewQuiz(13, "Pilihlah <i>article partitif</i> yang sesuai untuk melengkapi kalimat-kalimat berikut !", questions);
 
         /*******************************************************************************************
          *  ADD QUIZ 14
@@ -1059,7 +1059,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         question.setCorrectIndexofChoices(1);
         questions.add(question);
 
-        addNewQuiz(14, "Pilihlah <i>adjectif possesif<i> yang sesuai untuk melengkapi kalimat-kalimat berikut!", questions);
+        addNewQuiz(14, "Pilihlah <i>adjectif possesif</i> yang sesuai untuk melengkapi kalimat-kalimat berikut!", questions);
 
         /*******************************************************************************************
          *  ADD QUIZ 15
@@ -1127,7 +1127,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         question.setCorrectIndexofChoices(3);
         questions.add(question);
 
-        addNewQuiz(15, "Pilihlah <i>adjectif démonstratif<i> yang sesuai untuk melengkapi kalimat-kalimat berikut!", questions);
+        addNewQuiz(15, "Pilihlah <i>adjectif démonstratif</i> yang sesuai untuk melengkapi kalimat-kalimat berikut!", questions);
 
         /*******************************************************************************************
          *  ADD QUIZ 16
@@ -1137,13 +1137,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         // Create new class
         question = new Question();
         question.setQuestion("Madame Soirée aime aider n’importe qui. Elle est une personne …..");
-        question.setChoices(new String[]{"a.\tbelle", "b.\tbeau", "c.\tgentile", "d.\triche"});
+        question.setChoices(new String[]{"a.\tbelle", "b.\tbeau", "c.\tgentille", "d.\triche"});
         question.setCorrectIndexofChoices(2);
         questions.add(question);
 
         question = new Question();
         question.setQuestion("Erick jamais fait son devoir. Il est une personne …..");
-        question.setChoices(new String[]{"a.\tbelle", "b.\tbeau", "c.\tgentile", "d.\tparreuseux"});
+        question.setChoices(new String[]{"a.\tbelle", "b.\tbeau", "c.\tgentile", "d.\tpareusseux"});
         question.setCorrectIndexofChoices(3);
         questions.add(question);
 
@@ -1160,9 +1160,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         questions.add(question);
 
         question = new Question();
-        question.setQuestion(". C’est une …. table.");
+        question.setQuestion("C’est une …. femme.");
         question.setChoices(new String[]{"a.\tbelle", "b.\tbeau", "c.\tlaid", "d.\tnouveau"});
-        question.setCorrectIndexofChoices(1);
+        question.setCorrectIndexofChoices(0);
         questions.add(question);
 
         question = new Question();
@@ -1185,7 +1185,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         question = new Question();
         question.setQuestion("Vous avez un ….. chapeau");
-        question.setChoices(new String[]{"a.\tbelle", "b.\tbeau", "c.\tnouvelle", "d.\tnouveau"});
+        question.setChoices(new String[]{"a.\tbelle", "b.\tgentille", "c.\tnouvelle", "d.\tnouveau"});
         question.setCorrectIndexofChoices(3);
         questions.add(question);
 
@@ -1195,7 +1195,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         question.setCorrectIndexofChoices(2);
         questions.add(question);
 
-        addNewQuiz(16, "Pilihlah <i>adjectif qualificatif<i> yang sesuai untuk melengkapi kalimat-kalimat berikut!", questions);
+        addNewQuiz(16, "Pilihlah <i>adjectif qualificatif</i> yang sesuai untuk melengkapi kalimat-kalimat berikut!", questions);
 
         /*******************************************************************************************
          *  ADD QUIZ 17
@@ -1263,7 +1263,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         question.setCorrectIndexofChoices(0);
         questions.add(question);
 
-        addNewQuiz(17, "Pilihlah <i>conjonction<i> yang tepat untuk melengkapi kalimat-kalimat berikut! ", questions);
+        addNewQuiz(17, "Pilihlah <i>conjonction</i> yang tepat untuk melengkapi kalimat-kalimat berikut! ", questions);
 
         /*******************************************************************************************
          *  ADD QUIZ 17
@@ -1331,7 +1331,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         question.setCorrectIndexofChoices(3);
         questions.add(question);
 
-        addNewQuiz(18, "Pilihlah <i>mot interrogation<i> yang sesuai untuk melengkapi kalimat-kalimat berikut!", questions);
+        addNewQuiz(18, "Pilihlah <i>mot interrogation</i> yang sesuai untuk melengkapi kalimat-kalimat berikut!", questions);
     }
 
 

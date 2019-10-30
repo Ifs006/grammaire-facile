@@ -8,7 +8,7 @@
         android:layout_height="@dimen/_65sdp"
         android:layout_centerHorizontal="true"
         android:layout_marginVertical="@dimen/_7sdp"
-        android:background="@drawable/les_verbes_list_materi"
+        android:background="@drawable/les_adjectifs_list_materi"
         android:padding="@dimen/_10sdp">
 
         <ImageView

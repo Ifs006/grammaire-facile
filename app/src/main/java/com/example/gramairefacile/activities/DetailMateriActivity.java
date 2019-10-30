@@ -2,6 +2,7 @@ package com.example.gramairefacile.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
@@ -11,7 +12,7 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-import androidx.core.content.ContextCompat;
+import androidx.core.widget.NestedScrollView;
 
 import com.example.gramairefacile.R;
 import com.example.gramairefacile.database.DatabaseHelper;
@@ -22,12 +23,14 @@ public class DetailMateriActivity extends AppCompatActivity {
     private int id;
     private String title;
     private int[] contents;
+    private int background;
 
     private Toolbar toolbar;
     private TextView titleToolbar;
     private LinearLayout contentContainer;
     private ImageButton ibtnQuiz;
     private ImageButton ibtnBack;
+    private NestedScrollView scrollView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,18 +49,26 @@ public class DetailMateriActivity extends AppCompatActivity {
 
             String jsonList = bundle.getString(Constants.EXTRA_CONTENTS, "");
             contents = DatabaseHelper.toArray(jsonList, int[].class);
+
+            // Ini karena typenya integer
+            background = bundle.getInt(Constants.EXTRA_BACKGROUND, 0);
         }
     }
 
     private void initViews() {
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
         titleToolbar = findViewById(R.id.title_toolbar);
+        titleToolbar.setText(title);
+        titleToolbar.setGravity(Gravity.CENTER);
+
         contentContainer = findViewById(R.id.content_container);
         ibtnQuiz = findViewById(R.id.ibtn_quiz);
         ibtnBack = findViewById(R.id.btn_back);
+        scrollView = findViewById(R.id.scrollview);
 
-        titleToolbar.setText(title);
+
 
         for (Integer content : contents) {
             addContent(content);
@@ -78,7 +89,9 @@ public class DetailMateriActivity extends AppCompatActivity {
             }
         });
 
-        contentContainer.setBackground(ContextCompat.getDrawable(this,R.drawable.bg_card_top_rounded));
+        // Ini buat set background berdasarkan extra yang td di set
+        scrollView.setBackgroundResource(background);
+
     }
 
 

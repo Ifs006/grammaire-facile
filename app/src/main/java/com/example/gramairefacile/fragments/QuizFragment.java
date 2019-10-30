@@ -132,7 +132,7 @@ public class QuizFragment extends Fragment {
         } else {
             String label = getString(R.string.alert_correct_answer);
             labelAlert.setText(label);
-            labelAlert.setTextColor(ContextCompat.getColor(getContext(), R.color.betul));
+            labelAlert.setTextColor(ContextCompat.getColor(getContext(), R.color.selectedButton));
         }
 
         disableChoices();
