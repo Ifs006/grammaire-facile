@@ -71,12 +71,12 @@ public class LesVerbesAdapter extends RecyclerView.Adapter<LesVerbesAdapter.LesV
         public void onBind(final int position) {
             LesVerbes data = lesVerbes.get(position);
 
-//            if (position > 0) {
-//                float alpha = 1 - (position / 10);
-//                containerBackground.setAlpha(alpha);
-//            } else {
-//                containerBackground.setAlpha(1);
-//            }
+            if (position > 0) {
+                float alpha = 1 - (position / 7);
+                containerBackground.setAlpha(alpha);
+            } else {
+                containerBackground.setAlpha(1);
+            }
 
             logoVerbes.setImageResource(data.getIcon());
 

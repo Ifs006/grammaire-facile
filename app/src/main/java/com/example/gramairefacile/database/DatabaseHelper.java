@@ -72,34 +72,34 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     private void generateMateri() {
         // GENERATE MATERI VERB
-        addNewMateri(Constants.Materi.TYPE_VERB, "Verbe regulier", new int[]{R.drawable.verbes1_content1});
-        addNewMateri(Constants.Materi.TYPE_VERB, "Verbe irregulier", new int[]{R.drawable.verbes2_content1, R.drawable.verbes2_content2, R.drawable.verbes2_content3, R.drawable.verbes2_content4});
-        addNewMateri(Constants.Materi.TYPE_VERB, "Conditionnel\nde politese", new int[]{R.drawable.verbes3_content1});
-        addNewMateri(Constants.Materi.TYPE_VERB, "Negation", new int[]{R.drawable.verbes4_content1, R.drawable.verbes4_content2});
-        addNewMateri(Constants.Materi.TYPE_VERB, "La forme\nimpersonnelle simple", new int[]{R.drawable.verbes5_content1, R.drawable.verbes5_content2, R.drawable.verbes5_content3});
-        addNewMateri(Constants.Materi.TYPE_VERB, "L’Imperatif", new int[]{R.drawable.verbes6_content1, R.drawable.verbes6_content2, R.drawable.verbes6_content3});
-        addNewMateri(Constants.Materi.TYPE_VERB, "La present de l'indicatifs", new int[]{R.drawable.verbes7_content1, R.drawable.verbes7_content2, R.drawable.verbes7_content3, R.drawable.verbes7_content4, R.drawable.verbes7_content5});
+        addNewMateri(Constants.Materi.TYPE_VERB, "Verbe régulier", new int[]{R.drawable.verbes1_content1});
+        addNewMateri(Constants.Materi.TYPE_VERB, "Verbe irrégulier", new int[]{R.drawable.verbes2_content1, R.drawable.verbes2_content2, R.drawable.verbes2_content3, R.drawable.verbes2_content4});
+        addNewMateri(Constants.Materi.TYPE_VERB, "Conditionnel\nde politesse", new int[]{R.drawable.verbes3_content1});
+        addNewMateri(Constants.Materi.TYPE_VERB, "Forme négatif", new int[]{R.drawable.verbes4_content1, R.drawable.verbes4_content2});
+        addNewMateri(Constants.Materi.TYPE_VERB, "Forme\nimpersonnele simple", new int[]{R.drawable.verbes5_content1, R.drawable.verbes5_content2, R.drawable.verbes5_content3});
+        addNewMateri(Constants.Materi.TYPE_VERB, "Impératif", new int[]{R.drawable.verbes6_content1, R.drawable.verbes6_content2, R.drawable.verbes6_content3});
+        addNewMateri(Constants.Materi.TYPE_VERB, "Present de l'indicatifs", new int[]{R.drawable.verbes7_content1, R.drawable.verbes7_content2, R.drawable.verbes7_content3, R.drawable.verbes7_content4, R.drawable.verbes7_content5});
 
         // GENERATE MATERI PRONOM
-        addNewMateri(Constants.Materi.TYPE_PRONOM, "Les pronoms\npersonnels sujets", new int[]{R.drawable.pronom1_content1, R.drawable.pronom1_content2});
-        addNewMateri(Constants.Materi.TYPE_PRONOM, "Les pronoms tonique", new int[]{R.drawable.pronom2_content1, R.drawable.pronom2_content2});
-        addNewMateri(Constants.Materi.TYPE_PRONOM, "Les interrogatif simple", new int[]{R.drawable.pronom3_content1, R.drawable.pronom3_content2});
+        addNewMateri(Constants.Materi.TYPE_PRONOM, "Pronom\npersonnel sujet", new int[]{R.drawable.pronom1_content1, R.drawable.pronom1_content2});
+        addNewMateri(Constants.Materi.TYPE_PRONOM, "Pronom tonique", new int[]{R.drawable.pronom2_content1, R.drawable.pronom2_content2});
+        addNewMateri(Constants.Materi.TYPE_PRONOM, "Pronom interrogatif simple", new int[]{R.drawable.pronom3_content1, R.drawable.pronom3_content2});
 
         // GENERATE MATERI ARTICLES
-        addNewMateri(Constants.Materi.TYPE_ARTICLE, "L’Article defini", new int[]{R.drawable.article1_content1});
-        addNewMateri(Constants.Materi.TYPE_ARTICLE, "L’Article indefini", new int[]{R.drawable.article2_content1});
-        addNewMateri(Constants.Materi.TYPE_ARTICLE, "L’Article partitif", new int[]{R.drawable.article3_content1});
+        addNewMateri(Constants.Materi.TYPE_ARTICLE, "Article défini", new int[]{R.drawable.article1_content1});
+        addNewMateri(Constants.Materi.TYPE_ARTICLE, "Article indéfini", new int[]{R.drawable.article2_content1});
+        addNewMateri(Constants.Materi.TYPE_ARTICLE, "Article partitif", new int[]{R.drawable.article3_content1});
 
         // GENERATE MATERI ADJECTIF
-        addNewMateri(Constants.Materi.TYPE_ADJECTIF, "L’Adjectif posesif", new int[]{R.drawable.adjectif1_content1});
-        addNewMateri(Constants.Materi.TYPE_ADJECTIF, "L’Adjectif demonstratif", new int[]{R.drawable.adjectif2_content1});
-        addNewMateri(Constants.Materi.TYPE_ADJECTIF, "L’Adjectif qualificatif", new int[]{R.drawable.adjectif3_content1, R.drawable.adjectif3_content2});
+        addNewMateri(Constants.Materi.TYPE_ADJECTIF, "Adjectif possessif", new int[]{R.drawable.adjectif1_content1});
+        addNewMateri(Constants.Materi.TYPE_ADJECTIF, "Adjectif démonstratif", new int[]{R.drawable.adjectif2_content1});
+        addNewMateri(Constants.Materi.TYPE_ADJECTIF, "Adjectif qualificatif", new int[]{R.drawable.adjectif3_content1, R.drawable.adjectif3_content2});
 
         // GENERATE MATERI CONJONCTION
-        addNewMateri(Constants.Materi.TYPE_CONJONCTION, "LES CONJONCTION", new int[]{R.drawable.conjonction1_content1, R.drawable.conjonction1_content2, R.drawable.conjonction1_content3});
+        addNewMateri(Constants.Materi.TYPE_CONJONCTION, "CONJONCTION \nDE COORDINATION", new int[]{R.drawable.conjonction1_content1, R.drawable.conjonction1_content2, R.drawable.conjonction1_content3});
 
         // GENERATE MATERI INTERROGATIF
-        addNewMateri(Constants.Materi.TYPE_INTERROGATIF, "LES INTERROGATIF", new int[]{R.drawable.interrogation1_content1, R.drawable.interrogation1_content2, R.drawable.interrogation1_content3, R.drawable.interrogation1_content4, R.drawable.interrogation1_content5});
+        addNewMateri(Constants.Materi.TYPE_INTERROGATIF, "MOT \nINTERROGATIF", new int[]{R.drawable.interrogation1_content1, R.drawable.interrogation1_content2, R.drawable.interrogation1_content3, R.drawable.interrogation1_content4, R.drawable.interrogation1_content5});
 
 
     }

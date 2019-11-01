@@ -121,10 +121,12 @@ public class MenuAwalActivity extends AppCompatActivity
             intent.putExtra(Constants.EXTRA_ID, ((Conjonction) data).getId());
             intent.putExtra(Constants.EXTRA_TITLE, ((Conjonction) data).getTitle());
             intent.putExtra(Constants.EXTRA_CONTENTS, ((Conjonction) data).getContents());
+            intent.putExtra(Constants.EXTRA_BACKGROUND, R.drawable.bg_conjonction);
         } else {
             intent.putExtra(Constants.EXTRA_ID, ((Interrogatif) data).getId());
             intent.putExtra(Constants.EXTRA_TITLE, ((Interrogatif) data).getTitle());
             intent.putExtra(Constants.EXTRA_CONTENTS, ((Interrogatif) data).getContents());
+            intent.putExtra(Constants.EXTRA_BACKGROUND, R.drawable.bg_interogation);
         }
 
         return intent;

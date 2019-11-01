@@ -26,7 +26,6 @@
             android:layout_toRightOf="@id/img_logo_articles"
             android:background="@drawable/vertical_dashes" />
 
-
         <TextView
             android:id="@+id/tv_title_articles"
             android:layout_width="wrap_content"

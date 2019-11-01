@@ -8,21 +8,29 @@
     android:background="@color/chathamsBlue"
     app:popupTheme="@style/AppTheme.PopupOverlay">
 
-    <ImageButton
-        android:id="@+id/btn_back"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/btn_back" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/title_toolbar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/montserrat_light"
-        android:gravity="center"
-        android:textAllCaps="true"
-        android:textColor="@color/white"
-        android:textSize="@dimen/_15ssp"
-        tools:text="LES VERBES" />
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/btn_back" />
+
+        <TextView
+            android:id="@+id/title_toolbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_light"
+            android:layout_centerInParent="true"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_15ssp"
+            tools:text="LES VERBES" />
+
+    </RelativeLayout>
 
 </androidx.appcompat.widget.Toolbar>

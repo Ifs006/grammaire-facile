@@ -1,6 +1,5 @@
 package com.example.gramairefacile.activities;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
@@ -9,11 +8,12 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.content.ContextCompat;
+import androidx.core.widget.NestedScrollView;
 
 import com.example.gramairefacile.R;
 import com.example.gramairefacile.database.DatabaseHelper;
 import com.example.gramairefacile.database.model.Conjonction;
-import com.example.gramairefacile.utils.Constants;
 
 import java.util.List;
 
@@ -24,6 +24,7 @@ public class ConjonctionActivity extends AppCompatActivity {
     private DatabaseHelper db;
     private List<Conjonction> dataList;
     private ImageButton ibtnBack;
+    private NestedScrollView scrollview;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,19 +57,11 @@ public class ConjonctionActivity extends AppCompatActivity {
 
         dataList = db.getMateriByType(Conjonction.class);
 
+        scrollview = findViewById(R.id.scrollview);
+        scrollview.setBackground(ContextCompat.getDrawable(this, R.drawable.bg_conjonction));
+
     }
 
-
-    private void showDetail(int position) {
-        Conjonction data = dataList.get(position);
-
-        Intent intent = new Intent(this, DetailMateriActivity.class);
-        intent.putExtra(Constants.EXTRA_ID, data.getId());
-        intent.putExtra(Constants.EXTRA_TITLE, data.getTitle());
-        intent.putExtra(Constants.EXTRA_CONTENTS, data.getContents());
-        intent.putExtra(Constants.EXTRA_BACKGROUND, R.drawable.bg_conjonction);
-        startActivity(intent);
-    }
 }
 
 

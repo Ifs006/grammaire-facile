@@ -1,6 +1,5 @@
 package com.example.gramairefacile.activities;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
@@ -13,7 +12,6 @@ import androidx.appcompat.widget.Toolbar;
 import com.example.gramairefacile.R;
 import com.example.gramairefacile.database.DatabaseHelper;
 import com.example.gramairefacile.database.model.Interrogatif;
-import com.example.gramairefacile.utils.Constants;
 
 import java.util.List;
 
@@ -56,17 +54,6 @@ public class InterrogatifActivity extends AppCompatActivity {
 
     }
 
-
-    private void showDetail(int position) {
-        Interrogatif data = dataList.get(position);
-
-        Intent intent = new Intent(this, DetailMateriActivity.class);
-        intent.putExtra(Constants.EXTRA_ID, data.getId());
-        intent.putExtra(Constants.EXTRA_TITLE, data.getTitle());
-        intent.putExtra(Constants.EXTRA_CONTENTS, data.getContents());
-        intent.putExtra(Constants.EXTRA_BACKGROUND, R.drawable.bg_interogation);
-        startActivity(intent);
-    }
 }
 
 
