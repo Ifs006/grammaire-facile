@@ -21,6 +21,17 @@ public class LesVerbesAdapter extends RecyclerView.Adapter<LesVerbesAdapter.LesV
     private Context context;
     private List<LesVerbes> lesVerbes;
 
+    // Ini disesuaikan dengan jumlah itemnya
+    private int background[] = {
+            R.drawable.les_verbes_list_materi, // background 1
+            R.drawable.les_verbes_list_materi, // background 2
+            R.drawable.les_verbes_list_materi, // background 3
+            R.drawable.les_verbes_list_materi, // background 4
+            R.drawable.les_verbes_list_materi, // background 5
+            R.drawable.les_verbes_list_materi, // background 6
+            R.drawable.les_verbes_list_materi  // background 7
+    };
+
     public LesVerbesAdapter(Context context, List<LesVerbes> lesVerbes) {
         this.context = context;
         this.lesVerbes = lesVerbes;
@@ -71,15 +82,8 @@ public class LesVerbesAdapter extends RecyclerView.Adapter<LesVerbesAdapter.LesV
         public void onBind(final int position) {
             LesVerbes data = lesVerbes.get(position);
 
-            if (position > 0) {
-                float alpha = 1 - (position / 7);
-                containerBackground.setAlpha(alpha);
-            } else {
-                containerBackground.setAlpha(1);
-            }
-
+            containerBackground.setBackgroundResource(background[position]);
             logoVerbes.setImageResource(data.getIcon());
-
             titleVerbes.setText(data.getTitle());
         }
     }
